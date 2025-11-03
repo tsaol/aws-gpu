@@ -145,9 +145,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>实例名称</th>
+                        <th>实例家族</th>
                         <th>GPU型号</th>
-                        <th>GPU数量</th>
+                        <th>GPU配置</th>
                         <th>每GPU显存</th>
                         <th>总显存</th>
                         <th>vCPU</th>
@@ -160,22 +160,22 @@
                 <tbody>
                     <!-- P系列 - 按发布时间倒序 -->
                     <tr class="new">
-                        <td class="instance-name">p6.48xlarge</td>
+                        <td class="instance-name">P6 系列</td>
                         <td class="gpu-name">NVIDIA B200</td>
-                        <td>8</td>
-                        <td>192GB HBM3e</td>
-                        <td>1,536 GB</td>
+                        <td>8卡</td>
+                        <td>179GB</td>
+                        <td>1,432 GB</td>
                         <td>192</td>
-                        <td>2,304 GB</td>
+                        <td>2,048 GB</td>
                         <td>3,200 Gbps</td>
                         <td>~$98.32/小时</td>
                         <td>2024</td>
                     </tr>
                     <tr class="new">
-                        <td class="instance-name">p5en.48xlarge</td>
+                        <td class="instance-name">P5en 系列</td>
                         <td class="gpu-name">NVIDIA H200</td>
-                        <td>8</td>
-                        <td>141GB HBM3e</td>
+                        <td>8卡</td>
+                        <td>141GB</td>
                         <td>1,128 GB</td>
                         <td>192</td>
                         <td>2,048 GB</td>
@@ -184,10 +184,10 @@
                         <td>2024</td>
                     </tr>
                     <tr class="new">
-                        <td class="instance-name">p5e.48xlarge</td>
+                        <td class="instance-name">P5e 系列</td>
                         <td class="gpu-name">NVIDIA H200</td>
-                        <td>8</td>
-                        <td>141GB HBM3e</td>
+                        <td>8卡</td>
+                        <td>141GB</td>
                         <td>1,128 GB</td>
                         <td>192</td>
                         <td>2,048 GB</td>
@@ -196,10 +196,10 @@
                         <td>2024</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">p5.48xlarge</td>
+                        <td class="instance-name">P5 系列</td>
                         <td class="gpu-name">NVIDIA H100</td>
-                        <td>8</td>
-                        <td>80GB HBM3</td>
+                        <td>8卡</td>
+                        <td>80GB</td>
                         <td>640 GB</td>
                         <td>192</td>
                         <td>2,048 GB</td>
@@ -208,10 +208,10 @@
                         <td>2023</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">p4de.24xlarge</td>
+                        <td class="instance-name">P4de 系列</td>
                         <td class="gpu-name">NVIDIA A100 80GB</td>
-                        <td>8</td>
-                        <td>80GB HBM2e</td>
+                        <td>8卡</td>
+                        <td>80GB</td>
                         <td>640 GB</td>
                         <td>96</td>
                         <td>1,152 GB</td>
@@ -220,10 +220,10 @@
                         <td>2020</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">p4d.24xlarge</td>
+                        <td class="instance-name">P4d 系列</td>
                         <td class="gpu-name">NVIDIA A100 40GB</td>
-                        <td>8</td>
-                        <td>40GB HBM2</td>
+                        <td>8卡</td>
+                        <td>40GB</td>
                         <td>320 GB</td>
                         <td>96</td>
                         <td>1,152 GB</td>
@@ -232,10 +232,10 @@
                         <td>2020</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">p3dn.24xlarge</td>
+                        <td class="instance-name">P3dn 系列</td>
                         <td class="gpu-name">NVIDIA V100 32GB</td>
-                        <td>8</td>
-                        <td>32GB HBM2</td>
+                        <td>8卡</td>
+                        <td>32GB</td>
                         <td>256 GB</td>
                         <td>96</td>
                         <td>768 GB</td>
@@ -244,10 +244,10 @@
                         <td>2018</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">p3.16xlarge</td>
+                        <td class="instance-name">P3 系列</td>
                         <td class="gpu-name">NVIDIA V100</td>
-                        <td>8</td>
-                        <td>16GB HBM2</td>
+                        <td>1/4/8卡</td>
+                        <td>16GB</td>
                         <td>128 GB</td>
                         <td>64</td>
                         <td>488 GB</td>
@@ -282,142 +282,58 @@
 
                     <!-- G系列 -->
                     <tr class="new">
-                        <td class="instance-name">g6.48xlarge</td>
-                        <td class="gpu-name">NVIDIA L4</td>
-                        <td>8</td>
-                        <td>24GB GDDR6</td>
-                        <td>192 GB</td>
-                        <td>192</td>
-                        <td>768 GB</td>
-                        <td>50 Gbps</td>
-                        <td>~$9.28/小时</td>
+                        <td class="instance-name">G6e 系列</td>
+                        <td class="gpu-name">NVIDIA L40S</td>
+                        <td>1/4/8卡</td>
+                        <td>48GB</td>
+                        <td>48-384 GB</td>
+                        <td>4-192</td>
+                        <td>32-1536 GB</td>
+                        <td>20-400 Gbps</td>
+                        <td>~$1.69-16.13/小时</td>
                         <td>2024</td>
                     </tr>
                     <tr class="new">
-                        <td class="instance-name">g6.2xlarge</td>
+                        <td class="instance-name">G6 系列</td>
                         <td class="gpu-name">NVIDIA L4</td>
-                        <td>1</td>
-                        <td>24GB GDDR6</td>
-                        <td>24 GB</td>
-                        <td>8</td>
-                        <td>32 GB</td>
-                        <td>10 Gbps</td>
-                        <td>~$1.52/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name">g6.xlarge</td>
-                        <td class="gpu-name">NVIDIA L4</td>
-                        <td>1</td>
-                        <td>24GB GDDR6</td>
-                        <td>24 GB</td>
-                        <td>4</td>
-                        <td>16 GB</td>
-                        <td>10 Gbps</td>
-                        <td>~$1.16/小时</td>
+                        <td>1/8卡</td>
+                        <td>24GB</td>
+                        <td>24-192 GB</td>
+                        <td>4-192</td>
+                        <td>16-768 GB</td>
+                        <td>10-50 Gbps</td>
+                        <td>~$1.16-9.28/小时</td>
                         <td>2024</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">g5.48xlarge</td>
+                        <td class="instance-name">G5 系列</td>
                         <td class="gpu-name">NVIDIA A10G</td>
-                        <td>8</td>
-                        <td>24GB GDDR6</td>
-                        <td>192 GB</td>
-                        <td>192</td>
-                        <td>768 GB</td>
-                        <td>100 Gbps</td>
-                        <td>~$16.29/小时</td>
+                        <td>1/4/8卡</td>
+                        <td>24GB</td>
+                        <td>24-192 GB</td>
+                        <td>4-192</td>
+                        <td>16-768 GB</td>
+                        <td>10-100 Gbps</td>
+                        <td>~$1.01-16.29/小时</td>
                         <td>2021</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">g5.12xlarge</td>
-                        <td class="gpu-name">NVIDIA A10G</td>
-                        <td>4</td>
-                        <td>24GB GDDR6</td>
-                        <td>96 GB</td>
-                        <td>48</td>
-                        <td>192 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$5.67/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g5.4xlarge</td>
-                        <td class="gpu-name">NVIDIA A10G</td>
-                        <td>1</td>
-                        <td>24GB GDDR6</td>
-                        <td>24 GB</td>
-                        <td>16</td>
-                        <td>64 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$1.62/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g5.2xlarge</td>
-                        <td class="gpu-name">NVIDIA A10G</td>
-                        <td>1</td>
-                        <td>24GB GDDR6</td>
-                        <td>24 GB</td>
-                        <td>8</td>
-                        <td>32 GB</td>
-                        <td>10 Gbps</td>
-                        <td>~$1.21/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g5.xlarge</td>
-                        <td class="gpu-name">NVIDIA A10G</td>
-                        <td>1</td>
-                        <td>24GB GDDR6</td>
-                        <td>24 GB</td>
-                        <td>4</td>
-                        <td>16 GB</td>
-                        <td>10 Gbps</td>
-                        <td>~$1.01/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g4dn.12xlarge</td>
+                        <td class="instance-name">G4dn 系列</td>
                         <td class="gpu-name">NVIDIA T4</td>
-                        <td>4</td>
-                        <td>16GB GDDR6</td>
-                        <td>64 GB</td>
-                        <td>48</td>
-                        <td>192 GB</td>
-                        <td>50 Gbps</td>
-                        <td>~$3.91/小时</td>
+                        <td>1/4卡</td>
+                        <td>16GB</td>
+                        <td>16-64 GB</td>
+                        <td>4-48</td>
+                        <td>16-192 GB</td>
+                        <td>25-50 Gbps</td>
+                        <td>~$0.53-3.91/小时</td>
                         <td>2019</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">g4dn.2xlarge</td>
-                        <td class="gpu-name">NVIDIA T4</td>
-                        <td>1</td>
-                        <td>16GB GDDR6</td>
-                        <td>16 GB</td>
-                        <td>8</td>
-                        <td>32 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$0.75/小时</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g4dn.xlarge</td>
-                        <td class="gpu-name">NVIDIA T4</td>
-                        <td>1</td>
-                        <td>16GB GDDR6</td>
-                        <td>16 GB</td>
-                        <td>4</td>
-                        <td>16 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$0.53/小时</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">g4ad.xlarge</td>
+                        <td class="instance-name">G4ad 系列</td>
                         <td class="gpu-name">AMD Radeon Pro V520</td>
-                        <td>1</td>
-                        <td>8GB GDDR6</td>
+                        <td>1卡</td>
+                        <td>8GB</td>
                         <td>8 GB</td>
                         <td>4</td>
                         <td>16 GB</td>
@@ -428,122 +344,50 @@
 
                     <!-- Inf系列 -->
                     <tr>
-                        <td class="instance-name">inf2.48xlarge</td>
+                        <td class="instance-name">Inf2 系列</td>
                         <td class="gpu-name">AWS Inferentia2</td>
-                        <td>12</td>
+                        <td>1/2/6/12芯片</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>192</td>
-                        <td>384 GB</td>
-                        <td>100 Gbps</td>
-                        <td>~$12.98/小时</td>
+                        <td>4-192</td>
+                        <td>16-384 GB</td>
+                        <td>15-100 Gbps</td>
+                        <td>~$0.76-12.98/小时</td>
                         <td>2022</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">inf2.24xlarge</td>
-                        <td class="gpu-name">AWS Inferentia2</td>
-                        <td>6</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>96</td>
-                        <td>192 GB</td>
-                        <td>50 Gbps</td>
-                        <td>~$6.49/小时</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">inf2.8xlarge</td>
-                        <td class="gpu-name">AWS Inferentia2</td>
-                        <td>2</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>32</td>
-                        <td>64 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$1.97/小时</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">inf2.xlarge</td>
-                        <td class="gpu-name">AWS Inferentia2</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>4</td>
-                        <td>16 GB</td>
-                        <td>15 Gbps</td>
-                        <td>~$0.76/小时</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">inf1.2xlarge</td>
+                        <td class="instance-name">Inf1 系列</td>
                         <td class="gpu-name">AWS Inferentia</td>
-                        <td>1</td>
+                        <td>1芯片</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>8</td>
-                        <td>16 GB</td>
+                        <td>4-8</td>
+                        <td>8-16 GB</td>
                         <td>25 Gbps</td>
-                        <td>~$0.58/小时</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">inf1.xlarge</td>
-                        <td class="gpu-name">AWS Inferentia</td>
-                        <td>1</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>4</td>
-                        <td>8 GB</td>
-                        <td>25 Gbps</td>
-                        <td>~$0.37/小时</td>
+                        <td>~$0.37-0.58/小时</td>
                         <td>2019</td>
                     </tr>
 
                     <!-- Trn系列 -->
                     <tr>
-                        <td class="instance-name">trn1n.32xlarge</td>
+                        <td class="instance-name">Trn1 系列</td>
                         <td class="gpu-name">AWS Trainium</td>
-                        <td>16</td>
-                        <td>32GB (每加速器)</td>
-                        <td>512 GB</td>
-                        <td>128</td>
-                        <td>512 GB</td>
-                        <td>1,600 Gbps</td>
-                        <td>~$24.78/小时</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">trn1.32xlarge</td>
-                        <td class="gpu-name">AWS Trainium</td>
-                        <td>16</td>
-                        <td>32GB (每加速器)</td>
-                        <td>512 GB</td>
-                        <td>128</td>
-                        <td>512 GB</td>
-                        <td>800 Gbps</td>
-                        <td>~$21.50/小时</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">trn1.2xlarge</td>
-                        <td class="gpu-name">AWS Trainium</td>
-                        <td>1</td>
+                        <td>1/16芯片</td>
                         <td>32GB</td>
-                        <td>32 GB</td>
-                        <td>8</td>
-                        <td>32 GB</td>
-                        <td>12.5 Gbps</td>
-                        <td>~$1.34/小时</td>
+                        <td>32-512 GB</td>
+                        <td>8-128</td>
+                        <td>32-512 GB</td>
+                        <td>12.5-1600 Gbps</td>
+                        <td>~$1.34-24.78/小时</td>
                         <td>2022</td>
                     </tr>
 
                     <!-- DL系列 -->
                     <tr>
-                        <td class="instance-name">dl1.24xlarge</td>
+                        <td class="instance-name">DL1 系列</td>
                         <td class="gpu-name">Habana Gaudi</td>
-                        <td>8</td>
-                        <td>32GB HBM2e</td>
+                        <td>8芯片</td>
+                        <td>32GB</td>
                         <td>256 GB</td>
                         <td>96</td>
                         <td>768 GB</td>

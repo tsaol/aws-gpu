@@ -218,6 +218,51 @@
 
 ---
 
+### G6e 系列（NVIDIA L40S）
+
+#### g6e.xlarge
+- **EC2 实例名称**: g6e.xlarge
+- **GPU 型号**: NVIDIA L40S Tensor Core GPU
+- **GPU 数量**: 1
+- **每GPU显存**: 48GB GDDR6
+- **总显存**: 48 GB
+- **vCPU**: 4
+- **系统内存**: 32 GB
+- **网络带宽**: 最高 20 Gbps
+- **EBS 带宽**: 最高 5 Gbps
+- **实例存储**: 250GB NVMe SSD
+- **发布时间**: 2024年
+- **适用场景**: 大模型推理(13B参数)、AI视频生成、空间计算、3D渲染
+- **价格参考**: ~$1.69/小时
+
+#### g6e.2xlarge
+- **EC2 实例名称**: g6e.2xlarge
+- **GPU 型号**: NVIDIA L40S
+- **GPU 数量**: 1
+- **每GPU显存**: 48GB GDDR6
+- **总显存**: 48 GB
+- **vCPU**: 8
+- **系统内存**: 64 GB
+- **网络带宽**: 最高 20 Gbps
+- **价格参考**: ~$2.41/小时
+
+#### g6e.48xlarge
+- **EC2 实例名称**: g6e.48xlarge
+- **GPU 型号**: NVIDIA L40S
+- **GPU 数量**: 8
+- **每GPU显存**: 48GB GDDR6
+- **总显存**: 384 GB
+- **vCPU**: 192
+- **系统内存**: 1,536 GB
+- **网络带宽**: 400 Gbps
+- **EBS 带宽**: 60 Gbps
+- **实例存储**: 7.6TB NVMe SSD
+- **发布时间**: 2024年
+- **适用场景**: 大规模AI推理、空间计算、数字孪生、高性能3D渲染
+- **价格参考**: ~$16.13/小时
+
+---
+
 ### G5 系列（NVIDIA A10G）
 
 #### g5.xlarge
@@ -469,13 +514,59 @@
 |---------|---------|---------|
 | 超大 (70B-480B+) | p5en.48xlarge | p5e.48xlarge |
 | 中大 (20B-70B) | p5.48xlarge | p4d.24xlarge |
-| 小型 (<20B) | g5.xlarge | inf2.xlarge |
+| 中型 (7B-20B) | g6e.xlarge | g6e.2xlarge |
+| 小型 (<7B) | g5.xlarge | inf2.xlarge |
 
 ### 图形渲染场景
 
 | 应用类型 | 推荐实例 |
 |---------|---------|
+| 顶级渲染 | g6e.xlarge, g6e.48xlarge |
 | 高端渲染 | g6.xlarge, g6.48xlarge |
 | 通用渲染 | g5.xlarge, g5.12xlarge |
 | 经济型 | g4dn.xlarge |
 | AMD需求 | g4ad.xlarge |
+---
+
+## 性能对比
+
+### 训练性能排序（相对分数）
+
+1. p6.48xlarge (B200): 100
+2. p5en.48xlarge (H200): 95
+3. p5e.48xlarge (H200): 93
+4. p5.48xlarge (H100): 90
+5. p4d.24xlarge (A100): 75
+6. trn1.32xlarge: 72
+7. p3.16xlarge (V100): 60
+
+### 推理性能排序（相对分数）
+
+1. p6.48xlarge: 100
+2. p5en.48xlarge: 95
+3. p5.48xlarge: 90
+4. p4d.24xlarge: 75
+5. g6e.xlarge: 72
+6. g6.xlarge: 70
+7. g5.xlarge: 68
+8. inf2.xlarge: 65
+9. g4dn.xlarge: 55
+
+### G6e vs G6 vs G5 对比
+
+| 特性 | G6e (L40S) | G6 (L4) | G5 (A10G) |
+|------|------------|---------|-----------|
+| 每GPU显存 | 48GB | 24GB | 24GB |
+| 显存带宽 | 864 GB/s | 300 GB/s | 600 GB/s |
+| 适合模型规模 | 7B-20B | 3B-7B | 3B-7B |
+| 推理性能 | 最高 | 中等 | 中等 |
+| 成本效率 | 高 | 最高 | 中等 |
+| 发布时间 | 2024 | 2024 | 2021 |
+
+---
+
+## 数据来源
+
+- AWS EC2 官方文档: https://aws.amazon.com/ec2/instance-types/
+- AWS 定价页面: https://aws.amazon.com/ec2/pricing/
+- NVIDIA GPU 规格: https://www.nvidia.com/data-center/
