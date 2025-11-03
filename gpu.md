@@ -13,20 +13,21 @@
 - **EC2 实例名称**: p6.48xlarge
 - **GPU 型号**: NVIDIA B200 Tensor Core GPU
 - **GPU 数量**: 8
-- **每GPU显存**: 192GB HBM3e
-- **总显存**: 1,536 GB
+- **每GPU显存**: ~179GB HBM3e
+- **总显存**: 1,432 GB
 - **GPU 显存带宽**: 8 TB/s (每GPU)
-- **vCPU**: 192 (Intel Xeon Scalable 第4代)
-- **系统内存**: 2,304 GB
-- **网络带宽**: 3,200 Gbps (ENA)
+- **vCPU**: 192 (Intel Xeon Scalable 第5代 Emerald Rapids)
+- **系统内存**: 2,048 GB
+- **网络带宽**: 3,200 Gbps (EFAv4)
 - **EBS 带宽**: 100 Gbps
-- **实例存储**: 8 x 7TB NVMe SSD (56 TB 总量)
-- **发布时间**: 2024年
+- **实例存储**: 8 x 3.84TB NVMe SSD (30.7 TB 总量)
+- **发布时间**: 2024年（2025年5月GA）
 - **适用场景**: 超大规模AI训练(>1T参数)、高吞吐量推理、多模态模型训练
-- **价格参考** (us-east-1):
+- **价格参考** (us-east-1, 估算):
   - 按需: ~$98.32/小时
   - Spot: ~$29.50/小时
   - 1年预留: ~$65.20/小时
+  - **注意**: 实际价格以AWS官网为准
 
 ---
 
@@ -39,10 +40,10 @@
 - **每GPU显存**: 141GB HBM3e
 - **总显存**: 1,128 GB
 - **GPU 显存带宽**: 4.8 TB/s (每GPU)
-- **vCPU**: 192 (AMD EPYC 第3代)
+- **vCPU**: 192 (Intel Xeon Scalable 第4代)
 - **系统内存**: 2,048 GB
-- **网络带宽**: 3,200 Gbps (EFA v2)
-- **EBS 带宽**: 80 Gbps
+- **网络带宽**: 3,200 Gbps (EFAv3)
+- **EBS 带宽**: 100 Gbps
 - **实例存储**: 8 x 3.8TB NVMe SSD (30.4 TB)
 - **发布时间**: 2024年
 - **适用场景**: 大模型训练(100B-1T参数)、超大模型推理(70B-480B参数)、分布式训练
@@ -451,7 +452,7 @@
 
 ---
 
-## 按场景推荐总结
+## 按场景
 
 ### AI 训练场景
 
@@ -478,36 +479,3 @@
 | 通用渲染 | g5.xlarge, g5.12xlarge |
 | 经济型 | g4dn.xlarge |
 | AMD需求 | g4ad.xlarge |
-
----
-
-## 性能对比
-
-### 训练性能排序（相对分数）
-
-1. p6.48xlarge (B200): 100
-2. p5en.48xlarge (H200): 95
-3. p5e.48xlarge (H200): 93
-4. p5.48xlarge (H100): 90
-5. p4d.24xlarge (A100): 75
-6. trn1.32xlarge: 72
-7. p3.16xlarge (V100): 60
-
-### 推理性能排序（相对分数）
-
-1. p6.48xlarge: 100
-2. p5en.48xlarge: 95
-3. p5.48xlarge: 90
-4. p4d.24xlarge: 75
-5. g6.xlarge: 70
-6. g5.xlarge: 68
-7. inf2.xlarge: 65
-8. g4dn.xlarge: 55
-
----
-
-## 数据来源
-
-- AWS EC2 官方文档: https://aws.amazon.com/ec2/instance-types/
-- AWS 定价页面: https://aws.amazon.com/ec2/pricing/
-- NVIDIA GPU 规格: https://www.nvidia.com/data-center/
