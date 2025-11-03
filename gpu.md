@@ -363,22 +363,6 @@
 
 ---
 
-### G4ad 系列（AMD Radeon Pro）
-
-#### g4ad.xlarge
-- **EC2 实例名称**: g4ad.xlarge
-- **GPU 型号**: AMD Radeon Pro V520
-- **GPU 数量**: 1
-- **每GPU显存**: 8GB GDDR6
-- **总显存**: 8 GB
-- **vCPU**: 4
-- **系统内存**: 16 GB
-- **实例存储**: 150GB NVMe SSD
-- **适用场景**: 图形应用、虚拟工作站、需要AMD GPU的应用
-- **价格参考**: ~$0.379/小时
-
----
-
 ## Inf 系列 - AWS Inferentia 推理加速器
 
 ### Inf2 系列
@@ -525,7 +509,6 @@
 | 高端渲染 | g6.xlarge, g6.48xlarge |
 | 通用渲染 | g5.xlarge, g5.12xlarge |
 | 经济型 | g4dn.xlarge |
-| AMD需求 | g4ad.xlarge |
 ---
 
 ## 性能对比
