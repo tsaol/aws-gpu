@@ -7,7 +7,7 @@
 
 ## P 系列 - 通用 GPU 计算实例
 
-### P6 系列（NVIDIA B200）
+### P6 系列（NVIDIA B200）- Global
 
 #### p6.48xlarge
 - **EC2 实例名称**: p6.48xlarge
@@ -31,7 +31,7 @@
 
 ---
 
-### P5 系列（NVIDIA H100/H200）
+### P5 系列（NVIDIA H100/H200）- Global
 
 #### p5en.48xlarge
 - **EC2 实例名称**: p5en.48xlarge
@@ -89,7 +89,7 @@
 
 ---
 
-### P4 系列（NVIDIA A100）
+### P4 系列（NVIDIA A100）- Global
 
 #### p4d.24xlarge
 - **EC2 实例名称**: p4d.24xlarge
@@ -126,7 +126,7 @@
 
 ---
 
-### P3 系列（NVIDIA V100）
+### P3 系列（NVIDIA V100）- Global, China
 
 #### p3.2xlarge
 - **EC2 实例名称**: p3.2xlarge
@@ -180,7 +180,7 @@
 
 ## G 系列 - 图形密集型实例
 
-### G6 系列（NVIDIA L4/L40S）
+### G6 系列（NVIDIA L4/L40S） - Global
 
 #### g6.xlarge
 - **EC2 实例名称**: g6.xlarge
@@ -218,7 +218,7 @@
 
 ---
 
-### G6e 系列（NVIDIA L40S）
+### G6e 系列（NVIDIA L40S）- Global
 
 #### g6e.xlarge
 - **EC2 实例名称**: g6e.xlarge
@@ -263,7 +263,7 @@
 
 ---
 
-### G5 系列（NVIDIA A10G）
+### G5 系列（NVIDIA A10G） - Global, China
 
 #### g5.xlarge
 - **EC2 实例名称**: g5.xlarge
@@ -322,7 +322,7 @@
 
 ---
 
-### G4dn 系列（NVIDIA T4）
+### G4dn 系列（NVIDIA T4） - Global, China
 
 #### g4dn.xlarge
 - **EC2 实例名称**: g4dn.xlarge
@@ -365,7 +365,7 @@
 
 ## Inf 系列 - AWS Inferentia 推理加速器
 
-### Inf2 系列
+### Inf2 系列 - Global
 
 #### inf2.xlarge
 - **EC2 实例名称**: inf2.xlarge
@@ -402,7 +402,7 @@
 
 ---
 
-### Inf1 系列
+### Inf1 系列 - Global
 
 #### inf1.xlarge
 - **EC2 实例名称**: inf1.xlarge
@@ -424,7 +424,7 @@
 
 ## Trn 系列 - AWS Trainium 训练加速器
 
-### Trn1 系列
+### Trn1 系列 - Global
 
 #### trn1.2xlarge
 - **EC2 实例名称**: trn1.2xlarge
@@ -464,7 +464,7 @@
 
 ## DL 系列 - Habana Gaudi 深度学习加速器
 
-### DL1 系列
+### DL1 系列 - Global
 
 #### dl1.24xlarge
 - **EC2 实例名称**: dl1.24xlarge
