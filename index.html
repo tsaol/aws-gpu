@@ -95,7 +95,13 @@
             color: #555;
         }
 
+        tbody tr.new {
+            background: #e8f5e9 !important;
+        }
 
+        tbody tr.new:hover {
+            background: #d4edda !important;
+        }
 
         .section-title {
             padding: 20px 20px 10px 20px;
@@ -213,40 +219,40 @@
                 </thead>
                 <tbody>
                     <!-- P系列 - 按发布时间倒序 -->
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name">P6</td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">B200</td>
                         <td>179GB</td>
-                        <td>超大规模AI训练(>1T参数)</td>
+                        <td>顶级训练性能、超大模型推理</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>~$98.32/小时</td>
                         <td>2025</td>
                     </tr>
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name">P5en</td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
-                        <td>大模型训练(100B-1T参数)</td>
+                        <td>高端训练、70B-480B模型推理</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>~$72.00/小时</td>
                         <td>2024</td>
                     </tr>
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name">P5e</td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
-                        <td>超大模型推理(>100B参数)</td>
+                        <td>70B-480B模型推理优化</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>~$68.00/小时</td>
@@ -259,33 +265,33 @@
                         <td>8</td>
                         <td class="gpu-name">H100</td>
                         <td>80GB</td>
-                        <td>通用大规模训练(10B-100B参数)</td>
+                        <td>通用训练、20B-70B模型推理</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>~$58.00/小时</td>
                         <td>2023</td>
                     </tr>
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name"> H20(西云) </td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-china">China</span></td>
                         <td>8</td>
                         <td class="gpu-name">H20</td>
                         <td>141GB</td>
-                        <td>DeepSeek、Kimi K2等大模型</td>
+                        <td>传统模型训练，DeepSeek 全参数、Kimi K2等大模型推理</td>
                         <td>96</td>
                         <td>2,048 GB</td>
                         <td>销售询价</td>
                         <td>2025</td>
                     </tr>
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name"> H20(光环) </td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-china">China</span></td>
                         <td>8</td>
                         <td class="gpu-name">H20</td>
                         <td>96GB</td>
-                        <td>Qwen 235B/32B/30B模型</td>
+                        <td>传统模型训练，DeepSeek量化模型 ，Qwen 32B/30B模型推理</td>
                         <td>96</td>
                         <td>2,048 GB</td>
                         <td>销售询价</td>
@@ -298,7 +304,7 @@
                         <td>8</td>
                         <td class="gpu-name">A100</td>
                         <td>80GB</td>
-                        <td>需要更大显存的A100场景</td>
+                        <td>通用训练、20B-70B模型推理</td>
                         <td>96</td>
                         <td>1,152 GB</td>
                         <td>~$40.97/小时</td>
@@ -346,20 +352,20 @@
 
 
                     <!-- G系列 -->
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name">G6e</td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>1/4/8</td>
                         <td class="gpu-name">L40S</td>
                         <td>48GB</td>
-                        <td>大模型推理(13B参数)、AI视频生成</td>
+                        <td>20B以下的模型推理、AI图像视频生成模型</td>
                         <td>4-192</td>
                         <td>32-1536 GB</td>
                         <td>~$1.69-16.13/小时</td>
                         <td>2024</td>
                     </tr>
-                    <tr>
+                    <tr class="new">
                         <td class="instance-name">G6</td>
                         <td><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
@@ -429,7 +435,6 @@
                             <th>区域</th>
                             <th>芯片 数量</th>
                             <th>芯片型号</th>
-                            <th>芯片内存</th>
                             <th>应用场景</th>
                             <th>vCPU</th>
                             <th>系统内存</th>
@@ -439,13 +444,12 @@
                     </thead>
                     <tbody>
                         <!-- 按发布时间倒序 -->
-                        <tr>
+                        <tr class="new">
                             <td class="instance-name">Trn2</td>
                             <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                             <td><span class="region-tag region-global">Global</span></td>
                             <td>16/64</td>
                             <td class="gpu-name">AWS Trainium2</td>
-                            <td>1.5TB</td>
                             <td>万亿参数级模型训练</td>
                             <td>192</td>
                             <td>2TB</td>
@@ -458,7 +462,6 @@
                             <td><span class="region-tag region-global">Global</span></td>
                             <td>1/2/6/12</td>
                             <td class="gpu-name">AWS Inferentia2</td>
-                            <td>-</td>
                             <td>小模型批量推理(<20B)</td>
                             <td>4-192</td>
                             <td>16-384 GB</td>
@@ -471,7 +474,6 @@
                             <td><span class="region-tag region-global">Global</span></td>
                             <td>1/16</td>
                             <td class="gpu-name">AWS Trainium</td>
-                            <td>32GB</td>
                             <td>中大型模型训练、NLP模型</td>
                             <td>8-128</td>
                             <td>32-512 GB</td>
@@ -484,7 +486,6 @@
                             <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                             <td>1</td>
                             <td class="gpu-name">AWS Inferentia</td>
-                            <td>-</td>
                             <td>传统推理模型、成本优化</td>
                             <td>4-8</td>
                             <td>8-16 GB</td>
