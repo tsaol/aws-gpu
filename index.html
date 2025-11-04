@@ -99,6 +99,36 @@
             background: #e8f5e9;
         }
 
+        .section-title {
+            padding: 20px 20px 10px 20px;
+            font-size: 1.3em;
+            font-weight: 500;
+            color: #232f3e;
+            border-bottom: 2px solid #ff9900;
+            margin-bottom: 0;
+        }
+
+        .region-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .region-global {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 1px solid #90caf9;
+        }
+
+        .region-china {
+            background: #fff3e0;
+            color: #e65100;
+            border: 1px solid #ffb74d;
+        }
+
         footer {
             background: #232f3e;
             color: #ddd;
@@ -151,9 +181,9 @@
                     <tr>
                         <th>实例家族</th>
                         <th>区域</th>
-                        <th>GPU配置</th>
+                        <th>GPU 数量</th>
                         <th>GPU型号</th>
-                        <th>每GPU显存</th>
+                        <th>GPU 显存</th>
                         <th>vCPU</th>
                         <th>系统内存</th>
                         <th>网络带宽</th>
@@ -166,7 +196,7 @@
                     <tr class="new">
                         <td class="instance-name">P6</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">B200</td>
                         <td>179GB</td>
                         <td>192</td>
@@ -178,7 +208,7 @@
                     <tr class="new">
                         <td class="instance-name">P5en</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
                         <td>192</td>
@@ -190,7 +220,7 @@
                     <tr class="new">
                         <td class="instance-name">P5e</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
                         <td>192</td>
@@ -202,7 +232,7 @@
                     <tr>
                         <td class="instance-name">P5</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">H100</td>
                         <td>80GB</td>
                         <td>192</td>
@@ -214,7 +244,7 @@
                     <tr>
                         <td class="instance-name">P4de</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">A100</td>
                         <td>80GB</td>
                         <td>96</td>
@@ -226,7 +256,7 @@
                     <tr>
                         <td class="instance-name">P4d</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">A100</td>
                         <td>40GB</td>
                         <td>96</td>
@@ -238,7 +268,7 @@
                     <tr>
                         <td class="instance-name">P3dn</td>
                         <td>Global</td>
-                        <td>8卡</td>
+                        <td>8</td>
                         <td class="gpu-name">V100</td>
                         <td>32GB</td>
                         <td>96</td>
@@ -250,7 +280,7 @@
                     <tr>
                         <td class="instance-name">P3</td>
                         <td>Global, China</td>
-                        <td>1/4/8卡</td>
+                        <td>1/4/8</td>
                         <td class="gpu-name">V100</td>
                         <td>16GB</td>
                         <td>8-64</td>
@@ -265,7 +295,7 @@
                     <tr class="new">
                         <td class="instance-name">G6e</td>
                         <td>Global</td>
-                        <td>1/4/8卡</td>
+                        <td>1/4/8</td>
                         <td class="gpu-name">L40S</td>
                         <td>48GB</td>
                         <td>4-192</td>
@@ -277,7 +307,7 @@
                     <tr class="new">
                         <td class="instance-name">G6</td>
                         <td>Global</td>
-                        <td>1/8卡</td>
+                        <td>1/8</td>
                         <td class="gpu-name">L4</td>
                         <td>24GB</td>
                         <td>4-192</td>
@@ -289,7 +319,7 @@
                     <tr>
                         <td class="instance-name">G5</td>
                         <td>Global, China</td>
-                        <td>1/4/8卡</td>
+                        <td>1/4/8</td>
                         <td class="gpu-name">A10G</td>
                         <td>24GB</td>
                         <td>4-192</td>
@@ -301,7 +331,7 @@
                     <tr>
                         <td class="instance-name">G4dn</td>
                         <td>Global, China</td>
-                        <td>1/4卡</td>
+                        <td>1/4</td>
                         <td class="gpu-name">T4</td>
                         <td>16GB</td>
                         <td>4-48</td>
@@ -325,9 +355,9 @@
                         <tr>
                             <th>实例家族</th>
                             <th>区域</th>
-                            <th>芯片配置</th>
+                            <th>芯片 数量</th>
                             <th>芯片型号</th>
-                            <th>每芯片内存</th>
+                            <th>芯片内存</th>
                             <th>vCPU</th>
                             <th>系统内存</th>
                             <th>网络带宽</th>
@@ -341,7 +371,7 @@
                         <tr class="new">
                             <td class="instance-name">Inf2</td>
                             <td>Global</td>
-                            <td>1/2/6/12芯片</td>
+                            <td>1/2/6/12</td>
                             <td class="gpu-name">AWS Inferentia2</td>
                             <td>-</td>
                             <td>4-192</td>
@@ -354,7 +384,7 @@
                         <tr>
                             <td class="instance-name">Inf1</td>
                             <td>Global</td>
-                            <td>1芯片</td>
+                            <td>1</td>
                             <td class="gpu-name">AWS Inferentia</td>
                             <td>-</td>
                             <td>4-8</td>
@@ -369,7 +399,7 @@
                         <tr class="new">
                             <td class="instance-name">Trn1</td>
                             <td>Global</td>
-                            <td>1/16芯片</td>
+                            <td>1/16</td>
                             <td class="gpu-name">AWS Trainium</td>
                             <td>32GB</td>
                             <td>8-128</td>
@@ -384,7 +414,7 @@
                         <tr>
                             <td class="instance-name">DL1</td>
                             <td>Global</td>
-                            <td>8芯片</td>
+                            <td>8</td>
                             <td class="gpu-name">Habana Gaudi</td>
                             <td>32GB</td>
                             <td>96</td>
