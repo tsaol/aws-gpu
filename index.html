@@ -129,6 +129,27 @@
             border: 1px solid #ffb74d;
         }
 
+        .workload-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .workload-training {
+            background: #f3e5f5;
+            color: #7b1fa2;
+            border: 1px solid #ce93d8;
+        }
+
+        .workload-inference {
+            background: #e8f5e8;
+            color: #2e7d32;
+            border: 1px solid #81c784;
+        }
+
         footer {
             background: #232f3e;
             color: #ddd;
@@ -173,7 +194,7 @@
 
         <!-- GPU 实例 -->
         <section class="section">
-            <h2 class="section-title">NVIDIA GPU</h2>
+            <h2 class="section-title"><strong>NVIDIA GPU</strong></h2>
             
         <div class="table-container">
             <table>
@@ -196,8 +217,8 @@
                     <!-- P系列 - 按发布时间倒序 -->
                     <tr class="new">
                         <td class="instance-name">P6</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">B200</td>
                         <td>179GB</td>
@@ -209,8 +230,8 @@
                     </tr>
                     <tr class="new">
                         <td class="instance-name">P5en</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
@@ -222,8 +243,8 @@
                     </tr>
                     <tr class="new">
                         <td class="instance-name">P5e</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">H200</td>
                         <td>141GB</td>
@@ -235,8 +256,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">P5</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">H100</td>
                         <td>80GB</td>
@@ -247,35 +268,35 @@
                         <td>2023</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">光环H20</td>
-                        <td>训练/推理</td>
-                        <td>China</td>
+                        <td class="instance-name"> H20(光环) </td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-china">China</span></td>
                         <td>8</td>
                         <td class="gpu-name">H20</td>
                         <td>96GB</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>3,200 Gbps</td>
-                        <td>¥49,800/月</td>
-                        <td>2024</td>
+                        <td>销售询价</td>
+                        <td>2025</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">西云H20</td>
-                        <td>训练/推理</td>
-                        <td>China</td>
+                        <td class="instance-name"> H20(西云)</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-china">China</span></td>
                         <td>8</td>
                         <td class="gpu-name">H20</td>
-                        <td>96GB</td>
+                        <td>141GB</td>
                         <td>192</td>
                         <td>2,048 GB</td>
                         <td>3,200 Gbps</td>
-                        <td>¥32,500/月</td>
-                        <td>2024</td>
+                        <td>销售询价</td>
+                        <td>2025</td>
                     </tr>
                     <tr>
                         <td class="instance-name">P4de</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">A100</td>
                         <td>80GB</td>
@@ -287,8 +308,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">P4d</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>8</td>
                         <td class="gpu-name">A100</td>
                         <td>40GB</td>
@@ -300,8 +321,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">P3dn</td>
-                        <td>训练/推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
                         <td class="gpu-name">V100</td>
                         <td>32GB</td>
@@ -313,8 +334,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">P3</td>
-                        <td>训练/推理</td>
-                        <td>Global, China</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4/8</td>
                         <td class="gpu-name">V100</td>
                         <td>16GB</td>
@@ -329,8 +350,8 @@
                     <!-- G系列 -->
                     <tr class="new">
                         <td class="instance-name">G6e</td>
-                        <td>推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>1/4/8</td>
                         <td class="gpu-name">L40S</td>
                         <td>48GB</td>
@@ -342,8 +363,8 @@
                     </tr>
                     <tr class="new">
                         <td class="instance-name">G6</td>
-                        <td>推理</td>
-                        <td>Global</td>
+                        <td><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span></td>
                         <td>1/8</td>
                         <td class="gpu-name">L4</td>
                         <td>24GB</td>
@@ -355,8 +376,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">G5</td>
-                        <td>推理</td>
-                        <td>Global, China</td>
+                        <td><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4/8</td>
                         <td class="gpu-name">A10G</td>
                         <td>24GB</td>
@@ -368,8 +389,8 @@
                     </tr>
                     <tr>
                         <td class="instance-name">G4dn</td>
-                        <td>推理</td>
-                        <td>Global, China</td>
+                        <td><span class="workload-tag workload-inference">推理</span></td>
+                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4</td>
                         <td class="gpu-name">T4</td>
                         <td>16GB</td>
@@ -409,8 +430,8 @@
                         <!-- 推理专用芯片 -->
                         <tr class="new">
                             <td class="instance-name">Inf2</td>
-                            <td>推理</td>
-                            <td>Global</td>
+                            <td><span class="workload-tag workload-inference">推理</span></td>
+                            <td><span class="region-tag region-global">Global</span></td>
                             <td>1/2/6/12</td>
                             <td class="gpu-name">AWS Inferentia2</td>
                             <td>-</td>
@@ -422,8 +443,8 @@
                         </tr>
                         <tr>
                             <td class="instance-name">Inf1</td>
-                            <td>推理</td>
-                            <td>Global</td>
+                            <td><span class="workload-tag workload-inference">推理</span></td>
+                            <td><span class="region-tag region-global">Global</span></td>
                             <td>1</td>
                             <td class="gpu-name">AWS Inferentia</td>
                             <td>-</td>
@@ -437,8 +458,8 @@
                         <!-- 训练专用芯片 -->
                         <tr class="new">
                             <td class="instance-name">Trn1</td>
-                            <td>训练</td>
-                            <td>Global</td>
+                            <td><span class="workload-tag workload-training">训练</span></td>
+                            <td><span class="region-tag region-global">Global</span></td>
                             <td>1/16</td>
                             <td class="gpu-name">AWS Trainium</td>
                             <td>32GB</td>
@@ -452,8 +473,8 @@
                         <!-- 第三方芯片 -->
                         <tr>
                             <td class="instance-name">DL1</td>
-                            <td>训练</td>
-                            <td>Global</td>
+                            <td><span class="workload-tag workload-training">训练</span></td>
+                            <td><span class="region-tag region-global">Global</span></td>
                             <td>8</td>
                             <td class="gpu-name">Habana Gaudi</td>
                             <td>32GB</td>
@@ -472,7 +493,7 @@
         </div>
 
         <footer>
-            <p>数据来源: AWS 官方文档 | 项目仓库: https://github.com/tsaol/aws-gpu</p>
+            <p>数据来源: AWS 官方文档</p>
         </footer>
     </div>
 </body>
