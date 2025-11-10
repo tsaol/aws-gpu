@@ -42,8 +42,6 @@ WorkingDirectory=/home/ubuntu/Codes/aws-gpu
 ExecStart=/usr/bin/python3 -m http.server 3000
 Restart=always
 RestartSec=10
-StandardOutput=append:/home/ubuntu/Codes/aws-gpu/server.log
-StandardError=append:/home/ubuntu/Codes/aws-gpu/server.log
 
 [Install]
 WantedBy=multi-user.target
@@ -80,18 +78,33 @@ sudo systemctl stop aws-gpu-server
 # 重启服务
 sudo systemctl restart aws-gpu-server
 
-# 查看服务日志
-sudo journalctl -u aws-gpu-server -f
-
 # 禁用开机自动启动
 sudo systemctl disable aws-gpu-server
+```
+
+### 4. 查看日志
+
+日志由 systemd journal 自动管理，无需担心日志文件占满磁盘：
+
+```bash
+# 查看实时日志
+sudo journalctl -u aws-gpu-server -f
+
+# 查看最近 50 条日志
+sudo journalctl -u aws-gpu-server -n 50
+
+# 查看今天的日志
+sudo journalctl -u aws-gpu-server --since today
+
+# 查看最近 1 小时的日志
+sudo journalctl -u aws-gpu-server --since "1 hour ago"
 ```
 
 ### 服务特性
 
 - ✅ 系统重启后自动启动
 - ✅ 进程崩溃后自动重启（10秒后）
-- ✅ 日志自动记录到 `server.log`
+- ✅ 日志由 systemd journal 自动管理（自动轮转，不占满磁盘）
 - ✅ 在后台持续运行
 
 ## 项目文件
@@ -99,7 +112,7 @@ sudo systemctl disable aws-gpu-server
 - `index.html` - 主页面，展示 GPU 实例列表
 - `gpu.md` - GPU 实例详细信息库
 - `requirements.md` - 项目需求文档
-- `server.log` - 服务器访问日志
+- `deployment.md` - 部署和服务配置文档
 
 ## 数据更新
 
