@@ -27,7 +27,32 @@ python3 -m http.server 3000
 
 如果你希望服务在后台持续运行，并在系统重启后自动启动，可以设置为 systemd 服务。
 
-### 1. 创建服务文件
+### 快速部署（使用脚本）
+
+项目提供了自动化部署脚本，一键完成所有配置：
+
+```bash
+# 使用默认配置（端口 3000，当前目录）
+sudo ./deploy.sh
+
+# 自定义端口和路径
+sudo ./deploy.sh 8080 /path/to/project
+```
+
+脚本会自动：
+- ✅ 检查系统环境
+- ✅ 创建 systemd 服务文件
+- ✅ 启用开机自动启动
+- ✅ 启动服务
+- ✅ 验证部署状态
+
+---
+
+### 手动部署（详细步骤）
+
+如果你想了解部署细节或手动配置，可以按以下步骤操作。
+
+#### 1. 创建服务文件
 
 ```bash
 sudo tee /etc/systemd/system/aws-gpu-server.service > /dev/null << 'EOF'
@@ -53,7 +78,7 @@ EOF
 - `WorkingDirectory=/home/ubuntu/Codes/aws-gpu` - 改为你的项目路径
 - `ExecStart` 中的端口号（默认 3000）
 
-### 2. 启用并启动服务
+#### 2. 启用并启动服务
 
 ```bash
 # 重新加载 systemd 配置
@@ -66,7 +91,7 @@ sudo systemctl enable aws-gpu-server.service
 sudo systemctl start aws-gpu-server.service
 ```
 
-### 3. 服务管理命令
+#### 3. 服务管理命令
 
 ```bash
 # 查看服务状态
@@ -82,7 +107,7 @@ sudo systemctl restart aws-gpu-server
 sudo systemctl disable aws-gpu-server
 ```
 
-### 4. 查看日志
+#### 4. 查看日志
 
 日志由 systemd journal 自动管理，无需担心日志文件占满磁盘：
 
@@ -113,6 +138,7 @@ sudo journalctl -u aws-gpu-server --since "1 hour ago"
 - `gpu.md` - GPU 实例详细信息库
 - `requirements.md` - 项目需求文档
 - `deployment.md` - 部署和服务配置文档
+- `deploy.sh` - 自动化部署脚本
 
 ## 数据更新
 
