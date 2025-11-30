@@ -442,7 +442,6 @@
     <!-- Load real instance data -->
     <script>
         // Dynamic data loading based on region
-        let instanceData = [];
         let currentRegion = "us-east-1";
         let currentDataFile = 'global'; // 'global' or 'china'
 
@@ -476,9 +475,11 @@
             });
         }
 
-        // Initial load
+        // Initial load - load global data first
         loadDataFile(false).then(() => {
-            renderTable();
+            if (typeof instanceData !== 'undefined') {
+                renderTable();
+            }
         });
         const regionNames = {
             "us-east-1": "美国东部（弗吉尼亚北部）",
