@@ -132,13 +132,72 @@ sudo journalctl -u aws-gpu-server --since "1 hour ago"
 - ✅ 日志由 systemd journal 自动管理（自动轮转，不占满磁盘）
 - ✅ 在后台持续运行
 
+## 远程部署到 EC2 实例
+
+如果你需要批量部署或更新多个 EC2 实例，可以使用提供的部署脚本。
+
+### 配置环境变量
+
+1. 复制环境变量示例文件：
+```bash
+cp .env.example .env
+```
+
+2. 编辑 `.env` 文件，填入你的 EC2 实例 ID：
+```bash
+# 多个实例用逗号分隔
+AWS_GPU_INSTANCES="i-xxxxxxxxxxxxx,i-yyyyyyyyyyyyy"
+```
+
+3. 加载环境变量：
+```bash
+source .env
+# 或者
+export AWS_GPU_INSTANCES="i-xxxxxxxxxxxxx,i-yyyyyyyyyyyyy"
+```
+
+### 首次部署
+
+使用 `deploy_to_instances.sh` 进行首次部署：
+
+```bash
+./deploy_to_instances.sh
+```
+
+这个脚本会自动：
+- 检查实例状态
+- 安装 git 和 python3
+- 克隆项目代码
+- 配置并启动 systemd 服务
+
+### 后续更新
+
+使用 `update_instances.sh` 更新已部署的实例：
+
+```bash
+./update_instances.sh
+```
+
+这个脚本会：
+- 检查本地 git 状态
+- 从 GitHub 拉取最新代码
+- 重启服务
+
+**注意**：
+- 确保本地已安装并配置 AWS CLI
+- 实例必须安装 AWS Systems Manager (SSM) Agent
+- 需要有足够的 IAM 权限执行 SSM 命令
+
 ## 项目文件
 
 - `index.html` - 主页面，展示 GPU 实例列表
 - `gpu.md` - GPU 实例详细信息库
 - `requirements.md` - 项目需求文档
 - `deployment.md` - 部署和服务配置文档
-- `deploy.sh` - 自动化部署脚本
+- `deploy.sh` - 本地部署脚本
+- `deploy_to_instances.sh` - EC2 远程部署脚本
+- `update_instances.sh` - EC2 远程更新脚本
+- `.env.example` - 环境变量示例文件
 
 ## 数据更新
 

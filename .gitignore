@@ -11,3 +11,6 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+
+# Environment variables (contains sensitive information)
+.env
