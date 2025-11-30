@@ -272,7 +272,8 @@
 
         .price-item {
             display: flex;
-            justify-content: space-between;
+            
+            gap: 4px;
             align-items: center;
             font-size: 0.9em;
         }
@@ -293,7 +294,7 @@
         }
 
         .spec-unit {
-            color: #a0aec0;
+            color: #2d3748;
             font-size: 0.85em;
             margin-left: 2px;
         }
@@ -472,7 +473,7 @@
                 row.innerHTML = `
                     <td>
                         <div class="instance-name">${instance.name}</div>
-                        <div class="api-name">${instance.apiName || instance.name}</div>
+                        ${instance.apiName && instance.apiName !== instance.name ? `<div class="api-name">${instance.apiName}</div>` : ''}
                         ${instance.isNew ? '<span class="badge badge-new">新品</span>' : ''}
                     </td>
                     <td>
@@ -487,7 +488,7 @@
                         <div class="price-grid">
                             <div class="price-item">
                                 <span class="price-label">按需：</span>
-                                <span class="price-value">$$${pricing.onDemand.toFixed(2)}/小时</span>
+                                <span class="price-value">$${pricing.onDemand.toFixed(2)}/小时</span>
                             </div>
                         </div>
                     ` : '<span style="color: #999;">不可用</span>'}</td>
