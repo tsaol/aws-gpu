@@ -464,6 +464,8 @@
                 .then(scriptText => {
                     // Execute the script to get chinaData
                     const tempInstanceData = instanceData; // Save current
+                    // Replace const declaration with assignment to avoid conflict
+                    scriptText = scriptText.replace(/const\s+instanceData\s*=/, 'instanceData =');
                     eval(scriptText);
                     chinaData = instanceData; // Save china data
                     instanceData = tempInstanceData; // Restore
