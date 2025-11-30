@@ -45,6 +45,9 @@ const instanceData = [
       },
       "us-west-2": {
         "onDemand": 14.4
+      },
+      "cn-north-1": {
+        "onDemand": 169.792
       }
     },
     "availability": [
@@ -58,7 +61,8 @@ const instanceData = [
       "us-east-1",
       "us-east-2",
       "us-gov-west-1",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -106,6 +110,9 @@ const instanceData = [
       },
       "us-west-2": {
         "onDemand": 7.2
+      },
+      "cn-north-1": {
+        "onDemand": 84.896
       }
     },
     "availability": [
@@ -119,7 +126,8 @@ const instanceData = [
       "us-east-1",
       "us-east-2",
       "us-gov-west-1",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -167,6 +175,9 @@ const instanceData = [
       },
       "us-west-2": {
         "onDemand": 0.9
+      },
+      "cn-north-1": {
+        "onDemand": 10.612
       }
     },
     "availability": [
@@ -180,7 +191,8 @@ const instanceData = [
       "us-east-1",
       "us-east-2",
       "us-gov-west-1",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1"
     ],
     "generation": "current",
     "family": "GPU instance"
