@@ -91,6 +91,28 @@
             color: #232f3e;
         }
 
+        .instance-name a {
+            color: #232f3e;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .instance-name a:hover {
+            color: #ff9900;
+            transform: translateX(3px);
+        }
+
+        .instance-name a::after {
+            content: " →";
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .instance-name a:hover::after {
+            opacity: 1;
+        }
+
         .gpu-name {
             color: #555;
         }
@@ -220,7 +242,7 @@
                 <tbody>
                     <!-- P系列 - 按发布时间倒序 -->
                     <tr class="new">
-                        <td class="instance-name">P6</td>
+                        <td class="instance-name"><a href="instances/p6.html">P6</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
@@ -233,43 +255,17 @@
                         <td>2025</td>
                     </tr>
                     <tr class="new">
-                        <td class="instance-name">P5en</td>
+                        <td class="instance-name"><a href="instances/p5.html">P5</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
-                        <td class="gpu-name">H200</td>
-                        <td>141GB</td>
-                        <td>高端训练、70B-480B模型推理</td>
+                        <td class="gpu-name">H100/H200</td>
+                        <td>80-141GB</td>
+                        <td>大模型训练、超大模型推理 (3个实例类型)</td>
                         <td>192</td>
                         <td>2,048 GB</td>
-                        <td>~$72.00/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name">P5e</td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H200</td>
-                        <td>141GB</td>
-                        <td>70B-480B模型推理优化</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$68.00/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name">P5</td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H100</td>
-                        <td>80GB</td>
-                        <td>通用训练、20B-70B模型推理</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$58.00/小时</td>
-                        <td>2023</td>
+                        <td>~$58-72/小时</td>
+                        <td>2023-2024</td>
                     </tr>
                     <tr class="new">
                         <td class="instance-name"> H20(西云) </td>
@@ -298,7 +294,7 @@
                         <td>2025</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">P4de</td>
+                        <td class="instance-name"><a href="instances/p4de.html">P4de</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
@@ -311,7 +307,7 @@
                         <td>2020</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">P4d</td>
+                        <td class="instance-name"><a href="instances/p4d.html">P4d</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
@@ -324,7 +320,7 @@
                         <td>2020</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">P3dn</td>
+                        <td class="instance-name"><a href="instances/p3dn.html">P3dn</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>8</td>
@@ -337,7 +333,7 @@
                         <td>2018</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">P3</td>
+                        <td class="instance-name"><a href="instances/p3.html">P3</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4/8</td>
@@ -353,7 +349,7 @@
 
                     <!-- G系列 -->
                     <tr class="new">
-                        <td class="instance-name">G6e</td>
+                        <td class="instance-name"><a href="instances/g6e.html">G6e</a></td>
                         <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>1/4/8</td>
@@ -366,7 +362,7 @@
                         <td>2024</td>
                     </tr>
                     <tr class="new">
-                        <td class="instance-name">G6</td>
+                        <td class="instance-name"><a href="instances/g6.html">G6</a></td>
                         <td><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>1/8</td>
@@ -379,20 +375,20 @@
                         <td>2024</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">G5</td>
+                        <td class="instance-name"><a href="instances/g5.html">G5</a></td>
                         <td><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4/8</td>
                         <td class="gpu-name">A10G</td>
                         <td>24GB</td>
-                        <td>小模型实时推理(<20B)</td>
+                        <td>小模型实时推理(<20B) (5个实例类型)</td>
                         <td>4-192</td>
                         <td>16-768 GB</td>
                         <td>~$1.01-16.29/小时</td>
                         <td>2021</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">G5g</td>
+                        <td class="instance-name"><a href="instances/g5g.html">G5g</a></td>
                         <td><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span></td>
                         <td>1/2</td>
@@ -405,7 +401,7 @@
                         <td>2021</td>
                     </tr>
                     <tr>
-                        <td class="instance-name">G4dn</td>
+                        <td class="instance-name"><a href="instances/g4dn.html">G4dn</a></td>
                         <td><span class="workload-tag workload-inference">推理</span></td>
                         <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                         <td>1/4</td>
@@ -457,7 +453,7 @@
                             <td>2024</td>
                         </tr>
                         <tr>
-                            <td class="instance-name">Inf2</td>
+                            <td class="instance-name"><a href="instances/inf2.html">Inf2</a></td>
                             <td><span class="workload-tag workload-inference">推理</span></td>
                             <td><span class="region-tag region-global">Global</span></td>
                             <td>1/6/12</td>
@@ -469,7 +465,7 @@
                             <td>2022</td>
                         </tr>
                         <tr>
-                            <td class="instance-name">Trn1</td>
+                            <td class="instance-name"><a href="instances/trn1.html">Trn1</a></td>
                             <td><span class="workload-tag workload-training">训练</span></td>
                             <td><span class="region-tag region-global">Global</span></td>
                             <td>1/16</td>
@@ -481,7 +477,7 @@
                             <td>2022</td>
                         </tr>
                         <tr>
-                            <td class="instance-name">Inf1</td>
+                            <td class="instance-name"><a href="instances/inf1.html">Inf1</a></td>
                             <td><span class="workload-tag workload-inference">推理</span></td>
                             <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
                             <td>1</td>
