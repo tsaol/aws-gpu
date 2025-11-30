@@ -136,7 +136,7 @@ for family, instances in sorted(families.items()):
     with open(output_file, 'w') as f:
         f.write('// Auto-generated from instances.vantage.sh China region data\n')
         f.write('// Last updated: 2025-11-30\n\n')
-        f.write('const instanceData = ')
+        f.write('var instanceData = ')
         f.write(json.dumps(instances, indent=2))
         f.write(';\n')
     

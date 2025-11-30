@@ -1,7 +1,7 @@
 // Trn2 instance data from instances.vantage.sh
 // Last updated: 2025-11-30
 
-const instanceData = [
+var instanceData = [
   {
     "name": "trn2.48xlarge",
     "apiName": "trn2.48xlarge",

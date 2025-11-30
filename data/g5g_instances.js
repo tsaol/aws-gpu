@@ -1,7 +1,7 @@
 // Auto-generated from instances.vantage.sh data
 // Last updated: 2025-11-30
 
-const instanceData = [
+var instanceData = [
   {
     "name": "g5g.16xlarge",
     "apiName": "g5g.16xlarge",
