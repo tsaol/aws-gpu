@@ -440,10 +440,46 @@
     </div>
 
     <!-- Load real instance data -->
-    <script src="../data/g5_instances.js"></script>
-
     <script>
+        // Dynamic data loading based on region
+        let instanceData = [];
         let currentRegion = "us-east-1";
+        let currentDataFile = 'global'; // 'global' or 'china'
+
+        // Load data file dynamically
+        function loadDataFile(isChinaRegion) {
+            const targetFile = isChinaRegion ? 'china' : 'global';
+
+            // Only reload if switching between global and china
+            if (targetFile === currentDataFile) {
+                return Promise.resolve();
+            }
+
+            currentDataFile = targetFile;
+            const scriptSrc = isChinaRegion ? '../data/g5_instances_cn.js' : '../data/g5_instances.js';
+
+            return new Promise((resolve, reject) => {
+                // Remove old script if exists
+                const oldScript = document.querySelector('script[data-instance-data]');
+                if (oldScript) {
+                    oldScript.remove();
+                }
+
+                const script = document.createElement('script');
+                script.src = scriptSrc;
+                script.setAttribute('data-instance-data', 'true');
+                script.onload = () => {
+                    resolve();
+                };
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        }
+
+        // Initial load
+        loadDataFile(false).then(() => {
+            renderTable();
+        });
         const regionNames = {
             "us-east-1": "美国东部（弗吉尼亚北部）",
             "us-east-2": "美国东部（俄亥俄）",
@@ -488,7 +524,7 @@
                         <div class="price-grid">
                             <div class="price-item">
                                 <span class="price-label">按需：</span>
-                                <span class="price-value">$${pricing.onDemand.toFixed(2)}/小时</span>
+                                <span class="price-value">${currentRegion.startsWith('cn-') ? '¥' : '$'}${pricing.onDemand.toFixed(2)}/小时</span>
                             </div>
                         </div>
                     ` : '<span style="color: #999;">不可用</span>'}</td>
@@ -503,10 +539,19 @@
 
         function changeRegion(region) {
             currentRegion = region;
+            const isChinaRegion = region.startsWith('cn-');
+
             document.getElementById('regionCode').textContent = region;
             document.getElementById('statsRegion').textContent = region;
             document.getElementById('currentRegionLabel').textContent = regionNames[region] || region;
-            renderTable();
+
+            // Load appropriate data file and render
+            loadDataFile(isChinaRegion).then(() => {
+                renderTable();
+            }).catch(err => {
+                console.error('Failed to load data file:', err);
+                renderTable(); // Still try to render with current data
+            });
         }
 
         const filterInput = document.getElementById('filterInput');
