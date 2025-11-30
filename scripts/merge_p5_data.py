@@ -55,7 +55,7 @@ with open(output_file, 'w') as f:
     f.write('// Auto-generated P5 Family data from instances.vantage.sh\n')
     f.write('// Last updated: 2025-11-30\n')
     f.write('// Includes: p5, p5e, p5en variants\n\n')
-    f.write('const instanceData = ')
+    f.write('var instanceData = ')
     f.write(json.dumps(all_p5_instances, indent=2))
     f.write(';\n')
 

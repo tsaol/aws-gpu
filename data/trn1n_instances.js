@@ -1,7 +1,7 @@
 // Auto-generated from instances.vantage.sh data
 // Last updated: 2025-11-30
 
-const instanceData = [
+var instanceData = [
   {
     "name": "trn1n.32xlarge",
     "apiName": "trn1n.32xlarge",

@@ -1,7 +1,7 @@
 // Auto-generated from instances.vantage.sh China region data
 // Last updated: 2025-11-30
 
-const instanceData = [
+var instanceData = [
   {
     "name": "p3.16xlarge",
     "apiName": "p3.16xlarge",
