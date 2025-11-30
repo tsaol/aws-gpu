@@ -76,6 +76,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 5.672,
         "reserved": 3.57336
+      },
+      "cn-north-1": {
+        "onDemand": 53.64092,
+        "reserved": 34.51793
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 53.64092
+      },
+      "cn-northwest-1": {
+        "onDemand": 37.78062,
+        "reserved": 23.60344
       }
     },
     "availability": [
@@ -94,7 +105,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -173,6 +187,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 4.096,
         "reserved": 2.58048
+      },
+      "cn-north-1": {
+        "onDemand": 38.73646,
+        "reserved": 24.92691
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 38.73646
+      },
+      "cn-northwest-1": {
+        "onDemand": 27.28304,
+        "reserved": 17.04508
       }
     },
     "availability": [
@@ -191,7 +216,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -270,6 +298,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 8.144,
         "reserved": 5.13072
+      },
+      "cn-north-1": {
+        "onDemand": 77.01898,
+        "reserved": 49.56171
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 77.01898
+      },
+      "cn-northwest-1": {
+        "onDemand": 54.24636,
+        "reserved": 33.89042
       }
     },
     "availability": [
@@ -288,7 +327,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -367,6 +409,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 1.212,
         "reserved": 0.76356
+      },
+      "cn-north-1": {
+        "onDemand": 11.46206,
+        "reserved": 7.37583
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 11.46206
+      },
+      "cn-northwest-1": {
+        "onDemand": 8.07301,
+        "reserved": 5.04361
       }
     },
     "availability": [
@@ -385,7 +438,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -464,6 +520,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 16.288,
         "reserved": 10.26144
+      },
+      "cn-north-1": {
+        "onDemand": 154.03795,
+        "reserved": 99.12342
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 154.03795
+      },
+      "cn-northwest-1": {
+        "onDemand": 108.49273,
+        "reserved": 67.78083
       }
     },
     "availability": [
@@ -482,7 +549,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -564,6 +634,17 @@ const instanceData = [
       },
       "us-west-2-lax-1": {
         "onDemand": 2.23098
+      },
+      "cn-north-1": {
+        "onDemand": 15.3584,
+        "reserved": 9.88313
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 15.3584
+      },
+      "cn-northwest-1": {
+        "onDemand": 10.8173,
+        "reserved": 6.75811
       }
     },
     "availability": [
@@ -583,7 +664,10 @@ const instanceData = [
       "us-east-1",
       "us-east-2",
       "us-west-2",
-      "us-west-2-lax-1"
+      "us-west-2-lax-1",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -665,6 +749,17 @@ const instanceData = [
       },
       "us-west-2-lax-1": {
         "onDemand": 3.36296
+      },
+      "cn-north-1": {
+        "onDemand": 23.15109,
+        "reserved": 14.89772
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 23.15109
+      },
+      "cn-northwest-1": {
+        "onDemand": 16.30588,
+        "reserved": 10.1871
       }
     },
     "availability": [
@@ -684,7 +779,10 @@ const instanceData = [
       "us-east-1",
       "us-east-2",
       "us-west-2",
-      "us-west-2-lax-1"
+      "us-west-2-lax-1",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -763,6 +861,17 @@ const instanceData = [
       "us-west-2": {
         "onDemand": 1.006,
         "reserved": 0.63378
+      },
+      "cn-north-1": {
+        "onDemand": 9.51389,
+        "reserved": 6.12219
+      },
+      "cn-north-1-pkx-1": {
+        "onDemand": 9.51389
+      },
+      "cn-northwest-1": {
+        "onDemand": 6.70086,
+        "reserved": 4.18637
       }
     },
     "availability": [
@@ -781,7 +890,10 @@ const instanceData = [
       "sa-east-1",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "cn-north-1",
+      "cn-north-1-pkx-1",
+      "cn-northwest-1"
     ],
     "generation": "current",
     "family": "GPU instance"
