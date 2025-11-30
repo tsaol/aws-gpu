@@ -7,10 +7,16 @@
 # set -e
 
 # 配置
-INSTANCES=(
-    "i-036902f5b0ab2e24e"  # gpu-whole-picture-1
-    "i-0844edeba5a78ac70"  # (gpu whole picture -2) claudedev-private-1
-)
+# 从环境变量读取实例ID，格式：AWS_GPU_INSTANCES="instance-id-1,instance-id-2"
+if [ -z "$AWS_GPU_INSTANCES" ]; then
+    echo "❌ 错误: 未设置环境变量 AWS_GPU_INSTANCES"
+    echo "请设置环境变量："
+    echo "  export AWS_GPU_INSTANCES=\"instance-id-1,instance-id-2\""
+    exit 1
+fi
+
+# 将逗号分隔的字符串转换为数组
+IFS=',' read -ra INSTANCES <<< "$AWS_GPU_INSTANCES"
 
 PROJECT_DIR="/home/ubuntu/codes/aws-gpu"
 SERVICE_NAME="aws-gpu-server"
