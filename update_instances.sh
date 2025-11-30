@@ -3,7 +3,8 @@
 # AWS GPU 实例更新脚本
 # 用于更新部署在 EC2 实例上的 aws-gpu 项目
 
-set -e
+# 不使用 set -e，手动处理错误
+# set -e
 
 # 配置
 INSTANCES=(
