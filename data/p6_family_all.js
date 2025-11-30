@@ -36,7 +36,7 @@ const instanceData = [
     "generation": "current",
     "family": "GPU instance",
     "isNew": true,
-    "year": "2024-2025"
+    "year": "2025"
   },
   {
     "name": "p6-b300.48xlarge",
@@ -59,6 +59,6 @@ const instanceData = [
     "generation": "current",
     "family": "GPU instance",
     "isNew": true,
-    "year": "2024-2025"
+    "year": "2025"
   }
 ];
