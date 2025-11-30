@@ -190,9 +190,9 @@ export AWS_GPU_INSTANCES="i-xxxxxxxxxxxxx,i-yyyyyyyyyyyyy"
 
 ## 项目文件
 
+- `README.md` - 项目说明文档
 - `index.html` - 主页面，展示 GPU 实例列表
 - `gpu.md` - GPU 实例详细信息库
-- `requirements.md` - 项目需求文档
 - `deployment.md` - 部署和服务配置文档
 - `deploy.sh` - 本地部署脚本
 - `deploy_to_instances.sh` - EC2 远程部署脚本
