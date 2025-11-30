@@ -92,20 +92,22 @@
         }
 
         .instance-name a {
-            color: #232f3e;
+            color: #0066cc;
             text-decoration: none;
             display: inline-block;
             transition: all 0.2s;
+            border-bottom: 1px dashed #0066cc;
         }
 
         .instance-name a:hover {
             color: #ff9900;
+            border-bottom-color: #ff9900;
             transform: translateX(3px);
         }
 
         .instance-name a::after {
             content: " →";
-            opacity: 0;
+            opacity: 0.5;
             transition: opacity 0.2s;
         }
 
