@@ -201,7 +201,33 @@ export AWS_GPU_INSTANCES="i-xxxxxxxxxxxxx,i-yyyyyyyyyyyyy"
 
 ## 数据更新
 
-实例数据来源于 `gpu.md` 文件，如需更新实例信息，请编辑该文件。
+### 数据来源
+
+实例数据来自 **instances.vantage.sh**（第三方 AWS Pricing API 聚合服务），存储在 `data/` 目录。
+
+### 更新流程
+
+1. **下载最新数据**:
+   ```bash
+   curl -o data/instances_full.json https://instances.vantage.sh/instances.json
+   ```
+
+2. **处理数据**:
+   ```bash
+   python3 scripts/extract_gpu_instances.py      # 提取 GPU 实例
+   python3 scripts/convert_to_awsgpu_format.py   # 转换为项目格式
+   python3 scripts/generate_instance_pages.py    # 生成详情页面
+   ```
+
+3. **同步到 EC2**:
+   ```bash
+   git add data/*.js instances/*.html
+   git commit -m "update gpu data"
+   git push origin main
+   ./update_instances.sh  # 自动同步到所有 EC2 实例
+   ```
+
+详细的数据同步机制请参考主 README.md 的"数据更新"章节。
 
 ## 技术栈
 
