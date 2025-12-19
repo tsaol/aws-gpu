@@ -70,10 +70,6 @@ var instanceData = [
       "us-west-2": {
         "onDemand": 21.95764,
         "reserved": 13.921092
-      },
-      "cn-northwest-1": {
-        "onDemand": 172.873412,
-        "reserved": 109.601338
       }
     },
     "availability": [
@@ -91,8 +87,7 @@ var instanceData = [
       "us-east-1",
       "us-east-2",
       "us-gov-west-1",
-      "us-west-2",
-      "cn-northwest-1"
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"

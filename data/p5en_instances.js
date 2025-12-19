@@ -31,6 +31,9 @@ var instanceData = [
       "eu-south-2": {
         "onDemand": 68.35968
       },
+      "me-central-1": {
+        "onDemand": 75.9552
+      },
       "us-east-1": {
         "onDemand": 63.296
       },
@@ -57,6 +60,7 @@ var instanceData = [
       "ap-southeast-3",
       "eu-north-1",
       "eu-south-2",
+      "me-central-1",
       "us-east-1",
       "us-east-1-atl-1",
       "us-east-2",

@@ -70,9 +70,9 @@ def get_gpu_info(inst):
     instance_type = inst.get('instance_type', '')
     
     gpu_models = {
-        'p6-b200': 'NVIDIA GB200 Grace Blackwell',
-        'p6-b300': 'NVIDIA GB200 Grace Blackwell',
         'p6e-gb200': 'NVIDIA GB200 Grace Blackwell',
+        'p6-b300': 'NVIDIA B300 Blackwell',
+        'p6-b200': 'NVIDIA B200 Blackwell',
         'p5en': 'NVIDIA H200',
         'p5e': 'NVIDIA H200',
         'p5': 'NVIDIA H100',
@@ -112,10 +112,16 @@ converted_instances = []
 for inst in raw_instances:
     gpu_info = get_gpu_info(inst)
     pricing = convert_pricing(inst.get('pricing', {}))
-    
-    if not pricing:  # 跳过没有价格信息的实例
-        continue
-    
+
+    # 对于没有价格信息的实例（预览中），仍然包含它们但标记为预览
+    if not pricing:
+        pricing = {}
+        availability = []
+        generation = 'preview'
+    else:
+        availability = list(pricing.keys())
+        generation = inst.get('generation', 'current')
+
     converted = {
         'name': inst['instance_type'],
         'apiName': inst['instance_type'],
@@ -127,8 +133,8 @@ for inst in raw_instances:
         'network': inst.get('network_performance', 'Unknown'),
         'storage': format_storage(inst),
         'pricing': pricing,
-        'availability': list(pricing.keys()),
-        'generation': inst.get('generation', 'current'),
+        'availability': availability,
+        'generation': generation,
         'family': inst.get('family', 'Unknown'),
     }
     
