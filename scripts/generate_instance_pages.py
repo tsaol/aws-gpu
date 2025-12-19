@@ -8,21 +8,39 @@ from pathlib import Path
 FAMILY_INFO = {
     'p6-b200': {
         'title': 'P6-B200 Instance Family',
-        'description': 'NVIDIA GB200 Grace Blackwell Superchip',
+        'description': 'NVIDIA B200 Blackwell',
         'use_case': 'Next-Gen AI Training & Inference',
         'year': '2024'
     },
     'p6-b300': {
         'title': 'P6-B300 Instance Family',
-        'description': 'NVIDIA GB200 Grace Blackwell Superchip',
+        'description': 'NVIDIA B300 Blackwell',
         'use_case': 'Next-Gen AI Training & Inference',
-        'year': '2025'
+        'year': '2024'
+    },
+    'p6e-gb200': {
+        'title': 'P6e-GB200 UltraServers',
+        'description': 'NVIDIA GB200 Grace Blackwell Superchip',
+        'use_case': 'Ultra-Scale AI Training (Preview)',
+        'year': '2024'
+    },
+    'p5en': {
+        'title': 'P5en Instance Family',
+        'description': 'NVIDIA H200 Tensor Core',
+        'use_case': 'Large-scale Training with Enhanced Memory',
+        'year': '2024'
+    },
+    'p5e': {
+        'title': 'P5e Instance Family',
+        'description': 'NVIDIA H200 Tensor Core',
+        'use_case': 'High Performance Training (Preview)',
+        'year': '2024'
     },
     'p5': {
         'title': 'P5 Instance Family',
-        'description': 'NVIDIA H100/H200 Tensor Core',
+        'description': 'NVIDIA H100 Tensor Core',
         'use_case': 'Large-scale Training & Inference',
-        'year': '2023-2024'
+        'year': '2023'
     },
     'p4d': {
         'title': 'P4d Instance Family',

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G4dn Instance Family - AWS GPU 实例对比</title>
+    <title>G4dn Instance Family - AWS GPU Instance Comparison</title>
     <style>
         * {
             margin: 0;
@@ -272,8 +272,7 @@
 
         .price-item {
             display: flex;
-            
-            gap: 4px;
+            justify-content: space-between;
             align-items: center;
             font-size: 0.9em;
         }
@@ -294,7 +293,7 @@
         }
 
         .spec-unit {
-            color: #2d3748;
+            color: #a0aec0;
             font-size: 0.85em;
             margin-left: 2px;
         }
@@ -353,7 +352,7 @@
         <header>
             <h1>G4dn Instance Family</h1>
             <div class="breadcrumb">
-                <a href="../index.html">← 返回总览</a> / NVIDIA GPU / G 系列 / G4DN
+                <a href="../index.html">← Back to Overview</a> / NVIDIA GPU / G Series / G4DN
             </div>
         </header>
 
@@ -376,33 +375,33 @@
             </div>
             <div class="info-item">
                 <span class="info-label">Current Region</span>
-                <span class="info-value" id="currentRegionLabel">美国东部（弗吉尼亚北部）</span>
+                <span class="info-value" id="currentRegionLabel">US East (N. Virginia)</span>
             </div>
         </div>
 
         <div class="controls">
             <div class="control-group">
-                <input type="text" id="filterInput" class="filter-input" placeholder="🔍 筛选实例...">
+                <input type="text" id="filterInput" class="filter-input" placeholder="🔍 Filter instances...">
                 <select id="regionSelect" class="region-select" onchange="changeRegion(this.value)">
-                    <optgroup label="主要区域">
-                        <option value="us-east-1">美国东部（弗吉尼亚北部）</option>
-                        <option value="us-east-2">美国东部（俄亥俄）</option>
-                        <option value="us-west-1">美国西部（加利福尼亚北部）</option>
-                        <option value="us-west-2">美国西部（俄勒冈）</option>
-                        <option value="eu-west-1">欧洲（爱尔兰）</option>
-                        <option value="eu-central-1">欧洲（法兰克福）</option>
-                        <option value="ap-southeast-1">亚太（新加坡）</option>
-                        <option value="ap-northeast-1">亚太（东京）</option>
+                    <optgroup label="Main Regions">
+                        <option value="us-east-1">US East (N. Virginia)</option>
+                        <option value="us-east-2">US East (Ohio)</option>
+                        <option value="us-west-1">US West (N. California)</option>
+                        <option value="us-west-2">US West (Oregon)</option>
+                        <option value="eu-west-1">Europe (Ireland)</option>
+                        <option value="eu-central-1">Europe (Frankfurt)</option>
+                        <option value="ap-southeast-1">Asia Pacific (Singapore)</option>
+                        <option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
                     </optgroup>
-                    <optgroup label="中国区域">
-                        <option value="cn-north-1">中国（北京）</option>
-                        <option value="cn-northwest-1">中国（宁夏）</option>
+                    <optgroup label="China Regions">
+                        <option value="cn-north-1">China (Beijing)</option>
+                        <option value="cn-northwest-1">China (Ningxia)</option>
                     </optgroup>
                 </select>
             </div>
             <div class="control-group">
-                <button class="btn btn-secondary" onclick="clearFilter()">清除筛选</button>
-                <button class="btn btn-primary" onclick="window.location.href='../index.html'">← 返回</button>
+                <button class="btn btn-secondary" onclick="clearFilter()">Clear Filter</button>
+                <button class="btn btn-primary" onclick="window.location.href='../index.html'">← Back</button>
             </div>
         </div>
 
@@ -410,15 +409,15 @@
             <table id="instanceTable">
                 <thead>
                     <tr>
-                        <th class="sortable" onclick="sortTable(0)">实例类型</th>
-                        <th class="sortable" onclick="sortTable(1)">GPU 型号</th>
-                        <th class="sortable" onclick="sortTable(2)">数量</th>
-                        <th class="sortable" onclick="sortTable(3)">vCPU</th>
-                        <th class="sortable" onclick="sortTable(4)">系统内存</th>
-                        <th class="sortable" onclick="sortTable(5)">网络</th>
-                        <th class="sortable" onclick="sortTable(6)">存储</th>
+                        <th class="sortable" onclick="sortTable(0)">Instance Type</th>
+                        <th class="sortable" onclick="sortTable(1)">GPU/Accelerator</th>
+                        <th class="sortable" onclick="sortTable(2)">Count</th>
+                        <th class="sortable" onclick="sortTable(3)">vCPUs</th>
+                        <th class="sortable" onclick="sortTable(4)">System Memory</th>
+                        <th class="sortable" onclick="sortTable(5)">Network</th>
+                        <th class="sortable" onclick="sortTable(6)">Storage</th>
                         <th>Pricing (<span id="regionCode">us-east-1</span>)</th>
-                        <th>可用性</th>
+                        <th>Availability</th>
                     </tr>
                 </thead>
                 <tbody id="instanceTableBody">
@@ -427,83 +426,35 @@
         </div>
 
         <div class="stats">
-            显示 <strong id="visibleCount">0</strong> / 共 <strong id="totalCount">0</strong> 个实例 |
-            价格区域：<strong id="statsRegion">us-east-1</strong>
+            Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong> instances |
+            Pricing for <strong id="statsRegion">us-east-1</strong> region |
+            Real pricing data from <strong>instances.vantage.sh</strong> (AWS Pricing API)
         </div>
 
         <footer>
-            <p>AWS GPU 实例对比 | <a href="../index.html">返回总览</a></p>
+            <p>AWS GPU Instance Comparison | <a href="../index.html">Back to Overview</a></p>
             <p style="margin-top: 8px; font-size: 0.9em; opacity: 0.8;">
-                数据更新： 2025-11-30. 价格可能变动。
+                Data updated: 2025-11-30. Prices subject to change.
             </p>
         </footer>
     </div>
 
     <!-- Load real instance data -->
     <script src="../data/g4dn_instances.js"></script>
+
     <script>
-        // Store both global and china data
-        let globalData = null;
-        let chinaData = null;
         let currentRegion = "us-east-1";
-        let currentDataFile = 'global'; // 'global' or 'china'
-
-        // Save global data after page loads
-        if (typeof instanceData !== 'undefined') {
-            globalData = [...instanceData]; // Deep copy
-        }
-
-        // Load China data if needed
-        function loadChinaData() {
-            if (chinaData !== null) {
-                return Promise.resolve();
-            }
-
-            return fetch('../data/g4dn_instances_cn.js?v=' + Date.now())
-                .then(response => response.text())
-                .then(scriptText => {
-                    // Execute the script to get chinaData
-                    const tempInstanceData = instanceData; // Save current
-                    // Replace const declaration with assignment to avoid conflict
-                    scriptText = scriptText.replace(/const\s+instanceData\s*=/, 'instanceData =');
-                    eval(scriptText);
-                    chinaData = instanceData; // Save china data
-                    instanceData = tempInstanceData; // Restore
-                })
-                .catch(err => {
-                    console.error('Failed to load China data:', err);
-                    chinaData = []; // Empty array on error
-                });
-        }
-
-        // Switch data based on region
-        function switchData(isChinaRegion) {
-            if (isChinaRegion) {
-                return loadChinaData().then(() => {
-                    if (chinaData && chinaData.length > 0) {
-                        instanceData = chinaData;
-                        currentDataFile = 'china';
-                    }
-                });
-            } else {
-                if (globalData && globalData.length > 0) {
-                    instanceData = globalData;
-                }
-                currentDataFile = 'global';
-                return Promise.resolve();
-            }
-        }
         const regionNames = {
-            "us-east-1": "美国东部（弗吉尼亚北部）",
-            "us-east-2": "美国东部（俄亥俄）",
-            "us-west-1": "美国西部（加利福尼亚北部）",
-            "us-west-2": "美国西部（俄勒冈）",
-            "eu-west-1": "欧洲（爱尔兰）",
-            "eu-central-1": "欧洲（法兰克福）",
-            "ap-southeast-1": "亚太（新加坡）",
-            "ap-northeast-1": "亚太（东京）",
-            "cn-north-1": "中国（北京）",
-            "cn-northwest-1": "中国（宁夏）",
+            "us-east-1": "US East (N. Virginia)",
+            "us-east-2": "US East (Ohio)",
+            "us-west-1": "US West (N. California)",
+            "us-west-2": "US West (Oregon)",
+            "eu-west-1": "Europe (Ireland)",
+            "eu-central-1": "Europe (Frankfurt)",
+            "ap-southeast-1": "Asia Pacific (Singapore)",
+            "ap-northeast-1": "Asia Pacific (Tokyo)",
+            "cn-north-1": "China (Beijing)",
+            "cn-northwest-1": "China (Ningxia)",
         };
 
         function renderTable() {
@@ -522,8 +473,8 @@
                 row.innerHTML = `
                     <td>
                         <div class="instance-name">${instance.name}</div>
-                        ${instance.apiName && instance.apiName !== instance.name ? `<div class="api-name">${instance.apiName}</div>` : ''}
-                        ${instance.isNew ? '<span class="badge badge-new">new</span>' : ''}
+                        <div class="api-name">${instance.apiName || instance.name}</div>
+                        ${instance.isNew ? '<span class="badge badge-new">NEW</span>' : ''}
                     </td>
                     <td>
                         <div class="spec-value">${instance.gpu}</div>
@@ -536,12 +487,12 @@
                     <td>${isAvailable && pricing ? `
                         <div class="price-grid">
                             <div class="price-item">
-                                <span class="price-label">按需：</span>
-                                <span class="price-value">${currentDataFile === 'china' ? '¥' : '$'}${pricing.onDemand.toFixed(2)}/小时</span>
+                                <span class="price-label">On-Demand:</span>
+                                <span class="price-value">$${pricing.onDemand.toFixed(2)}/hr</span>
                             </div>
                         </div>
-                    ` : '<span style="color: #999;">不可用</span>'}</td>
-                    <td>${isAvailable ? '<span class="badge badge-region">可用</span>' : '<span style="color: #999;">不可用</span>'}</td>
+                    ` : '<span style="color: #999;">Not Available</span>'}</td>
+                    <td>${isAvailable ? '<span class="badge badge-region">Available</span>' : '<span style="color: #999;">Not Available</span>'}</td>
                 `;
 
                 tbody.appendChild(row);
@@ -552,19 +503,10 @@
 
         function changeRegion(region) {
             currentRegion = region;
-            const isChinaRegion = region.startsWith('cn-');
-
             document.getElementById('regionCode').textContent = region;
             document.getElementById('statsRegion').textContent = region;
             document.getElementById('currentRegionLabel').textContent = regionNames[region] || region;
-
-            // Switch data and render
-            switchData(isChinaRegion).then(() => {
-                renderTable();
-            }).catch(err => {
-                console.error('Failed to load data file:', err);
-                renderTable(); // Still try to render with current data
-            });
+            renderTable();
         }
 
         const filterInput = document.getElementById('filterInput');
