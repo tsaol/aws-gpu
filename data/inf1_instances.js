@@ -100,14 +100,6 @@ var instanceData = [
       "us-west-2": {
         "onDemand": 4.721,
         "reserved": 2.974
-      },
-      "cn-north-1": {
-        "onDemand": 47.342,
-        "reserved": 27.695
-      },
-      "cn-northwest-1": {
-        "onDemand": 33.376,
-        "reserved": 21.027
       }
     },
     "availability": [
@@ -132,9 +124,7 @@ var instanceData = [
       "us-gov-east-1",
       "us-gov-west-1",
       "us-west-1",
-      "us-west-2",
-      "cn-north-1",
-      "cn-northwest-1"
+      "us-west-2"
     ],
     "generation": "current",
     "family": "Machine Learning ASIC Instances"
@@ -233,14 +223,6 @@ var instanceData = [
       "us-west-2": {
         "onDemand": 0.362,
         "reserved": 0.228
-      },
-      "cn-north-1": {
-        "onDemand": 3.63,
-        "reserved": 2.123
-      },
-      "cn-northwest-1": {
-        "onDemand": 2.559,
-        "reserved": 1.612
       }
     },
     "availability": [
@@ -264,9 +246,7 @@ var instanceData = [
       "us-gov-east-1",
       "us-gov-west-1",
       "us-west-1",
-      "us-west-2",
-      "cn-north-1",
-      "cn-northwest-1"
+      "us-west-2"
     ],
     "generation": "current",
     "family": "Machine Learning ASIC Instances"
@@ -365,14 +345,6 @@ var instanceData = [
       "us-west-2": {
         "onDemand": 1.18,
         "reserved": 0.744
-      },
-      "cn-north-1": {
-        "onDemand": 11.835,
-        "reserved": 6.924
-      },
-      "cn-northwest-1": {
-        "onDemand": 8.344,
-        "reserved": 5.257
       }
     },
     "availability": [
@@ -396,9 +368,7 @@ var instanceData = [
       "us-gov-east-1",
       "us-gov-west-1",
       "us-west-1",
-      "us-west-2",
-      "cn-north-1",
-      "cn-northwest-1"
+      "us-west-2"
     ],
     "generation": "current",
     "family": "Machine Learning ASIC Instances"
@@ -501,14 +471,6 @@ var instanceData = [
       "us-west-2": {
         "onDemand": 0.228,
         "reserved": 0.144
-      },
-      "cn-north-1": {
-        "onDemand": 2.288,
-        "reserved": 1.338
-      },
-      "cn-northwest-1": {
-        "onDemand": 1.613,
-        "reserved": 1.016
       }
     },
     "availability": [
@@ -533,9 +495,7 @@ var instanceData = [
       "us-gov-east-1",
       "us-gov-west-1",
       "us-west-1",
-      "us-west-2",
-      "cn-north-1",
-      "cn-northwest-1"
+      "us-west-2"
     ],
     "generation": "current",
     "family": "Machine Learning ASIC Instances"

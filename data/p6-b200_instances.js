@@ -5,7 +5,7 @@ var instanceData = [
   {
     "name": "p6-b200.48xlarge",
     "apiName": "p6-b200.48xlarge",
-    "gpu": "NVIDIA GB200 Grace Blackwell",
+    "gpu": "NVIDIA B200 Blackwell",
     "gpuCount": 8,
     "gpuMemory": "Unknown",
     "vcpu": 192,
