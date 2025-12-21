@@ -1,5 +1,6 @@
 // Auto-generated from instances.vantage.sh data
 // Last updated: 2025-11-30
+// Status updated: 2024-12-21 (GA released)
 
 var instanceData = [
   {
@@ -14,7 +15,7 @@ var instanceData = [
     "storage": "EBS Only",
     "pricing": {},
     "availability": [],
-    "generation": "preview",
+    "generation": "current",
     "family": "GPU instance"
   }
 ];
