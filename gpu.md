@@ -1,11 +1,72 @@
 # AWS GPU 实例完整信息库
 
-> 最后更新：2025-11-03
-> 版本：v1.0
+> 最后更新：2024-12-21
+> 版本：v1.1 (新增 P6e-GB200 UltraServers)
 
 ---
 
 ## P 系列 - 通用 GPU 计算实例
+
+### P6e 系列（NVIDIA GB200 Grace Blackwell UltraServers）- Global
+
+#### u-p6e-gb200x36
+- **EC2 实例名称**: u-p6e-gb200x36
+- **GPU 型号**: NVIDIA GB200 Grace Blackwell Superchip
+- **GPU 数量**: 36 (在单个 NVLink 域内)
+- **GPU 总显存**: 6,660 GB (13.4 TB HBM3e for 72x)
+- **vCPU**: 1,296 (NVIDIA Grace CPU, ARM-based)
+- **系统内存**: 8,640 GiB
+- **网络带宽**: 14,400 Gbps (14.4 Tbps EFAv4)
+- **EBS 带宽**: 540 Gbps
+- **实例存储**: 202.5 TB NVMe SSD
+- **计算性能**: 180 PetaFLOPS (FP8, non-sparse)
+- **发布时间**: 2024年12月
+- **可用区域**: us-east-1-dfw-2a (达拉斯本地扩展区)
+- **Workload类型**: 训练/推理
+- **适用场景**:
+  - 超大规模AI模型训练 (万亿参数级别)
+  - 混合专家模型 (Mixture of Experts)
+  - 多模态大模型训练和推理
+  - 生成式AI应用 (代码生成、视频/图像生成、语音识别)
+- **技术特点**:
+  - NVIDIA NVLink-C2C 互连技术，GPU与CPU紧密集成
+  - 支持 NVIDIA GPUDirect RDMA
+  - AWS Nitro System 技术支持
+  - 可扩展至数万个 GPU (EC2 UltraClusters)
+- **购买方式**: EC2 Capacity Blocks for ML
+- **集成服务**:
+  - Amazon SageMaker Hyperpod
+  - Amazon EKS (支持拓扑感知路由)
+  - Amazon FSx for Lustre
+- **参考链接**: [AWS 官方博客](https://aws.amazon.com/cn/blogs/china/new-amazon-ec2-p6e-gb200-ultraservers-powered-by-nvidia-grace-blackwell-gpus-for-the-highest-ai-performance/)
+
+#### u-p6e-gb200x72
+- **EC2 实例名称**: u-p6e-gb200x72
+- **GPU 型号**: NVIDIA GB200 Grace Blackwell Superchip
+- **GPU 数量**: 72 (在单个 NVLink 域内)
+- **GPU 总显存**: 13,320 GB (13.4 TB HBM3e)
+- **vCPU**: 2,592 (NVIDIA Grace CPU, ARM-based)
+- **系统内存**: 17,280 GiB
+- **网络带宽**: 28,800 Gbps (28.8 Tbps EFAv4)
+- **EBS 带宽**: 1,080 Gbps
+- **实例存储**: 405 TB NVMe SSD
+- **计算性能**: 360 PetaFLOPS (FP8, non-sparse)
+- **发布时间**: 2024年12月
+- **可用区域**: us-east-1-dfw-2a (达拉斯本地扩展区)
+- **Workload类型**: 训练/推理
+- **适用场景**:
+  - 最大规模AI模型训练 (万亿参数以上)
+  - 需要最高计算密度的分布式训练
+  - 大规模推理服务集群
+  - 复杂多模态模型处理
+- **技术特点**:
+  - 单一 NVLink 域内最大 GPU 配置
+  - 最高网络吞吐量 28.8 Tbps
+  - 405 TB 本地存储，适合大数据集缓存
+- **购买方式**: EC2 Capacity Blocks for ML
+- **参考链接**: [AWS 官方博客](https://aws.amazon.com/cn/blogs/china/new-amazon-ec2-p6e-gb200-ultraservers-powered-by-nvidia-grace-blackwell-gpus-for-the-highest-ai-performance/)
+
+---
 
 ### P6 系列（NVIDIA B200）- Global
 

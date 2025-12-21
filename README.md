@@ -43,7 +43,7 @@
 
 | 实例家族 | GPU 型号 | 发布年份 | 状态 |
 |---------|---------|---------|------|
-| **P6e** | NVIDIA GB200 Grace Blackwell | 2024 | 🔄 预览中 |
+| **P6e** | NVIDIA GB200 Grace Blackwell | 2024 | 🆕 最新 |
 | **P6** | NVIDIA B200/B300 Blackwell | 2024 | 🆕 最新 |
 | **P5en** | NVIDIA H200 | 2024 | 🔥 推荐 |
 | **P5** | NVIDIA H100 | 2023 | ✅ 稳定 |
