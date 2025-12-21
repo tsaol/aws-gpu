@@ -18,13 +18,12 @@ from utils import read_js_data, colorize, group_by_family
 
 
 # GPU.md 文档结构配置
-SERIES_ORDER = ['P', 'G', 'Inf', 'Trn', 'DL']
+SERIES_ORDER = ['P', 'G', 'Inf', 'Trn']
 SERIES_TITLES = {
     'P': 'P 系列（训练型）',
     'G': 'G 系列（推理/图形）',
     'Inf': 'Inferentia 系列（推理）',
     'Trn': 'Trainium 系列（训练）',
-    'DL': 'DL 系列（深度学习）',
 }
 
 # 额外的手动信息（数据源不提供）
