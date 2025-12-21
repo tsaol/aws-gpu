@@ -290,56 +290,6 @@ FAMILY_INFO = {
         'year': '2024',
         'series': 'Trn',
     },
-    # 旧型号
-    'g3': {
-        'title': 'G3 Instance Family',
-        'description': 'NVIDIA M60',
-        'use_case': 'Graphics Workstations (Previous Gen)',
-        'year': '2017',
-        'series': 'G',
-    },
-    'g3s': {
-        'title': 'G3s Instance Family',
-        'description': 'NVIDIA M60 (Small)',
-        'use_case': 'Graphics Workstations',
-        'year': '2017',
-        'series': 'G',
-    },
-    'g2': {
-        'title': 'G2 Instance Family',
-        'description': 'NVIDIA GRID K520',
-        'use_case': 'Graphics (Legacy)',
-        'year': '2014',
-        'series': 'G',
-    },
-    'g6f': {
-        'title': 'G6f Instance Family',
-        'description': 'NVIDIA L40',
-        'use_case': 'Graphics Rendering',
-        'year': '2024',
-        'series': 'G',
-    },
-    'gr6': {
-        'title': 'GR6 Instance Family',
-        'description': 'NVIDIA L4',
-        'use_case': 'Real-time Inference',
-        'year': '2024',
-        'series': 'G',
-    },
-    'gr6f': {
-        'title': 'GR6f Instance Family',
-        'description': 'NVIDIA L40',
-        'use_case': 'Real-time Rendering',
-        'year': '2024',
-        'series': 'G',
-    },
-    'dl2q': {
-        'title': 'DL2q Instance Family',
-        'description': 'Qualcomm AI 100',
-        'use_case': 'AI Inference',
-        'year': '2023',
-        'series': 'DL',
-    },
 }
 
 # ==================== 工具函数 ====================
