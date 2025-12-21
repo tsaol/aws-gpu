@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {

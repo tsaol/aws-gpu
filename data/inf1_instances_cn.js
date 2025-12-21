@@ -1,13 +1,13 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "inf1.24xlarge",
     "apiName": "inf1.24xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia",
     "gpuCount": 16,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB",
     "vcpu": 96,
     "memory": "192 GB",
     "network": "100 Gigabit",
@@ -32,9 +32,9 @@ var instanceData = [
   {
     "name": "inf1.2xlarge",
     "apiName": "inf1.2xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB",
     "vcpu": 8,
     "memory": "16 GB",
     "network": "Up to 25 Gigabit",
@@ -59,9 +59,9 @@ var instanceData = [
   {
     "name": "inf1.6xlarge",
     "apiName": "inf1.6xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB",
     "vcpu": 24,
     "memory": "48 GB",
     "network": "25 Gigabit",
@@ -86,9 +86,9 @@ var instanceData = [
   {
     "name": "inf1.xlarge",
     "apiName": "inf1.xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB",
     "vcpu": 4,
     "memory": "8 GB",
     "network": "Up to 25 Gigabit",

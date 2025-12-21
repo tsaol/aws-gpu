@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "g4ad.16xlarge",
     "gpu": "AMD Radeon Pro V520",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR6",
     "vcpu": 64,
     "memory": "256 GB",
     "network": "25 Gigabit",
-    "storage": "1200 GB (2 \u00d7 600 GB SSD)",
+    "storage": "1200 GB (2 × 600 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 4.68,
@@ -64,7 +64,7 @@ var instanceData = [
     "apiName": "g4ad.2xlarge",
     "gpu": "AMD Radeon Pro V520",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR6",
     "vcpu": 8,
     "memory": "32 GB",
     "network": "Up to 10 Gigabit",
@@ -121,7 +121,7 @@ var instanceData = [
     "apiName": "g4ad.4xlarge",
     "gpu": "AMD Radeon Pro V520",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR6",
     "vcpu": 16,
     "memory": "64 GB",
     "network": "Up to 10 Gigabit",
@@ -178,7 +178,7 @@ var instanceData = [
     "apiName": "g4ad.8xlarge",
     "gpu": "AMD Radeon Pro V520",
     "gpuCount": 2,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR6",
     "vcpu": 32,
     "memory": "128 GB",
     "network": "15 Gigabit",
@@ -235,7 +235,7 @@ var instanceData = [
     "apiName": "g4ad.xlarge",
     "gpu": "AMD Radeon Pro V520",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR6",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 10 Gigabit",

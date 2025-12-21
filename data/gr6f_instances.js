@@ -1,11 +1,11 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "gr6f.4xlarge",
     "apiName": "gr6f.4xlarge",
-    "gpu": "NVIDIA L4",
+    "gpu": "NVIDIA L40",
     "gpuCount": 0.5,
     "gpuMemory": "Unknown",
     "vcpu": 16,

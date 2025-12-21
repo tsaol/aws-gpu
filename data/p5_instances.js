@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "p5.48xlarge",
     "gpu": "NVIDIA H100",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "80 GB HBM3",
     "vcpu": 192,
     "memory": "2048 GB",
     "network": "3200 Gigabit",
-    "storage": "3800 GB (8 \u00d7 475 GB SSD)",
+    "storage": "3800 GB (8 × 475 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 68.8
@@ -80,7 +80,7 @@ var instanceData = [
     "apiName": "p5.4xlarge",
     "gpu": "NVIDIA H100",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "80 GB HBM3",
     "vcpu": 16,
     "memory": "256 GB",
     "network": "100 Gigabit",

@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "p4d.24xlarge",
     "gpu": "NVIDIA A100",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "40 GB HBM2",
     "vcpu": 96,
     "memory": "1152 GB",
     "network": "4x 100 Gigabit",
-    "storage": "1000 GB (8 \u00d7 125 GB SSD)",
+    "storage": "1000 GB (8 × 125 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 30.09784,

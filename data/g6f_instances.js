@@ -1,13 +1,13 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "g6f.2xlarge",
     "apiName": "g6f.2xlarge",
-    "gpu": "NVIDIA L4",
+    "gpu": "NVIDIA L40",
     "gpuCount": 0.25,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 8,
     "memory": "32 GB",
     "network": "Up to 10 Gigabit",
@@ -74,9 +74,9 @@ var instanceData = [
   {
     "name": "g6f.4xlarge",
     "apiName": "g6f.4xlarge",
-    "gpu": "NVIDIA L4",
+    "gpu": "NVIDIA L40",
     "gpuCount": 0.5,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 16,
     "memory": "64 GB",
     "network": "Up to 25 Gigabit",
@@ -143,9 +143,9 @@ var instanceData = [
   {
     "name": "g6f.large",
     "apiName": "g6f.large",
-    "gpu": "NVIDIA L4",
+    "gpu": "NVIDIA L40",
     "gpuCount": 0.125,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 2,
     "memory": "8 GB",
     "network": "Up to 10 Gigabit",
@@ -212,9 +212,9 @@ var instanceData = [
   {
     "name": "g6f.xlarge",
     "apiName": "g6f.xlarge",
-    "gpu": "NVIDIA L4",
+    "gpu": "NVIDIA L40",
     "gpuCount": 0.125,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 10 Gigabit",

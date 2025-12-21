@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "g6e.12xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 48,
     "memory": "384 GB",
     "network": "100 Gigabit",
-    "storage": "1900 GB (2 \u00d7 950 GB SSD)",
+    "storage": "1900 GB (2 × 950 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 15.21742,
@@ -64,11 +64,11 @@ var instanceData = [
     "apiName": "g6e.16xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 64,
     "memory": "512 GB",
     "network": "35 Gigabit",
-    "storage": "950 GB (2 \u00d7 475 GB SSD)",
+    "storage": "950 GB (2 × 475 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 10.98917,
@@ -121,11 +121,11 @@ var instanceData = [
     "apiName": "g6e.24xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 96,
     "memory": "768 GB",
     "network": "200 Gigabit",
-    "storage": "1900 GB (2 \u00d7 950 GB SSD)",
+    "storage": "1900 GB (2 × 950 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 21.84956,
@@ -178,7 +178,7 @@ var instanceData = [
     "apiName": "g6e.2xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 8,
     "memory": "64 GB",
     "network": "Up to 20 Gigabit",
@@ -235,11 +235,11 @@ var instanceData = [
     "apiName": "g6e.48xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 192,
     "memory": "1536 GB",
     "network": "400 Gigabit",
-    "storage": "1900 GB (4 \u00d7 475 GB SSD)",
+    "storage": "1900 GB (4 × 475 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 43.69912,
@@ -292,7 +292,7 @@ var instanceData = [
     "apiName": "g6e.4xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 16,
     "memory": "128 GB",
     "network": "20 Gigabit",
@@ -349,11 +349,11 @@ var instanceData = [
     "apiName": "g6e.8xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 32,
     "memory": "256 GB",
     "network": "25 Gigabit",
-    "storage": "450 GB (2 \u00d7 225 GB SSD)",
+    "storage": "450 GB (2 × 225 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 6.56775,
@@ -406,7 +406,7 @@ var instanceData = [
     "apiName": "g6e.xlarge",
     "gpu": "NVIDIA L40S",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "48 GB GDDR6",
     "vcpu": 4,
     "memory": "32 GB",
     "network": "Up to 20 Gigabit",

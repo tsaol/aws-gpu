@@ -1,13 +1,13 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "g5g.16xlarge",
     "apiName": "g5g.16xlarge",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 2,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 64,
     "memory": "128 GB",
     "network": "25 Gigabit",
@@ -57,9 +57,9 @@ var instanceData = [
   {
     "name": "g5g.2xlarge",
     "apiName": "g5g.2xlarge",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 8,
     "memory": "16 GB",
     "network": "Up to 10 Gigabit",
@@ -109,9 +109,9 @@ var instanceData = [
   {
     "name": "g5g.4xlarge",
     "apiName": "g5g.4xlarge",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 16,
     "memory": "32 GB",
     "network": "Up to 10 Gigabit",
@@ -161,9 +161,9 @@ var instanceData = [
   {
     "name": "g5g.8xlarge",
     "apiName": "g5g.8xlarge",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 32,
     "memory": "64 GB",
     "network": "12 Gigabit",
@@ -213,9 +213,9 @@ var instanceData = [
   {
     "name": "g5g.metal",
     "apiName": "g5g.metal",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 2,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 64,
     "memory": "128 GB",
     "network": "25 Gigabit",
@@ -269,9 +269,9 @@ var instanceData = [
   {
     "name": "g5g.xlarge",
     "apiName": "g5g.xlarge",
-    "gpu": "NVIDIA A10G",
+    "gpu": "ARM Mali-G78MP12",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB",
     "vcpu": 4,
     "memory": "8 GB",
     "network": "Up to 10 Gigabit",

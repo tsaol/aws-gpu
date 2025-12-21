@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "p6-b300.48xlarge",
     "gpu": "NVIDIA B300 Blackwell",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "192 GB HBM3e",
     "vcpu": 192,
     "memory": "4096 GB",
     "network": "6400 Gigabit",
