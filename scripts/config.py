@@ -154,7 +154,7 @@ FAMILY_INFO = {
         'title': 'P6e-GB200 UltraServers',
         'description': 'NVIDIA GB200 Grace Blackwell Superchip',
         'use_case': 'Ultra-Scale AI Training',
-        'year': '2024',
+        'year': '2025',
         'series': 'P',
     },
     'p5en': {
