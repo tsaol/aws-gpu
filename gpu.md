@@ -64,6 +64,25 @@
   - 405 TB 本地存储，适合大数据集缓存
 - **购买方式**: EC2 Capacity Blocks for ML
 
+#### p6e-gb200.36xlarge
+- **EC2 实例名称**: p6e-gb200.36xlarge
+- **GPU 型号**: NVIDIA GB200 Grace Blackwell Superchip
+- **GPU 数量**: 4
+- **GPU 总显存**: 740 GB HBM3e
+- **vCPU**: 144
+- **系统内存**: 960 GiB
+- **网络带宽**: 1,600 Gbps EFAv4
+- **EBS 带宽**: 60 Gbps
+- **实例存储**: 22.5 TB NVMe SSD
+- **GPU Peer to Peer**: 1,800 GB/s NVLink
+- **GPUDirect RDMA**: 支持
+- **发布时间**: 2025年
+- **Workload类型**: 训练/推理
+- **适用场景**:
+  - 中大规模模型训练
+  - 高性能推理服务
+  - 多模态模型部署
+
 ---
 
 ### P6 系列（NVIDIA B200）- Global
