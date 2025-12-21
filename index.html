@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Web Services GPU </title>
+    <title>Amazon Web Services GPU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-bg: #f0f4f8;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+            --header-gradient: linear-gradient(135deg, #232f3e 0%, #37475a 50%, #232f3e 100%);
+            --accent-gradient: linear-gradient(135deg, #ff9900 0%, #ffb84d 100%);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --accent-orange: #ff9900;
+            --accent-blue: #0073bb;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --card-hover: rgba(255, 255, 255, 1);
+            --border-color: rgba(0, 0, 0, 0.06);
+            --training-bg: #f3e5f5;
+            --training-text: #7b1fa2;
+            --inference-bg: #e8f5e9;
+            --inference-text: #2e7d32;
+            --global-bg: #e3f2fd;
+            --global-text: #1565c0;
+            --china-bg: #fff3e0;
+            --china-text: #e65100;
+
+        }
+
+        [data-theme="dark"] {
+            --primary-bg: #0f172a;
+            --glass-bg: rgba(30, 41, 59, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --header-gradient: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.9);
+            --card-hover: rgba(51, 65, 85, 1);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --training-bg: rgba(123, 31, 162, 0.2);
+            --inference-bg: rgba(46, 125, 50, 0.2);
+            --global-bg: rgba(21, 101, 192, 0.2);
+            --china-bg: rgba(230, 81, 0, 0.2);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,211 +55,525 @@
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5f5f5;
-            color: #232f3e;
-            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(255, 153, 0, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 115, 187, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: -1;
         }
 
         .container {
             max-width: 1800px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
         }
 
+        /* Header */
         header {
-            background: #232f3e;
+            background: var(--header-gradient);
             color: white;
-            padding: 20px 30px;
-            border-bottom: 3px solid #ff9900;
+            padding: 30px 40px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: linear-gradient(135deg, rgba(255,153,0,0.15) 0%, transparent 60%);
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
-            font-size: 2em;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            color: #ddd;
-            font-size: 0.95em;
-            margin-top: 5px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.18);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .stat-value.highlight {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Search and Filter Bar */
+        .toolbar {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .toolbar-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.15);
+        }
+
+        .search-box::before {
+            content: '🔍';
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-select {
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        .clear-btn {
+            padding: 10px 18px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .clear-btn:hover {
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .result-count {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-left: auto;
+        }
+
+        /* Quick Nav */
+        .quick-nav {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .quick-nav-btn {
+            padding: 8px 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .quick-nav-btn:hover {
+            background: var(--accent-orange);
+            color: white;
+            border-color: var(--accent-orange);
+        }
+
+        /* Section */
+        .section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: var(--glass-shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            padding: 24px 30px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 28px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
         }
 
         .table-container {
             overflow-x: auto;
-            padding: 20px;
+            padding: 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9em;
+            font-size: 0.92rem;
         }
 
         thead {
-            background: #232f3e;
-            color: white;
             position: sticky;
             top: 0;
+            z-index: 10;
         }
 
         th {
-            padding: 12px 10px;
+            padding: 16px 14px;
             text-align: left;
-            font-weight: 500;
+            font-weight: 600;
             white-space: nowrap;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border-color);
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        th:hover {
+            background: var(--card-hover);
+        }
+
+        th.sortable::after {
+            content: ' ↕';
+            opacity: 0.4;
+            font-size: 0.8em;
+        }
+
+        th.sort-asc::after {
+            content: ' ↑';
+            opacity: 1;
+            color: var(--accent-orange);
+        }
+
+        th.sort-desc::after {
+            content: ' ↓';
+            opacity: 1;
+            color: var(--accent-orange);
         }
 
         td {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
+            padding: 14px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tbody tr {
+            background: transparent;
+            transition: all 0.25s ease;
         }
 
         tbody tr:hover {
-            background: #f8f9fa;
+            background: var(--card-hover);
         }
 
-        tbody tr:nth-child(even) {
-            background: #fafafa;
-        }
 
-        tbody tr:nth-child(even):hover {
-            background: #f8f9fa;
+
+        tbody tr.hidden {
+            display: none;
         }
 
         .instance-name {
-            font-family: 'Courier New', monospace;
+            font-family: 'Fira Code', monospace;
             font-weight: 600;
-            color: #232f3e;
+            padding-left: 8px;
         }
 
         .instance-name a {
-            color: #0066cc;
+            color: var(--accent-blue);
             text-decoration: none;
+            transition: all 0.2s ease;
+            padding: 4px 8px;
+            border-radius: 6px;
             display: inline-block;
-            transition: all 0.2s;
-            border-bottom: 1px dashed #0066cc;
         }
 
         .instance-name a:hover {
-            color: #ff9900;
-            border-bottom-color: #ff9900;
-            transform: translateX(3px);
-        }
-
-        .instance-name a::after {
-            content: " →";
-            opacity: 0.5;
-            transition: opacity 0.2s;
-        }
-
-        .instance-name a:hover::after {
-            opacity: 1;
+            color: var(--accent-orange);
+            background: rgba(255, 153, 0, 0.1);
         }
 
         .gpu-name {
-            color: #555;
-        }
-
-        tbody tr.new {
-            background: #e8f5e9 !important;
-        }
-
-        tbody tr.new:hover {
-            background: #d4edda !important;
-        }
-
-        .section-title {
-            padding: 20px 20px 10px 20px;
-            font-size: 1.3em;
+            color: var(--text-secondary);
             font-weight: 500;
-            color: #232f3e;
-            border-bottom: 2px solid #ff9900;
-            margin-bottom: 0;
         }
 
-        .region-tag {
-            display: inline-block;
-            padding: 2px 8px;
+        /* Tags */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
             margin: 2px;
-            border-radius: 3px;
-            font-size: 0.85em;
+            border-radius: 20px;
+            font-size: 0.78rem;
             font-weight: 500;
+            transition: all 0.2s ease;
         }
 
-        .region-global {
-            background: #e3f2fd;
-            color: #1565c0;
-            border: 1px solid #90caf9;
+        .tag:hover {
+            transform: scale(1.05);
         }
 
-        .region-china {
-            background: #fff3e0;
-            color: #e65100;
-            border: 1px solid #ffb74d;
+        .tag-training {
+            background: var(--training-bg);
+            color: var(--training-text);
         }
 
-        .workload-tag {
-            display: inline-block;
-            padding: 2px 8px;
-            margin: 2px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            font-weight: 500;
+        .tag-inference {
+            background: var(--inference-bg);
+            color: var(--inference-text);
         }
 
-        .workload-training {
-            background: #f3e5f5;
-            color: #7b1fa2;
-            border: 1px solid #ce93d8;
+        .tag-global {
+            background: var(--global-bg);
+            color: var(--global-text);
         }
 
-        .workload-inference {
-            background: #e8f5e8;
-            color: #2e7d32;
-            border: 1px solid #81c784;
+        .tag-china {
+            background: var(--china-bg);
+            color: var(--china-text);
         }
 
+        /* Footer */
         footer {
-            background: #232f3e;
-            color: #ddd;
             text-align: center;
-            padding: 15px;
-            font-size: 0.85em;
+            padding: 30px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+
+            header {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .toolbar-row {
+                flex-direction: column;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-select {
+                flex: 1;
+            }
+
+            .quick-nav {
+                flex-wrap: wrap;
+            }
+
             table {
-                font-size: 0.8em;
+                font-size: 0.82rem;
             }
 
             th, td {
-                padding: 8px 5px;
+                padding: 10px 8px;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+                padding: 18px 20px;
             }
         }
 
-        /* 实例家族列样式 - 更宽并居中对齐 */
-        th:first-child,
-        td:first-child {
-            min-width: 120px;
-            text-align: center;
-        }
-
+        /* Print */
         @media print {
-            body {
-                background: white;
+            body::before {
+                display: none;
             }
 
-            .container {
+            .toolbar, .theme-toggle, .quick-nav {
+                display: none;
+            }
+
+            .section {
                 box-shadow: none;
-            }
-
-            thead {
-                background: #232f3e !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                border: 1px solid #ddd;
             }
         }
     </style>
@@ -224,314 +581,371 @@
 <body>
     <div class="container">
         <header>
-            <h1>Amazon Web Services GPU </h1>
-            <p class="subtitle"> 最后更新: 2025-12-21</p>
+            <div class="header-content">
+                <div>
+                    <h1>Amazon Web Services <span>GPU</span></h1>
+                    <p class="subtitle">AWS GPU 与 AI 加速实例完整对比 · 最后更新: 2025-12-21</p>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <span id="theme-icon">🌙</span>
+                        <span id="theme-text">深色模式</span>
+                    </button>
+                </div>
+            </div>
         </header>
 
-        <!-- GPU 实例 -->
-        <section class="section">
-            <h2 class="section-title"><strong>NVIDIA GPU</strong></h2>
-            
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>实例家族</th>
-                        <th>Workload类型</th>
-                        <th>区域</th>
-                        <th>GPU 数量</th>
-                        <th>GPU型号</th>
-                        <th>GPU 显存</th>
-                        <th>应用场景</th>
-                        <th>vCPU</th>
-                        <th>系统内存</th>
-                        <th>价格(按需/us-east-1)</th>
-                        <th>发布时间</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- P系列 - 按发布时间倒序 -->
-                    <tr class="new">
-                        <td class="instance-name"><a href="instances/p6e-gb200.html">P6e (GB200)</a></td>
-                        <td><span class="workload-tag workload-training">训练</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>4/36/72</td>
-                        <td class="gpu-name">GB200 Grace Blackwell</td>
-                        <td>185GB</td>
-                        <td>超大规模 AI 训练 (UltraServers)</td>
-                        <td>144</td>
-                        <td>960 GiB</td>
-                        <td>已发布 (GA)</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name"><a href="instances/p6-b300.html">P6 (B300)</a></td>
-                        <td><span class="workload-tag workload-training">训练</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">B300 Blackwell Ultra</td>
-                        <td>262GB</td>
-                        <td>顶级训练性能、万亿参数模型</td>
-                        <td>192</td>
-                        <td>4 TB</td>
-                        <td>~$142.42/小时</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name"><a href="instances/p6-b200.html">P6 (B200)</a></td>
-                        <td><span class="workload-tag workload-training">训练</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">B200 Blackwell</td>
-                        <td>180GB</td>
-                        <td>顶级训练性能、超大模型推理</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$113.93/小时</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p5en.html">P5en</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H200</td>
-                        <td>141GB</td>
-                        <td>大规模训练、增强内存 (12个区域)</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$63/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p5e.html">P5e</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H200</td>
-                        <td>141GB</td>
-                        <td>高性能训练</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$70/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p5.html">P5</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/8</td>
-                        <td class="gpu-name">H100</td>
-                        <td>80GB</td>
-                        <td>大模型训练、生成式 AI</td>
-                        <td>192</td>
-                        <td>2,048 GB</td>
-                        <td>~$58-72/小时</td>
-                        <td>2023-2024</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name"> H20(西云) </td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-china">China</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H20</td>
-                        <td>141GB</td>
-                        <td>传统模型训练，DeepSeek 全参数、Kimi K2等大模型推理</td>
-                        <td>96</td>
-                        <td>2,048 GB</td>
-                        <td>销售询价</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr class="new">
-                        <td class="instance-name"> H20(光环) </td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-china">China</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">H20</td>
-                        <td>96GB</td>
-                        <td>传统模型训练，DeepSeek量化模型 ，Qwen 32B/30B模型推理</td>
-                        <td>96</td>
-                        <td>2,048 GB</td>
-                        <td>销售询价</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p4de.html">P4de</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">A100</td>
-                        <td>80GB</td>
-                        <td>通用训练、20B-70B模型推理</td>
-                        <td>96</td>
-                        <td>1,152 GB</td>
-                        <td>~$40.97/小时</td>
-                        <td>2020</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p4d.html">P4d</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">A100</td>
-                        <td>40GB</td>
-                        <td>预算有限的训练、中小型模型</td>
-                        <td>96</td>
-                        <td>1,152 GB</td>
-                        <td>~$32.77/小时</td>
-                        <td>2020</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p3dn.html">P3dn</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>8</td>
-                        <td class="gpu-name">V100</td>
-                        <td>32GB</td>
-                        <td>传统深度学习、教学</td>
-                        <td>96</td>
-                        <td>768 GB</td>
-                        <td>~$31.21/小时</td>
-                        <td>2018</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p3.html">P3</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
-                        <td>1/4/8</td>
-                        <td class="gpu-name">V100</td>
-                        <td>16GB</td>
-                        <td>传统深度学习、教学</td>
-                        <td>8-64</td>
-                        <td>61-488 GB</td>
-                        <td>~$3.06-24.48/小时</td>
-                        <td>2017</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/p2.html">P2</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/8/16</td>
-                        <td class="gpu-name">K80</td>
-                        <td>12GB</td>
-                        <td>旧代 GPU、预算有限场景</td>
-                        <td>4-64</td>
-                        <td>61-732 GB</td>
-                        <td>~$0.90-14.40/小时</td>
-                        <td>2016</td>
-                    </tr>
-
-
-                    <!-- G系列 -->
-                    <tr>
-                        <td class="instance-name"><a href="instances/g6e.html">G6e</a></td>
-                        <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/4/8</td>
-                        <td class="gpu-name">L40S</td>
-                        <td>48GB</td>
-                        <td>20B以下的模型推理、AI图像视频生成模型</td>
-                        <td>4-192</td>
-                        <td>32-1536 GB</td>
-                        <td>~$1.86-30.13/小时</td>
-                        <td>2024</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/g6.html">G6</a></td>
-                        <td><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/4/8</td>
-                        <td class="gpu-name">L4</td>
-                        <td>24GB</td>
-                        <td>AI视频生成、实时推理</td>
-                        <td>4-192</td>
-                        <td>16-768 GB</td>
-                        <td>~$1.16-9.28/小时</td>
-                        <td>2023</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/g5.html">G5</a></td>
-                        <td><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
-                        <td>1/4/8</td>
-                        <td class="gpu-name">A10G</td>
-                        <td>24GB</td>
-                        <td>小模型实时推理(<20B) (5个实例类型)</td>
-                        <td>4-192</td>
-                        <td>16-768 GB</td>
-                        <td>~$1.01-16.29/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/g5g.html">G5g</a></td>
-                        <td><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/2</td>
-                        <td class="gpu-name">T4G</td>
-                        <td>16GB</td>
-                        <td>Android游戏流、ARM原生应用</td>
-                        <td>4-64</td>
-                        <td>8-128 GB</td>
-                        <td>~$0.42-2.74/小时</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/g4dn.html">G4dn</a></td>
-                        <td><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
-                        <td>1/4/8</td>
-                        <td class="gpu-name">T4</td>
-                        <td>16GB</td>
-                        <td>经济型推理、小模型部署</td>
-                        <td>4-48</td>
-                        <td>16-192 GB</td>
-                        <td>~$0.53-3.91/小时</td>
-                        <td>2019</td>
-                    </tr>
-                    <tr>
-                        <td class="instance-name"><a href="instances/g4ad.html">G4ad</a></td>
-                        <td><span class="workload-tag workload-inference">推理</span></td>
-                        <td><span class="region-tag region-global">Global</span></td>
-                        <td>1/2/4</td>
-                        <td class="gpu-name">AMD Radeon Pro V520</td>
-                        <td>8GB</td>
-                        <td>图形工作站、远程桌面</td>
-                        <td>4-64</td>
-                        <td>16-256 GB</td>
-                        <td>~$0.38-2.18/小时</td>
-                        <td>2020</td>
-                    </tr>
-
-                </tbody>
-            </table>
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">GPU 实例总数</div>
+                <div class="stat-value highlight" id="total-instances">20+</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">最新发布</div>
+                <div class="stat-value">P6 系列</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">价格区间</div>
+                <div class="stat-value">$0.37-142/h</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">支持区域</div>
+                <div class="stat-value">Global + China</div>
+            </div>
         </div>
 
-        <!-- AWS 自研芯片实例 -->
-        <section class="section">
-            <h2 class="section-title">AWS 自研芯片</h2>
-            
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="toolbar-row">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索实例名称、GPU型号..." oninput="filterTable()">
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select" id="filter-workload" onchange="filterTable()">
+                        <option value="">全部类型</option>
+                        <option value="训练">训练</option>
+                        <option value="推理">推理</option>
+                    </select>
+                    <select class="filter-select" id="filter-region" onchange="filterTable()">
+                        <option value="">全部区域</option>
+                        <option value="Global">Global</option>
+                        <option value="China">China</option>
+                    </select>
+                    <select class="filter-select" id="filter-gpu-count" onchange="filterTable()">
+                        <option value="">GPU数量</option>
+                        <option value="1">1 GPU</option>
+                        <option value="4">4 GPU</option>
+                        <option value="8">8+ GPU</option>
+                    </select>
+                    <button class="clear-btn" onclick="clearFilters()">清空筛选</button>
+                </div>
+                <span class="result-count" id="result-count"></span>
+            </div>
+            <div class="quick-nav">
+                <button class="quick-nav-btn" onclick="scrollToSection('nvidia-section')">NVIDIA GPU</button>
+                <button class="quick-nav-btn" onclick="scrollToSection('aws-section')">AWS 自研芯片</button>
+                <button class="quick-nav-btn" onclick="scrollToSection('case-section')">客户案例</button>
+            </div>
+        </div>
+
+        <!-- NVIDIA GPU Section -->
+        <section class="section" id="nvidia-section">
+            <h2 class="section-title">NVIDIA GPU</h2>
             <div class="table-container">
-                <table>
+                <table id="nvidia-table">
                     <thead>
                         <tr>
-                            <th>实例家族</th>
+                            <th class="sortable" data-sort="name">实例家族</th>
                             <th>Workload类型</th>
                             <th>区域</th>
-                            <th>芯片 数量</th>
+                            <th class="sortable" data-sort="gpu">GPU 数量</th>
+                            <th>GPU型号</th>
+                            <th>GPU 显存</th>
+                            <th>应用场景</th>
+                            <th>vCPU</th>
+                            <th>系统内存</th>
+                            <th class="sortable" data-sort="price">价格(按需)</th>
+                            <th class="sortable" data-sort="year">发布时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="new" data-workload="训练" data-region="Global" data-gpu="72">
+                            <td class="instance-name"><a href="instances/p6e-gb200.html">P6e (GB200)</a></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>4/36/72</td>
+                            <td class="gpu-name">GB200 Grace Blackwell</td>
+                            <td>185GB</td>
+                            <td>超大规模 AI 训练 (UltraServers)</td>
+                            <td>144</td>
+                            <td>960 GiB</td>
+                            <td>已发布 (GA)</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr class="new" data-workload="训练" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p6-b300.html">P6 (B300)</a></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">B300 Blackwell Ultra</td>
+                            <td>262GB</td>
+                            <td>顶级训练性能、万亿参数模型</td>
+                            <td>192</td>
+                            <td>4 TB</td>
+                            <td>~$142.42/小时</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr class="new" data-workload="训练" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p6-b200.html">P6 (B200)</a></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">B200 Blackwell</td>
+                            <td>180GB</td>
+                            <td>顶级训练性能、超大模型推理</td>
+                            <td>192</td>
+                            <td>2,048 GB</td>
+                            <td>~$113.93/小时</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p5en.html">P5en</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">H200</td>
+                            <td>141GB</td>
+                            <td>大规模训练、增强内存 (12个区域)</td>
+                            <td>192</td>
+                            <td>2,048 GB</td>
+                            <td>~$63/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p5e.html">P5e</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">H200</td>
+                            <td>141GB</td>
+                            <td>高性能训练</td>
+                            <td>192</td>
+                            <td>2,048 GB</td>
+                            <td>~$70/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p5.html">P5</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/8</td>
+                            <td class="gpu-name">H100</td>
+                            <td>80GB</td>
+                            <td>大模型训练、生成式 AI</td>
+                            <td>192</td>
+                            <td>2,048 GB</td>
+                            <td>~$58-72/小时</td>
+                            <td>2023-2024</td>
+                        </tr>
+                        <tr class="new" data-workload="训练,推理" data-region="China" data-gpu="8">
+                            <td class="instance-name">H20(西云)</td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-china">China</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">H20</td>
+                            <td>141GB</td>
+                            <td>传统模型训练，DeepSeek 全参数、Kimi K2等大模型推理</td>
+                            <td>96</td>
+                            <td>2,048 GB</td>
+                            <td>销售询价</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr class="new" data-workload="训练,推理" data-region="China" data-gpu="8">
+                            <td class="instance-name">H20(光环)</td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-china">China</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">H20</td>
+                            <td>96GB</td>
+                            <td>传统模型训练，DeepSeek量化模型 ，Qwen 32B/30B模型推理</td>
+                            <td>96</td>
+                            <td>2,048 GB</td>
+                            <td>销售询价</td>
+                            <td>2025</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p4de.html">P4de</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">A100</td>
+                            <td>80GB</td>
+                            <td>通用训练、20B-70B模型推理</td>
+                            <td>96</td>
+                            <td>1,152 GB</td>
+                            <td>~$40.97/小时</td>
+                            <td>2020</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p4d.html">P4d</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">A100</td>
+                            <td>40GB</td>
+                            <td>预算有限的训练、中小型模型</td>
+                            <td>96</td>
+                            <td>1,152 GB</td>
+                            <td>~$32.77/小时</td>
+                            <td>2020</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p3dn.html">P3dn</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">V100</td>
+                            <td>32GB</td>
+                            <td>传统深度学习、教学</td>
+                            <td>96</td>
+                            <td>768 GB</td>
+                            <td>~$31.21/小时</td>
+                            <td>2018</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global,China" data-gpu="8">
+                            <td class="instance-name"><a href="instances/p3.html">P3</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
+                            <td>1/4/8</td>
+                            <td class="gpu-name">V100</td>
+                            <td>16GB</td>
+                            <td>传统深度学习、教学</td>
+                            <td>8-64</td>
+                            <td>61-488 GB</td>
+                            <td>~$3.06-24.48/小时</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="16">
+                            <td class="instance-name"><a href="instances/p2.html">P2</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/8/16</td>
+                            <td class="gpu-name">K80</td>
+                            <td>12GB</td>
+                            <td>旧代 GPU、预算有限场景</td>
+                            <td>4-64</td>
+                            <td>61-732 GB</td>
+                            <td>~$0.90-14.40/小时</td>
+                            <td>2016</td>
+                        </tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/g6e.html">G6e</a></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/4/8</td>
+                            <td class="gpu-name">L40S</td>
+                            <td>48GB</td>
+                            <td>20B以下的模型推理、AI图像视频生成模型</td>
+                            <td>4-192</td>
+                            <td>32-1536 GB</td>
+                            <td>~$1.86-30.13/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/g6.html">G6</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/4/8</td>
+                            <td class="gpu-name">L4</td>
+                            <td>24GB</td>
+                            <td>AI视频生成、实时推理</td>
+                            <td>4-192</td>
+                            <td>16-768 GB</td>
+                            <td>~$1.16-9.28/小时</td>
+                            <td>2023</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global,China" data-gpu="8">
+                            <td class="instance-name"><a href="instances/g5.html">G5</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
+                            <td>1/4/8</td>
+                            <td class="gpu-name">A10G</td>
+                            <td>24GB</td>
+                            <td>小模型实时推理(&lt;20B)</td>
+                            <td>4-192</td>
+                            <td>16-768 GB</td>
+                            <td>~$1.01-16.29/小时</td>
+                            <td>2021</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="2">
+                            <td class="instance-name"><a href="instances/g5g.html">G5g</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/2</td>
+                            <td class="gpu-name">T4G</td>
+                            <td>16GB</td>
+                            <td>Android游戏流、ARM原生应用</td>
+                            <td>4-64</td>
+                            <td>8-128 GB</td>
+                            <td>~$0.42-2.74/小时</td>
+                            <td>2021</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global,China" data-gpu="8">
+                            <td class="instance-name"><a href="instances/g4dn.html">G4dn</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
+                            <td>1/4/8</td>
+                            <td class="gpu-name">T4</td>
+                            <td>16GB</td>
+                            <td>经济型推理、小模型部署</td>
+                            <td>4-48</td>
+                            <td>16-192 GB</td>
+                            <td>~$0.53-3.91/小时</td>
+                            <td>2019</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="4">
+                            <td class="instance-name"><a href="instances/g4ad.html">G4ad</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/2/4</td>
+                            <td class="gpu-name">AMD Radeon Pro V520</td>
+                            <td>8GB</td>
+                            <td>图形工作站、远程桌面</td>
+                            <td>4-64</td>
+                            <td>16-256 GB</td>
+                            <td>~$0.38-2.18/小时</td>
+                            <td>2020</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- AWS Custom Chips Section -->
+        <section class="section" id="aws-section">
+            <h2 class="section-title">AWS 自研芯片</h2>
+            <div class="table-container">
+                <table id="aws-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="name">实例家族</th>
+                            <th>Workload类型</th>
+                            <th>区域</th>
+                            <th class="sortable" data-sort="chip">芯片数量</th>
                             <th>芯片型号</th>
                             <th>应用场景</th>
                             <th>vCPU</th>
                             <th>系统内存</th>
-                            <th>价格(按需/us-east-1)</th>
-                            <th>发布时间</th>
+                            <th class="sortable" data-sort="price">价格(按需)</th>
+                            <th class="sortable" data-sort="year">发布时间</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- 按发布时间倒序 -->
-                        <tr>
+                        <tr data-workload="训练,推理" data-region="Global" data-gpu="16">
                             <td class="instance-name"><a href="instances/trn2.html">Trn2</a></td>
-                            <td><span class="workload-tag workload-training">训练</span><span class="workload-tag workload-inference">推理</span></td>
-                            <td><span class="region-tag region-global">Global</span></td>
+                            <td><span class="tag tag-training">训练</span><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
                             <td>16</td>
                             <td class="gpu-name">AWS Trainium2</td>
                             <td>万亿参数级模型训练</td>
@@ -540,22 +954,22 @@
                             <td>~$35.76/小时</td>
                             <td>2024</td>
                         </tr>
-                        <tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="12">
                             <td class="instance-name"><a href="instances/inf2.html">Inf2</a></td>
-                            <td><span class="workload-tag workload-inference">推理</span></td>
-                            <td><span class="region-tag region-global">Global</span></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
                             <td>1/6/12</td>
                             <td class="gpu-name">AWS Inferentia2</td>
-                            <td>小模型批量推理(<20B)</td>
+                            <td>小模型批量推理(&lt;20B)</td>
                             <td>4-192</td>
                             <td>16-384 GB</td>
                             <td>~$0.76-12.98/小时</td>
                             <td>2022</td>
                         </tr>
-                        <tr>
+                        <tr data-workload="训练" data-region="Global" data-gpu="16">
                             <td class="instance-name"><a href="instances/trn1.html">Trn1</a></td>
-                            <td><span class="workload-tag workload-training">训练</span></td>
-                            <td><span class="region-tag region-global">Global</span></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
                             <td>1/16</td>
                             <td class="gpu-name">AWS Trainium</td>
                             <td>中大型模型训练、NLP模型</td>
@@ -564,10 +978,10 @@
                             <td>~$1.34-24.78/小时</td>
                             <td>2022</td>
                         </tr>
-                        <tr>
+                        <tr data-workload="训练" data-region="Global" data-gpu="16">
                             <td class="instance-name"><a href="instances/trn1n.html">Trn1n</a></td>
-                            <td><span class="workload-tag workload-training">训练</span></td>
-                            <td><span class="region-tag region-global">Global</span></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
                             <td>16</td>
                             <td class="gpu-name">AWS Trainium (网络优化)</td>
                             <td>分布式深度学习训练</td>
@@ -576,10 +990,10 @@
                             <td>~$24.78/小时</td>
                             <td>2023</td>
                         </tr>
-                        <tr>
+                        <tr data-workload="推理" data-region="Global,China" data-gpu="1">
                             <td class="instance-name"><a href="instances/inf1.html">Inf1</a></td>
-                            <td><span class="workload-tag workload-inference">推理</span></td>
-                            <td><span class="region-tag region-global">Global</span><span class="region-tag region-china">China</span></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
                             <td>1</td>
                             <td class="gpu-name">AWS Inferentia</td>
                             <td>传统推理模型、成本优化</td>
@@ -588,19 +1002,14 @@
                             <td>~$0.37-0.58/小时</td>
                             <td>2019</td>
                         </tr>
-
-
                     </tbody>
                 </table>
             </div>
-
-
         </section>
 
-        <!-- 客户案例 -->
-        <section class="section">
+        <!-- Customer Cases Section -->
+        <section class="section" id="case-section">
             <h2 class="section-title">客户案例</h2>
-            
             <div class="table-container">
                 <table>
                     <thead>
@@ -620,7 +1029,7 @@
                             <td>Amazon Nova Pro + SageMaker</td>
                             <td class="gpu-name">Qwen1.5 7B</td>
                             <td>案情识别 99%，满意度 +30%</td>
-                            <td><a href="https://aws.amazon.com/cn/blogs/china/smartions-use-amazon-nova-to-create-a-big-model-of-chinese-laws/" target="_blank">查看</a></td>
+                            <td><a href="https://aws.amazon.com/cn/blogs/china/smartions-use-amazon-nova-to-create-a-big-model-of-chinese-laws/" target="_blank" style="color: var(--accent-blue);">查看 →</a></td>
                         </tr>
                         <tr>
                             <td class="instance-name">云学堂</td>
@@ -628,7 +1037,7 @@
                             <td>Amazon SageMaker</td>
                             <td class="gpu-name">DeepSeek Coder 6.7B</td>
                             <td>业务代码生成 +44%，业务FIM显著提升</td>
-                            <td><a href="https://aws.amazon.com/cn/blogs/china/yxt-innovative-practice-of-fine-tuning-large-models-and-enabling-code-generation-based-on-amazon-sagemaker/" target="_blank">查看</a></td>
+                            <td><a href="https://aws.amazon.com/cn/blogs/china/yxt-innovative-practice-of-fine-tuning-large-models-and-enabling-code-generation-based-on-amazon-sagemaker/" target="_blank" style="color: var(--accent-blue);">查看 →</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -636,8 +1045,116 @@
         </section>
 
         <footer>
-            <p>数据来源: 亚马逊云科技官方网站</p>
+            <p>数据来源: <a href="https://aws.amazon.com" target="_blank">亚马逊云科技官方网站</a></p>
         </footer>
-        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('theme-icon');
+            const text = document.getElementById('theme-text');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                icon.textContent = '🌙';
+                text.textContent = '深色模式';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                icon.textContent = '☀️';
+                text.textContent = '浅色模式';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                document.getElementById('theme-icon').textContent = '☀️';
+                document.getElementById('theme-text').textContent = '浅色模式';
+            }
+        })();
+
+        // Filter Table
+        function filterTable() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const workloadFilter = document.getElementById('filter-workload').value;
+            const regionFilter = document.getElementById('filter-region').value;
+            const gpuCountFilter = document.getElementById('filter-gpu-count').value;
+            
+            const tables = document.querySelectorAll('#nvidia-table tbody, #aws-table tbody');
+            let visibleCount = 0;
+            
+            tables.forEach(tbody => {
+                const rows = tbody.querySelectorAll('tr');
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    const workload = row.getAttribute('data-workload') || '';
+                    const region = row.getAttribute('data-region') || '';
+                    const gpuCount = parseInt(row.getAttribute('data-gpu')) || 0;
+                    
+                    let show = true;
+                    
+                    // Search filter
+                    if (searchTerm && !text.includes(searchTerm)) {
+                        show = false;
+                    }
+                    
+                    // Workload filter
+                    if (workloadFilter && !workload.includes(workloadFilter)) {
+                        show = false;
+                    }
+                    
+                    // Region filter
+                    if (regionFilter && !region.includes(regionFilter)) {
+                        show = false;
+                    }
+                    
+                    // GPU count filter
+                    if (gpuCountFilter) {
+                        const filterNum = parseInt(gpuCountFilter);
+                        if (filterNum === 8) {
+                            if (gpuCount < 8) show = false;
+                        } else {
+                            if (gpuCount !== filterNum) show = false;
+                        }
+                    }
+                    
+                    if (show) {
+                        row.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
+            });
+            
+            document.getElementById('result-count').textContent = `显示 ${visibleCount} 个实例`;
+        }
+
+        // Clear Filters
+        function clearFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('filter-workload').value = '';
+            document.getElementById('filter-region').value = '';
+            document.getElementById('filter-gpu-count').value = '';
+            filterTable();
+        }
+
+        // Quick Nav
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Initialize
+        filterTable();
+    </script>
 </body>
 </html>
