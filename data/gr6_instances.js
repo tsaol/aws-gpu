@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -117,7 +117,7 @@ var instanceData = [
     "vcpu": 32,
     "memory": "256 GB",
     "network": "25 Gigabit",
-    "storage": "450 GB (2 \u00d7 225 GB SSD)",
+    "storage": "450 GB (2 × 225 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 3.54801,

@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "p3.16xlarge",
     "gpu": "NVIDIA V100",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB HBM2",
     "vcpu": 64,
     "memory": "488 GB",
     "network": "25 Gigabit",
@@ -32,7 +32,7 @@ var instanceData = [
     "apiName": "p3.2xlarge",
     "gpu": "NVIDIA V100",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB HBM2",
     "vcpu": 8,
     "memory": "61 GB",
     "network": "Up to 10 Gigabit",
@@ -57,7 +57,7 @@ var instanceData = [
     "apiName": "p3.8xlarge",
     "gpu": "NVIDIA V100",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB HBM2",
     "vcpu": 32,
     "memory": "244 GB",
     "network": "10 Gigabit",

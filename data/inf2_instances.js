@@ -1,13 +1,13 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "inf2.24xlarge",
     "apiName": "inf2.24xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia2",
     "gpuCount": 6,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "32 GB HBM",
     "vcpu": 96,
     "memory": "384 GB",
     "network": "50 Gigabit",
@@ -87,9 +87,9 @@ var instanceData = [
   {
     "name": "inf2.48xlarge",
     "apiName": "inf2.48xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia2",
     "gpuCount": 12,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "32 GB HBM",
     "vcpu": 192,
     "memory": "768 GB",
     "network": "100 Gigabit",
@@ -169,9 +169,9 @@ var instanceData = [
   {
     "name": "inf2.8xlarge",
     "apiName": "inf2.8xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia2",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "32 GB HBM",
     "vcpu": 32,
     "memory": "128 GB",
     "network": "Up to 25 Gigabit",
@@ -251,9 +251,9 @@ var instanceData = [
   {
     "name": "inf2.xlarge",
     "apiName": "inf2.xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Inferentia2",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "32 GB HBM",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 15 Gigabit",

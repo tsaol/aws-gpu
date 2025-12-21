@@ -1,6 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
-// Status updated: 2024-12-21 (GA released)
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -8,14 +7,14 @@ var instanceData = [
     "apiName": "p6e-gb200.36xlarge",
     "gpu": "NVIDIA GB200 Grace Blackwell",
     "gpuCount": 36,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "192 GB HBM3e",
     "vcpu": 144,
     "memory": "960 GB",
     "network": "1700 Gigabit",
     "storage": "EBS Only",
     "pricing": {},
     "availability": [],
-    "generation": "current",
+    "generation": "preview",
     "family": "GPU instance"
   }
 ];

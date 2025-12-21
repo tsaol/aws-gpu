@@ -1,17 +1,17 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "trn1n.32xlarge",
     "apiName": "trn1n.32xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "AWS Trainium",
     "gpuCount": 16,
     "gpuMemory": "Unknown",
     "vcpu": 128,
     "memory": "512 GB",
     "network": "16x 100 Gigabit",
-    "storage": "1900 GB (4 \u00d7 475 GB SSD)",
+    "storage": "1900 GB (4 × 475 GB SSD)",
     "pricing": {
       "us-east-1": {
         "onDemand": 24.78,

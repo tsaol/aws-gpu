@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "g6.12xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 48,
     "memory": "192 GB",
     "network": "40 Gigabit",
-    "storage": "940 GB (4 \u00d7 235 GB SSD)",
+    "storage": "940 GB (4 × 235 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 6.67369,
@@ -118,11 +118,11 @@ var instanceData = [
     "apiName": "g6.16xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 64,
     "memory": "256 GB",
     "network": "25 Gigabit",
-    "storage": "940 GB (2 \u00d7 470 GB SSD)",
+    "storage": "940 GB (2 × 470 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 4.92637,
@@ -229,11 +229,11 @@ var instanceData = [
     "apiName": "g6.24xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 96,
     "memory": "384 GB",
     "network": "50 Gigabit",
-    "storage": "940 GB (4 \u00d7 235 GB SSD)",
+    "storage": "940 GB (4 × 235 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 9.68103,
@@ -340,7 +340,7 @@ var instanceData = [
     "apiName": "g6.2xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 8,
     "memory": "32 GB",
     "network": "Up to 10 Gigabit",
@@ -451,11 +451,11 @@ var instanceData = [
     "apiName": "g6.48xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 192,
     "memory": "768 GB",
     "network": "100 Gigabit",
-    "storage": "940 GB (8 \u00d7 117 GB SSD)",
+    "storage": "940 GB (8 × 117 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 19.36206,
@@ -562,7 +562,7 @@ var instanceData = [
     "apiName": "g6.4xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 16,
     "memory": "64 GB",
     "network": "Up to 25 Gigabit",
@@ -673,11 +673,11 @@ var instanceData = [
     "apiName": "g6.8xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 32,
     "memory": "128 GB",
     "network": "25 Gigabit",
-    "storage": "450 GB (2 \u00d7 225 GB SSD)",
+    "storage": "450 GB (2 × 225 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 2.92148,
@@ -784,7 +784,7 @@ var instanceData = [
     "apiName": "g6.xlarge",
     "gpu": "NVIDIA L4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 10 Gigabit",

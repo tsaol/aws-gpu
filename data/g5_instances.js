@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "g5.12xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 48,
     "memory": "192 GB",
     "network": "40 Gigabit",
@@ -104,7 +104,7 @@ var instanceData = [
     "apiName": "g5.16xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 64,
     "memory": "256 GB",
     "network": "25 Gigabit",
@@ -201,7 +201,7 @@ var instanceData = [
     "apiName": "g5.24xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 96,
     "memory": "384 GB",
     "network": "50 Gigabit",
@@ -298,7 +298,7 @@ var instanceData = [
     "apiName": "g5.2xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 8,
     "memory": "32 GB",
     "network": "Up to 10 Gigabit",
@@ -395,11 +395,11 @@ var instanceData = [
     "apiName": "g5.48xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 8,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 192,
     "memory": "768 GB",
     "network": "100 Gigabit",
-    "storage": "3800 GB (2 \u00d7 1900 GB SSD)",
+    "storage": "3800 GB (2 × 1900 GB SSD)",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 23.62246,
@@ -492,7 +492,7 @@ var instanceData = [
     "apiName": "g5.4xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 16,
     "memory": "64 GB",
     "network": "Up to 25 Gigabit",
@@ -593,7 +593,7 @@ var instanceData = [
     "apiName": "g5.8xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 32,
     "memory": "128 GB",
     "network": "25 Gigabit",
@@ -694,7 +694,7 @@ var instanceData = [
     "apiName": "g5.xlarge",
     "gpu": "NVIDIA A10G",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "24 GB GDDR6",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 10 Gigabit",

@@ -18,3 +18,4 @@ Thumbs.db
 # Large data files (too big for GitHub, should be downloaded locally)
 data/instances_full.json
 data/gpu_instances_raw.json
+scripts/__pycache__/

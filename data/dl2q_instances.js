@@ -1,11 +1,11 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
     "name": "dl2q.24xlarge",
     "apiName": "dl2q.24xlarge",
-    "gpu": "Unknown GPU",
+    "gpu": "Qualcomm AI 100",
     "gpuCount": 8,
     "gpuMemory": "Unknown",
     "vcpu": 96,

@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2025-11-30
+// Last updated: 2025-12-21
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "g4dn.12xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 48,
     "memory": "192 GB",
     "network": "50 Gigabit",
@@ -34,7 +34,7 @@ var instanceData = [
     "apiName": "g4dn.16xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 64,
     "memory": "256 GB",
     "network": "50 Gigabit",
@@ -61,7 +61,7 @@ var instanceData = [
     "apiName": "g4dn.2xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 8,
     "memory": "32 GB",
     "network": "Up to 25 Gigabit",
@@ -88,7 +88,7 @@ var instanceData = [
     "apiName": "g4dn.4xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 16,
     "memory": "64 GB",
     "network": "Up to 25 Gigabit",
@@ -115,7 +115,7 @@ var instanceData = [
     "apiName": "g4dn.8xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 32,
     "memory": "128 GB",
     "network": "50 Gigabit",
@@ -142,7 +142,7 @@ var instanceData = [
     "apiName": "g4dn.xlarge",
     "gpu": "NVIDIA T4",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "16 GB GDDR6",
     "vcpu": 4,
     "memory": "16 GB",
     "network": "Up to 25 Gigabit",
