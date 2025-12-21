@@ -89,7 +89,7 @@
 - **EC2 实例名称**: p6-b200.48xlarge
 - **GPU 型号**: NVIDIA B200 Tensor Core GPU
 - **GPU 数量**: 8
-- **每GPU显存**: 192GB HBM3e
+- **每GPU显存**: 180GB HBM3e
 - **GPU 显存带宽**: 8 TB/s (每GPU)
 - **vCPU**: 192 (Intel Xeon Scalable 第5代 Emerald Rapids)
 - **系统内存**: 2,048 GB
@@ -107,7 +107,7 @@
 - **EC2 实例名称**: p6-b300.48xlarge
 - **GPU 型号**: NVIDIA B300 Tensor Core GPU
 - **GPU 数量**: 8
-- **每GPU显存**: 192GB HBM3e
+- **每GPU显存**: 180GB HBM3e
 - **GPU 显存带宽**: 8 TB/s (每GPU)
 - **vCPU**: 192
 - **系统内存**: 4,096 GB
