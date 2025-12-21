@@ -12,12 +12,13 @@ var instanceData = [
     "memory": "960 GiB",
     "network": "1600 Gbps EFAv4",
     "storage": "22.5 TB NVMe SSD",
-    "ebsBandwidth": "60 Gbps",
-    "gpuDirectRDMA": true,
-    "gpuPeerToPeer": "1800 GB/s NVLink",
     "pricing": {},
     "availability": [],
     "generation": "preview",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "60 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   }
 ];

@@ -2,6 +2,10 @@
 """
 转换 AWS 实例数据
 从原始 JSON 数据提取 GPU 实例并转换为项目格式
+
+数据源:
+  1. instances.vantage.sh - 主数据源（定价、可用区域）
+  2. AWS 官方页面 - 补充数据源（规格数据更准确）
 """
 import json
 import sys
@@ -19,6 +23,7 @@ from utils import (
     convert_instance, group_by_family, write_js_data,
     read_js_data, colorize
 )
+from fetch_aws_official import get_aws_official_specs, merge_with_vantage_data
 
 
 def extract_gpu_instances(input_file: Path, output_file: Path, region_type: str = 'global') -> List[Dict]:
@@ -163,7 +168,37 @@ def merge_family_data(family_prefix: str, extra_info: Dict = None) -> None:
     print(f"   {colorize('✅', 'green')} 已生成: {output_file.name} ({len(all_instances)} 个实例)")
 
 
-def process_global_data() -> bool:
+def apply_aws_official_specs(instances: List[Dict], use_official: bool = True) -> List[Dict]:
+    """
+    应用 AWS 官方规格数据
+
+    策略:
+    - 规格数据（GPU数量、显存、vCPU等）使用 AWS 官方
+    - 定价数据保留 vantage.sh
+    - 官方有但 vantage 没有的实例，添加到列表
+    """
+    if not use_official:
+        return instances
+
+    print(f"\n🔗 合并 AWS 官方规格数据...")
+
+    official_specs = get_aws_official_specs()
+    print(f"   AWS 官方数据: {len(official_specs)} 个实例")
+
+    merged = merge_with_vantage_data(instances, official_specs)
+
+    # 统计
+    merged_count = sum(1 for inst in merged if inst.get('source') == 'merged')
+    added_count = sum(1 for inst in merged if inst.get('source') == 'aws_official')
+
+    print(f"   已合并: {colorize(str(merged_count), 'green')} 个实例")
+    if added_count > 0:
+        print(f"   新增: {colorize(str(added_count), 'cyan')} 个实例")
+
+    return merged
+
+
+def process_global_data(use_official: bool = True) -> bool:
     """处理全球数据"""
     print("\n" + "=" * 50)
     print("🌍 处理全球数据")
@@ -183,13 +218,16 @@ def process_global_data() -> bool:
     # 2. 转换格式
     converted = convert_instances(gpu_instances, 'global', include_preview=True)
 
-    # 3. 按系列保存
+    # 3. 合并 AWS 官方规格数据
+    converted = apply_aws_official_specs(converted, use_official)
+
+    # 4. 按系列保存
     save_by_family(converted)
 
-    # 4. 保存合并文件
+    # 5. 保存合并文件
     save_all_instances(converted)
 
-    # 5. 合并 P5 系列
+    # 6. 合并 P5 系列
     p5_extra = {
         'p5en': {'isNew': True, 'year': '2024'},
         'p5e': {'isNew': True, 'year': '2024'},
@@ -197,7 +235,7 @@ def process_global_data() -> bool:
     }
     merge_family_data('p5', p5_extra)
 
-    # 6. 合并 P6 系列
+    # 7. 合并 P6 系列
     p6_extra = {
         'p6-b200': {'isNew': True, 'year': '2025'},
         'p6-b300': {'isNew': True, 'year': '2025'},
@@ -249,6 +287,10 @@ def main():
                         help='处理中国区数据')
     parser.add_argument('--all', '-a', action='store_true',
                         help='处理所有数据')
+    parser.add_argument('--no-official', action='store_true',
+                        help='不使用 AWS 官方数据补充')
+    parser.add_argument('--official-only', action='store_true',
+                        help='仅更新 AWS 官方数据（不重新下载 vantage）')
 
     args = parser.parse_args()
 
@@ -256,15 +298,18 @@ def main():
     if not (args.process_global or args.process_china or args.all):
         args.all = True
 
+    use_official = not args.no_official
+
     print("=" * 50)
     print("🔧 AWS 实例数据转换工具")
     print("=" * 50)
     print(f"数据目录: {DATA_DIR}")
+    print(f"AWS 官方数据: {'启用' if use_official else '禁用'}")
 
     success = True
 
     if args.process_global or args.all:
-        if not process_global_data():
+        if not process_global_data(use_official=use_official):
             success = False
 
     if args.process_china or args.all:

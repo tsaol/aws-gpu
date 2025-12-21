@@ -7,14 +7,18 @@ var instanceData = [
     "apiName": "p5e.48xlarge",
     "gpu": "NVIDIA H200",
     "gpuCount": 8,
-    "gpuMemory": "141 GB HBM3e",
+    "gpuMemory": "1128 GB HBM3e",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "EBS Only",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv2",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {},
     "availability": [],
     "generation": "preview",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "80 Gbps",
+    "gpuInterconnect": "900 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   }
 ];
