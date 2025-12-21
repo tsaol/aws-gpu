@@ -1,6 +1,6 @@
 // Auto-generated from instances.vantage.sh data
 // Last updated: 2025-12-21
-// Total GPU instances: 84
+// Total GPU instances: 86
 
 const allGPUInstances = [
   {
@@ -6196,11 +6196,11 @@ const allGPUInstances = [
     "apiName": "p4d.24xlarge",
     "gpu": "NVIDIA A100",
     "gpuCount": 8,
-    "gpuMemory": "40 GB HBM2",
+    "gpuMemory": "320 GB HBM2",
     "vcpu": 96,
-    "memory": "1152 GB",
-    "network": "4x 100 Gigabit",
-    "storage": "1000 GB (8 × 125 GB SSD)",
+    "memory": "1152 GiB",
+    "network": "400 Gbps EFA",
+    "storage": "8 x 1 TB NVMe SSD",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 30.09784,
@@ -6279,18 +6279,22 @@ const allGPUInstances = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "19 Gbps",
+    "gpuInterconnect": "600 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p4de.24xlarge",
     "apiName": "p4de.24xlarge",
     "gpu": "NVIDIA A100",
     "gpuCount": 8,
-    "gpuMemory": "80 GB HBM2e",
+    "gpuMemory": "640 GB HBM2e",
     "vcpu": 96,
-    "memory": "1152 GB",
-    "network": "4x 100 Gigabit",
-    "storage": "1000 GB (8 × 125 GB SSD)",
+    "memory": "1152 GiB",
+    "network": "400 Gbps EFA",
+    "storage": "8 x 1 TB NVMe SSD",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 37.6223,
@@ -6326,18 +6330,22 @@ const allGPUInstances = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "19 Gbps",
+    "gpuInterconnect": "600 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p5.48xlarge",
     "apiName": "p5.48xlarge",
     "gpu": "NVIDIA H100",
     "gpuCount": 8,
-    "gpuMemory": "80 GB HBM3",
+    "gpuMemory": "640 GB HBM3",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "3800 GB (8 × 475 GB SSD)",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv2",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 68.8
@@ -6399,7 +6407,11 @@ const allGPUInstances = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "80 Gbps",
+    "gpuInterconnect": "900 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p5.4xlarge",
@@ -6463,26 +6475,30 @@ const allGPUInstances = [
     "apiName": "p5e.48xlarge",
     "gpu": "NVIDIA H200",
     "gpuCount": 8,
-    "gpuMemory": "141 GB HBM3e",
+    "gpuMemory": "1128 GB HBM3e",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "EBS Only",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv2",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {},
     "availability": [],
     "generation": "preview",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "80 Gbps",
+    "gpuInterconnect": "900 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p5en.48xlarge",
     "apiName": "p5en.48xlarge",
     "gpu": "NVIDIA H200",
     "gpuCount": 8,
-    "gpuMemory": "141 GB HBM3e",
+    "gpuMemory": "1128 GB HBM3e",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "3800 GB (8 × 475 GB SSD)",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv3",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 79.12
@@ -6540,18 +6556,22 @@ const allGPUInstances = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "100 Gbps",
+    "gpuInterconnect": "900 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p6-b200.48xlarge",
     "apiName": "p6-b200.48xlarge",
     "gpu": "NVIDIA B200 Blackwell",
     "gpuCount": 8,
-    "gpuMemory": "192 GB HBM3e",
+    "gpuMemory": "1432 GB HBM3e",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "3800 GB (8 × 475 GB SSD)",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv4",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
       "us-east-1": {
         "onDemand": 113.9328
@@ -6573,7 +6593,11 @@ const allGPUInstances = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "100 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p6-b300.48xlarge",
@@ -6600,16 +6624,20 @@ const allGPUInstances = [
     "name": "p6e-gb200.36xlarge",
     "apiName": "p6e-gb200.36xlarge",
     "gpu": "NVIDIA GB200 Grace Blackwell",
-    "gpuCount": 36,
-    "gpuMemory": "192 GB HBM3e",
+    "gpuCount": 4,
+    "gpuMemory": "740 GB HBM3e",
     "vcpu": 144,
-    "memory": "960 GB",
-    "network": "1700 Gigabit",
-    "storage": "EBS Only",
+    "memory": "960 GiB",
+    "network": "1600 Gbps EFAv4",
+    "storage": "22.5 TB NVMe SSD",
     "pricing": {},
     "availability": [],
     "generation": "preview",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "60 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "trn1.2xlarge",
@@ -6721,5 +6749,41 @@ const allGPUInstances = [
     "availability": [],
     "generation": "preview",
     "family": "Machine Learning ASIC Instances"
+  },
+  {
+    "name": "u-p6e-gb200x36",
+    "gpu": "NVIDIA GB200 Grace Blackwell",
+    "gpuCount": 36,
+    "gpuMemory": "6660 GB HBM3e",
+    "vcpu": 1296,
+    "memory": "8640 GiB",
+    "network": "14400 Gbps EFAv4",
+    "storage": "202.5 TB NVMe SSD",
+    "ebsBandwidth": "540 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "aws_official",
+    "pricing": {},
+    "availability": [],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "u-p6e-gb200x72",
+    "gpu": "NVIDIA GB200 Grace Blackwell",
+    "gpuCount": 72,
+    "gpuMemory": "13320 GB HBM3e",
+    "vcpu": 2592,
+    "memory": "17280 GiB",
+    "network": "28800 Gbps EFAv4",
+    "storage": "405 TB NVMe SSD",
+    "ebsBandwidth": "1080 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "aws_official",
+    "pricing": {},
+    "availability": [],
+    "generation": "current",
+    "family": "GPU instance"
   }
 ];

@@ -25,10 +25,23 @@ GPU_MD_FILE = PROJECT_ROOT / 'gpu.md'
 
 # ==================== 数据源配置 ====================
 
-# instances.vantage.sh 数据源
+# instances.vantage.sh 数据源（主数据源 - 定价、可用区域）
 DATA_SOURCES = {
     'global': 'https://instances.vantage.sh/instances.json',
     'china': 'https://instances.vantage.sh/instances-cn.json',
+}
+
+# AWS 官方数据源（补充数据源 - 规格数据更准确）
+AWS_OFFICIAL_URLS = {
+    'accelerated': 'https://aws.amazon.com/ec2/instance-types/accelerated-computing/',
+    'p6': 'https://aws.amazon.com/ec2/instance-types/p6/',
+    'p5': 'https://aws.amazon.com/ec2/instance-types/p5/',
+    'p4': 'https://aws.amazon.com/ec2/instance-types/p4/',
+    'g5': 'https://aws.amazon.com/ec2/instance-types/g5/',
+    'g6': 'https://aws.amazon.com/ec2/instance-types/g6/',
+    'inf2': 'https://aws.amazon.com/ec2/instance-types/inf2/',
+    'trn1': 'https://aws.amazon.com/ec2/instance-types/trn1/',
+    'trn2': 'https://aws.amazon.com/ec2/instance-types/trn2/',
 }
 
 # 原始数据文件
@@ -42,6 +55,9 @@ GPU_RAW_FILES = {
     'global': DATA_DIR / 'gpu_instances_raw.json',
     'china': DATA_DIR / 'gpu_instances_raw_cn.json',
 }
+
+# AWS 官方规格数据文件
+AWS_OFFICIAL_FILE = DATA_DIR / 'aws_official_specs.json'
 
 # ==================== GPU 型号映射 ====================
 

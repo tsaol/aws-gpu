@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "p6-b200.48xlarge",
     "gpu": "NVIDIA B200 Blackwell",
     "gpuCount": 8,
-    "gpuMemory": "192 GB HBM3e",
+    "gpuMemory": "1432 GB HBM3e",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "3800 GB (8 × 475 GB SSD)",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv4",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
       "us-east-1": {
         "onDemand": 113.9328
@@ -33,6 +33,10 @@ var instanceData = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "100 Gbps",
+    "gpuInterconnect": "1800 GB/s NVLink",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   }
 ];

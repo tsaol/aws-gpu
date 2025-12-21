@@ -7,11 +7,11 @@ var instanceData = [
     "apiName": "p5.48xlarge",
     "gpu": "NVIDIA H100",
     "gpuCount": 8,
-    "gpuMemory": "80 GB HBM3",
+    "gpuMemory": "640 GB HBM3",
     "vcpu": 192,
-    "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "3800 GB (8 × 475 GB SSD)",
+    "memory": "2048 GiB",
+    "network": "3200 Gbps EFAv2",
+    "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 68.8
@@ -73,7 +73,11 @@ var instanceData = [
       "us-west-2"
     ],
     "generation": "current",
-    "family": "GPU instance"
+    "family": "GPU instance",
+    "ebsBandwidth": "80 Gbps",
+    "gpuInterconnect": "900 GB/s NVSwitch",
+    "gpuDirectRDMA": true,
+    "source": "merged"
   },
   {
     "name": "p5.4xlarge",
