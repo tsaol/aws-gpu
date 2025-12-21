@@ -97,7 +97,7 @@ GPU_MODELS = {
 # 手动维护的 GPU 显存信息（数据源不提供）
 GPU_MEMORY = {
     # P6 系列
-    'p6e-gb200': '192 GB HBM3e',
+    'p6e-gb200': '740 GB HBM3e',
     'p6-b300': '192 GB HBM3e',
     'p6-b200': '192 GB HBM3e',
     # P5 系列
