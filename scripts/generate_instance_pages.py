@@ -33,7 +33,7 @@ FAMILY_INFO = {
     'p5e': {
         'title': 'P5e Instance Family',
         'description': 'NVIDIA H200 Tensor Core',
-        'use_case': 'High Performance Training (Preview)',
+        'use_case': 'High Performance Training',
         'year': '2024'
     },
     'p5': {
