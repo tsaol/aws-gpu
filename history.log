@@ -1,0 +1,67 @@
+# AWS GPU Project Update History
+
+## 2025-12-21
+
+### Data Source Integration
+- Added AWS official data source (aws.amazon.com/ec2/instance-types/) as supplement
+- Dual data source strategy:
+  - Primary: instances.vantage.sh (pricing, availability)
+  - Secondary: AWS official (accurate specs)
+- Merge strategy: AWS official specs priority, vantage.sh pricing
+
+### New Scripts
+- `scripts/fetch_aws_official.py` - AWS official specs management
+- `scripts/config.py` - Unified configuration
+- `scripts/utils.py` - Common utility functions
+- `scripts/convert_data.py` - Data conversion with official merge
+- `scripts/download_data.py` - Download from vantage.sh
+- `scripts/generate_pages.py` - Generate HTML pages
+- `scripts/generate_gpu_md.py` - Generate gpu.md
+- `scripts/update_all.py` - One-click update entry
+
+### P6e (GB200) Updates
+- p6e-gb200.36xlarge: 4 GPUs, 185GB/GPU (740GB total)
+- u-p6e-gb200x36: 36 GPUs (UltraServer)
+- u-p6e-gb200x72: 72 GPUs (UltraServer)
+- GPU count display: 4/36/72
+
+### P6 B200/B300 Updates
+- P6 B200: 8 GPUs, 180GB/GPU
+- P6 B300: 8 GPUs, 262GB/GPU (2.1TB total), Blackwell Ultra
+- B300 specs from AWS official: 4TB memory, 6.4Tbps EFA, 30TB NVMe
+
+### P5/G6 GPU Count Fixes
+- P5: 8 → 1/8
+- G6: 1/8 → 1/4/8
+
+### Workload Updates
+- P6 series (P6e, B200, B300): removed "inference", now "training" only
+
+### README Updates
+- Updated data source documentation
+- Updated project structure
+- Updated data sync flow diagram
+
+### Server Deployment
+- Updated 2 EC2 instances via SSM:
+  - i-036902f5b0ab2e24e (gpu-whole-picture-1)
+  - i-0844edeba5a78ac70 (claudedev-private-1)
+- ALB: alb-542429639.us-west-2.elb.amazonaws.com
+
+---
+
+## Usage
+
+```bash
+# One-click update
+python3 scripts/update_all.py --all
+
+# Convert data with AWS official merge
+python3 scripts/convert_data.py
+
+# List AWS official specs
+python3 scripts/fetch_aws_official.py --list
+
+# Update remote servers
+./update_instances.sh
+```
