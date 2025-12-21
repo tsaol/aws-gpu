@@ -105,14 +105,14 @@
 
 #### p6-b300.48xlarge
 - **EC2 实例名称**: p6-b300.48xlarge
-- **GPU 型号**: NVIDIA B300 Tensor Core GPU
+- **GPU 型号**: NVIDIA B300 Blackwell Ultra
 - **GPU 数量**: 8
-- **每GPU显存**: 180GB HBM3e
-- **GPU 显存带宽**: 8 TB/s (每GPU)
+- **GPU 总显存**: 2.1 TB HBM3e (2100 GB)
+- **每GPU显存**: 262GB HBM3e
 - **vCPU**: 192
-- **系统内存**: 4,096 GB
-- **网络带宽**: 6,400 Gbps
-- **EBS 带宽**: EBS Only
+- **系统内存**: 4 TB
+- **网络带宽**: 6,400 Gbps EFA + 300 Gbps ENA
+- **实例存储**: 30 TB NVMe SSD
 - **发布时间**: 2025年
 - **Workload类型**: 训练
 - **适用场景**: 顶级训练性能、需要更大系统内存的场景
