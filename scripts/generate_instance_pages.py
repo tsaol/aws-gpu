@@ -10,19 +10,19 @@ FAMILY_INFO = {
         'title': 'P6-B200 Instance Family',
         'description': 'NVIDIA B200 Blackwell',
         'use_case': 'Next-Gen AI Training & Inference',
-        'year': '2024'
+        'year': '2025'
     },
     'p6-b300': {
         'title': 'P6-B300 Instance Family',
         'description': 'NVIDIA B300 Blackwell',
         'use_case': 'Next-Gen AI Training & Inference',
-        'year': '2024'
+        'year': '2025'
     },
     'p6e-gb200': {
         'title': 'P6e-GB200 UltraServers',
         'description': 'NVIDIA GB200 Grace Blackwell Superchip',
         'use_case': 'Ultra-Scale AI Training (Preview)',
-        'year': '2024'
+        'year': '2025'
     },
     'p5en': {
         'title': 'P5en Instance Family',
