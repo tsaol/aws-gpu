@@ -114,8 +114,8 @@ GPU_MODELS = {
 GPU_MEMORY = {
     # P6 系列
     'p6e-gb200': '740 GB HBM3e',
-    'p6-b300': '192 GB HBM3e',
-    'p6-b200': '192 GB HBM3e',
+    'p6-b300': '180 GB HBM3e',
+    'p6-b200': '180 GB HBM3e',
     # P5 系列
     'p5en': '141 GB HBM3e',
     'p5e': '141 GB HBM3e',
