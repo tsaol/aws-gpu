@@ -1,7 +1,7 @@
 # AWS GPU 实例完整信息库
 
-> 最后更新：2024-12-21
-> 版本：v1.1 (新增 P6e-GB200 UltraServers)
+> 最后更新：2025-12-21
+> 版本：v1.2
 
 ---
 
@@ -38,7 +38,6 @@
   - Amazon SageMaker Hyperpod
   - Amazon EKS (支持拓扑感知路由)
   - Amazon FSx for Lustre
-- **参考链接**: [AWS 官方博客](https://aws.amazon.com/cn/blogs/china/new-amazon-ec2-p6e-gb200-ultraservers-powered-by-nvidia-grace-blackwell-gpus-for-the-highest-ai-performance/)
 
 #### u-p6e-gb200x72
 - **EC2 实例名称**: u-p6e-gb200x72
@@ -64,7 +63,6 @@
   - 最高网络吞吐量 28.8 Tbps
   - 405 TB 本地存储，适合大数据集缓存
 - **购买方式**: EC2 Capacity Blocks for ML
-- **参考链接**: [AWS 官方博客](https://aws.amazon.com/cn/blogs/china/new-amazon-ec2-p6e-gb200-ultraservers-powered-by-nvidia-grace-blackwell-gpus-for-the-highest-ai-performance/)
 
 ---
 
