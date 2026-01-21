@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 
 var instanceData = [
   {
@@ -13,6 +13,10 @@ var instanceData = [
     "network": "40 Gigabit",
     "storage": "3800 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 8.7324,
+        "reserved": 5.50141
+      },
       "ap-northeast-1": {
         "onDemand": 8.22609,
         "reserved": 5.18244
@@ -79,6 +83,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -110,6 +115,10 @@ var instanceData = [
     "network": "25 Gigabit",
     "storage": "1900 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 6.30605,
+        "reserved": 3.97281
+      },
       "ap-northeast-1": {
         "onDemand": 5.94042,
         "reserved": 3.74247
@@ -176,6 +185,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -207,6 +217,10 @@ var instanceData = [
     "network": "50 Gigabit",
     "storage": "3800 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 12.5382,
+        "reserved": 7.89906
+      },
       "ap-northeast-1": {
         "onDemand": 11.81123,
         "reserved": 7.44107
@@ -273,6 +287,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -304,6 +319,10 @@ var instanceData = [
     "network": "Up to 10 Gigabit",
     "storage": "450 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 1.86595,
+        "reserved": 1.17555
+      },
       "ap-northeast-1": {
         "onDemand": 1.75776,
         "reserved": 1.10739
@@ -370,6 +389,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -401,6 +421,10 @@ var instanceData = [
     "network": "100 Gigabit",
     "storage": "3800 GB (2 × 1900 GB SSD)",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 25.0764,
+        "reserved": 15.79813
+      },
       "ap-northeast-1": {
         "onDemand": 23.62246,
         "reserved": 14.88215
@@ -467,6 +491,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -498,6 +523,10 @@ var instanceData = [
     "network": "Up to 25 Gigabit",
     "storage": "600 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 2.50025,
+        "reserved": 1.57516
+      },
       "ap-northeast-1": {
         "onDemand": 2.35528,
         "reserved": 1.48383
@@ -567,6 +596,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -599,6 +629,10 @@ var instanceData = [
     "network": "25 Gigabit",
     "storage": "900 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 3.76885,
+        "reserved": 2.37438
+      },
       "ap-northeast-1": {
         "onDemand": 3.55033,
         "reserved": 2.23671
@@ -668,6 +702,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -700,6 +735,10 @@ var instanceData = [
     "network": "Up to 10 Gigabit",
     "storage": "250 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 1.5488,
+        "reserved": 0.97574
+      },
       "ap-northeast-1": {
         "onDemand": 1.459,
         "reserved": 0.91917
@@ -766,6 +805,7 @@ var instanceData = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",

@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 
 var instanceData = [
   {
@@ -22,6 +22,10 @@ var instanceData = [
         "reserved": 3.68351
       },
       "ap-south-1": {
+        "onDemand": 5.52558,
+        "reserved": 3.59715
+      },
+      "ap-south-2": {
         "onDemand": 5.52558,
         "reserved": 3.59715
       },
@@ -93,6 +97,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -133,6 +138,10 @@ var instanceData = [
         "reserved": 2.71908
       },
       "ap-south-1": {
+        "onDemand": 4.07886,
+        "reserved": 2.65534
+      },
+      "ap-south-2": {
         "onDemand": 4.07886,
         "reserved": 2.65534
       },
@@ -204,6 +213,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -244,6 +254,10 @@ var instanceData = [
         "reserved": 5.34339
       },
       "ap-south-1": {
+        "onDemand": 8.01555,
+        "reserved": 5.21812
+      },
+      "ap-south-2": {
         "onDemand": 8.01555,
         "reserved": 5.21812
       },
@@ -315,6 +329,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -355,6 +370,10 @@ var instanceData = [
         "reserved": 0.78255
       },
       "ap-south-1": {
+        "onDemand": 1.1739,
+        "reserved": 0.76421
+      },
+      "ap-south-2": {
         "onDemand": 1.1739,
         "reserved": 0.76421
       },
@@ -426,6 +445,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -466,6 +486,10 @@ var instanceData = [
         "reserved": 10.68678
       },
       "ap-south-1": {
+        "onDemand": 16.0311,
+        "reserved": 10.43624
+      },
+      "ap-south-2": {
         "onDemand": 16.0311,
         "reserved": 10.43624
       },
@@ -537,6 +561,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -577,6 +602,10 @@ var instanceData = [
         "reserved": 1.0592
       },
       "ap-south-1": {
+        "onDemand": 1.58889,
+        "reserved": 1.03437
+      },
+      "ap-south-2": {
         "onDemand": 1.58889,
         "reserved": 1.03437
       },
@@ -648,6 +677,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -688,6 +718,10 @@ var instanceData = [
         "reserved": 1.6125
       },
       "ap-south-1": {
+        "onDemand": 2.41888,
+        "reserved": 1.57469
+      },
+      "ap-south-2": {
         "onDemand": 2.41888,
         "reserved": 1.57469
       },
@@ -759,6 +793,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -799,6 +834,10 @@ var instanceData = [
         "reserved": 0.64423
       },
       "ap-south-1": {
+        "onDemand": 0.9664,
+        "reserved": 0.62913
+      },
+      "ap-south-2": {
         "onDemand": 0.9664,
         "reserved": 0.62913
       },
@@ -870,6 +909,7 @@ var instanceData = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",

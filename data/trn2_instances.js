@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 
 var instanceData = [
   {
@@ -10,8 +10,8 @@ var instanceData = [
     "gpuMemory": "96 GB HBM3",
     "vcpu": 192,
     "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "EBS Only",
+    "network": "16x 200 Gigabit",
+    "storage": "1900 GB (4 × 475 GB SSD)",
     "pricing": {},
     "availability": [],
     "generation": "preview",

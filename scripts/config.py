@@ -39,6 +39,7 @@ AWS_OFFICIAL_URLS = {
     'p4': 'https://aws.amazon.com/ec2/instance-types/p4/',
     'g5': 'https://aws.amazon.com/ec2/instance-types/g5/',
     'g6': 'https://aws.amazon.com/ec2/instance-types/g6/',
+    'g7e': 'https://aws.amazon.com/ec2/instance-types/g7e/',
     'inf2': 'https://aws.amazon.com/ec2/instance-types/inf2/',
     'trn1': 'https://aws.amazon.com/ec2/instance-types/trn1/',
     'trn2': 'https://aws.amazon.com/ec2/instance-types/trn2/',
@@ -79,6 +80,8 @@ GPU_MODELS = {
     'p3': 'NVIDIA V100',
     # P2 系列 (K80)
     'p2': 'NVIDIA K80',
+    # G7 系列
+    'g7e': 'NVIDIA RTX PRO 6000 Blackwell',
     # G6 系列
     'g6e': 'NVIDIA L40S',
     'g6f': 'NVIDIA L40',
@@ -128,6 +131,8 @@ GPU_MEMORY = {
     'p3': '16 GB HBM2',
     # P2 系列
     'p2': '12 GB GDDR5',
+    # G7 系列
+    'g7e': '96 GB GDDR7',
     # G6 系列
     'g6e': '48 GB GDDR6',
     'g6': '24 GB GDDR6',
@@ -228,6 +233,13 @@ FAMILY_INFO = {
         'use_case': 'ML Training (Previous Generation)',
         'year': '2016',
         'series': 'P',
+    },
+    'g7e': {
+        'title': 'G7e Instance Family',
+        'description': 'NVIDIA RTX PRO 6000 Blackwell Server Edition',
+        'use_case': 'AI Inference & Spatial Computing',
+        'year': '2025',
+        'series': 'G',
     },
     'g6e': {
         'title': 'G6e Instance Family',
