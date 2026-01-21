@@ -238,7 +238,7 @@ FAMILY_INFO = {
         'title': 'G7e Instance Family',
         'description': 'NVIDIA RTX PRO 6000 Blackwell Server Edition',
         'use_case': 'AI Inference & Spatial Computing',
-        'year': '2025',
+        'year': '2026',
         'series': 'G',
     },
     'g6e': {
