@@ -51,11 +51,22 @@
 | **P3/P3dn** | NVIDIA V100 | 2017 | ✅ 成熟 |
 | **P2** | NVIDIA K80 | 2016 | ⚠️ 旧代 |
 
+### G 系列 - 图形与推理
+
+| 实例家族 | GPU 型号 | 发布年份 | 状态 |
+|---------|---------|---------|------|
+| **G7e** | NVIDIA RTX PRO 6000 Blackwell | 2026 | 🆕 最新 |
+| **G6e** | NVIDIA L40S | 2024 | 🔥 推荐 |
+| **G6** | NVIDIA L4 | 2023 | ✅ 稳定 |
+| **G5** | NVIDIA A10G | 2021 | ✅ 稳定 |
+| **G5g** | ARM Mali-G78 | 2021 | ✅ 稳定 |
+| **G4dn** | NVIDIA T4 | 2019 | ✅ 成熟 |
+| **G4ad** | AMD Radeon Pro V520 | 2020 | ✅ 成熟 |
+
 ### 其他系列
 
-- **G 系列** - 图形密集型（G6e, G6, G5, G5g, G4dn, G4ad）
 - **Inf 系列** - 机器学习推理（Inf2, Inf1 - AWS Inferentia）
-- **Trn 系列** - 机器学习训练（Trn1, Trn1n - AWS Trainium）
+- **Trn 系列** - 机器学习训练（Trn2, Trn1, Trn1n - AWS Trainium）
 
 ## 🚀 快速开始
 
@@ -156,6 +167,7 @@ aws-gpu/
 ├── 📄 history.log            # 更新历史记录
 ├── 🌐 index.html             # 主页面 - 实例总览
 ├── 📂 instances/             # 实例详情页面
+│   ├── g7e.html
 │   ├── p6e-gb200.html
 │   ├── p5.html
 │   └── ...
