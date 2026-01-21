@@ -1,6 +1,6 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-12-21
-// Total GPU instances: 86
+// Last updated: 2026-01-21
+// Total GPU instances: 92
 
 const allGPUInstances = [
   {
@@ -1946,6 +1946,10 @@ const allGPUInstances = [
     "network": "40 Gigabit",
     "storage": "3800 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 8.7324,
+        "reserved": 5.50141
+      },
       "ap-northeast-1": {
         "onDemand": 8.22609,
         "reserved": 5.18244
@@ -2012,6 +2016,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2043,6 +2048,10 @@ const allGPUInstances = [
     "network": "25 Gigabit",
     "storage": "1900 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 6.30605,
+        "reserved": 3.97281
+      },
       "ap-northeast-1": {
         "onDemand": 5.94042,
         "reserved": 3.74247
@@ -2109,6 +2118,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2140,6 +2150,10 @@ const allGPUInstances = [
     "network": "50 Gigabit",
     "storage": "3800 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 12.5382,
+        "reserved": 7.89906
+      },
       "ap-northeast-1": {
         "onDemand": 11.81123,
         "reserved": 7.44107
@@ -2206,6 +2220,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2237,6 +2252,10 @@ const allGPUInstances = [
     "network": "Up to 10 Gigabit",
     "storage": "450 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 1.86595,
+        "reserved": 1.17555
+      },
       "ap-northeast-1": {
         "onDemand": 1.75776,
         "reserved": 1.10739
@@ -2303,6 +2322,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2334,6 +2354,10 @@ const allGPUInstances = [
     "network": "100 Gigabit",
     "storage": "3800 GB (2 × 1900 GB SSD)",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 25.0764,
+        "reserved": 15.79813
+      },
       "ap-northeast-1": {
         "onDemand": 23.62246,
         "reserved": 14.88215
@@ -2400,6 +2424,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2431,6 +2456,10 @@ const allGPUInstances = [
     "network": "Up to 25 Gigabit",
     "storage": "600 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 2.50025,
+        "reserved": 1.57516
+      },
       "ap-northeast-1": {
         "onDemand": 2.35528,
         "reserved": 1.48383
@@ -2500,6 +2529,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2532,6 +2562,10 @@ const allGPUInstances = [
     "network": "25 Gigabit",
     "storage": "900 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 3.76885,
+        "reserved": 2.37438
+      },
       "ap-northeast-1": {
         "onDemand": 3.55033,
         "reserved": 2.23671
@@ -2601,6 +2635,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -2633,6 +2668,10 @@ const allGPUInstances = [
     "network": "Up to 10 Gigabit",
     "storage": "250 GB SSD",
     "pricing": {
+      "ap-east-1": {
+        "onDemand": 1.5488,
+        "reserved": 0.97574
+      },
       "ap-northeast-1": {
         "onDemand": 1.459,
         "reserved": 0.91917
@@ -2699,6 +2738,7 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-east-1",
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
@@ -3058,6 +3098,10 @@ const allGPUInstances = [
         "onDemand": 5.52558,
         "reserved": 3.59715
       },
+      "ap-south-2": {
+        "onDemand": 5.52558,
+        "reserved": 3.59715
+      },
       "ap-southeast-2": {
         "onDemand": 5.98299,
         "reserved": 3.89493
@@ -3126,6 +3170,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3166,6 +3211,10 @@ const allGPUInstances = [
         "reserved": 2.71908
       },
       "ap-south-1": {
+        "onDemand": 4.07886,
+        "reserved": 2.65534
+      },
+      "ap-south-2": {
         "onDemand": 4.07886,
         "reserved": 2.65534
       },
@@ -3237,6 +3286,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3277,6 +3327,10 @@ const allGPUInstances = [
         "reserved": 5.34339
       },
       "ap-south-1": {
+        "onDemand": 8.01555,
+        "reserved": 5.21812
+      },
+      "ap-south-2": {
         "onDemand": 8.01555,
         "reserved": 5.21812
       },
@@ -3348,6 +3402,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3388,6 +3443,10 @@ const allGPUInstances = [
         "reserved": 0.78255
       },
       "ap-south-1": {
+        "onDemand": 1.1739,
+        "reserved": 0.76421
+      },
+      "ap-south-2": {
         "onDemand": 1.1739,
         "reserved": 0.76421
       },
@@ -3459,6 +3518,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3499,6 +3559,10 @@ const allGPUInstances = [
         "reserved": 10.68678
       },
       "ap-south-1": {
+        "onDemand": 16.0311,
+        "reserved": 10.43624
+      },
+      "ap-south-2": {
         "onDemand": 16.0311,
         "reserved": 10.43624
       },
@@ -3570,6 +3634,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3610,6 +3675,10 @@ const allGPUInstances = [
         "reserved": 1.0592
       },
       "ap-south-1": {
+        "onDemand": 1.58889,
+        "reserved": 1.03437
+      },
+      "ap-south-2": {
         "onDemand": 1.58889,
         "reserved": 1.03437
       },
@@ -3681,6 +3750,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3721,6 +3791,10 @@ const allGPUInstances = [
         "reserved": 1.6125
       },
       "ap-south-1": {
+        "onDemand": 2.41888,
+        "reserved": 1.57469
+      },
+      "ap-south-2": {
         "onDemand": 2.41888,
         "reserved": 1.57469
       },
@@ -3792,6 +3866,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -3832,6 +3907,10 @@ const allGPUInstances = [
         "reserved": 0.64423
       },
       "ap-south-1": {
+        "onDemand": 0.9664,
+        "reserved": 0.62913
+      },
+      "ap-south-2": {
         "onDemand": 0.9664,
         "reserved": 0.62913
       },
@@ -3903,6 +3982,7 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-south-1",
+      "ap-south-2",
       "ap-southeast-2",
       "ap-southeast-5",
       "ca-central-1",
@@ -4656,6 +4736,156 @@ const allGPUInstances = [
     "family": "GPU instance"
   },
   {
+    "name": "g7e.12xlarge",
+    "apiName": "g7e.12xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 2,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 48,
+    "memory": "512 GB",
+    "network": "400 Gigabit",
+    "storage": "3800 GB SSD",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 8.28608
+      },
+      "us-east-2": {
+        "onDemand": 8.28608
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7e.24xlarge",
+    "apiName": "g7e.24xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 4,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 96,
+    "memory": "1024 GB",
+    "network": "800 Gigabit",
+    "storage": "3800 GB (2 × 1900 GB SSD)",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 16.57216
+      },
+      "us-east-2": {
+        "onDemand": 16.57216
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7e.2xlarge",
+    "apiName": "g7e.2xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 8,
+    "memory": "64 GB",
+    "network": "50 Gigabit",
+    "storage": "1900 GB SSD",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 3.36312
+      },
+      "us-east-2": {
+        "onDemand": 3.36312
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7e.48xlarge",
+    "apiName": "g7e.48xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 8,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 192,
+    "memory": "2048 GB",
+    "network": "1600 Gigabit",
+    "storage": "3800 GB (4 × 950 GB SSD)",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 33.14432
+      },
+      "us-east-2": {
+        "onDemand": 33.14432
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7e.4xlarge",
+    "apiName": "g7e.4xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 16,
+    "memory": "128 GB",
+    "network": "50 Gigabit",
+    "storage": "1900 GB SSD",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 3.99816
+      },
+      "us-east-2": {
+        "onDemand": 3.99816
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7e.8xlarge",
+    "apiName": "g7e.8xlarge",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "96 GB GDDR7",
+    "vcpu": 32,
+    "memory": "256 GB",
+    "network": "100 Gigabit",
+    "storage": "1900 GB SSD",
+    "pricing": {
+      "us-east-1": {
+        "onDemand": 5.26824
+      },
+      "us-east-2": {
+        "onDemand": 5.26824
+      }
+    },
+    "availability": [
+      "us-east-1",
+      "us-east-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
     "name": "gr6.4xlarge",
     "apiName": "gr6.4xlarge",
     "gpu": "NVIDIA L4",
@@ -4727,7 +4957,8 @@ const allGPUInstances = [
         "reserved": 1.00202
       },
       "us-gov-east-1": {
-        "onDemand": 1.9401
+        "onDemand": 1.9401,
+        "reserved": 1.26301
       },
       "us-gov-west-1": {
         "onDemand": 1.9401,
@@ -4833,7 +5064,8 @@ const allGPUInstances = [
         "reserved": 1.59261
       },
       "us-gov-east-1": {
-        "onDemand": 3.08359
+        "onDemand": 3.08359,
+        "reserved": 2.00742
       },
       "us-gov-west-1": {
         "onDemand": 3.08359,
@@ -6350,6 +6582,9 @@ const allGPUInstances = [
       "ap-northeast-1": {
         "onDemand": 68.8
       },
+      "ap-northeast-2": {
+        "onDemand": 75.9552
+      },
       "ap-south-1": {
         "onDemand": 66.048
       },
@@ -6392,6 +6627,7 @@ const allGPUInstances = [
     },
     "availability": [
       "ap-northeast-1",
+      "ap-northeast-2",
       "ap-south-1",
       "ap-southeast-2",
       "ap-southeast-3",
@@ -6604,11 +6840,11 @@ const allGPUInstances = [
     "apiName": "p6-b300.48xlarge",
     "gpu": "NVIDIA B300 Blackwell",
     "gpuCount": 8,
-    "gpuMemory": "192 GB HBM3e",
+    "gpuMemory": "262 GB HBM3e",
     "vcpu": 192,
     "memory": "4096 GB",
     "network": "6400 Gigabit",
-    "storage": "EBS Only",
+    "storage": "3800 GB (8 × 475 GB SSD)",
     "pricing": {
       "us-west-2": {
         "onDemand": 142.416
@@ -6743,8 +6979,8 @@ const allGPUInstances = [
     "gpuMemory": "96 GB HBM3",
     "vcpu": 192,
     "memory": "2048 GB",
-    "network": "3200 Gigabit",
-    "storage": "EBS Only",
+    "network": "16x 200 Gigabit",
+    "storage": "1900 GB (4 × 475 GB SSD)",
     "pricing": {},
     "availability": [],
     "generation": "preview",

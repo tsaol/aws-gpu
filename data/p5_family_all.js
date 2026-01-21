@@ -1,5 +1,5 @@
 // Auto-generated P5 Family data from instances.vantage.sh
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 // Includes: p5, p5e, p5en
 
 var instanceData = [
@@ -16,6 +16,9 @@ var instanceData = [
     "pricing": {
       "ap-northeast-1": {
         "onDemand": 68.8
+      },
+      "ap-northeast-2": {
+        "onDemand": 75.9552
       },
       "ap-south-1": {
         "onDemand": 66.048
@@ -59,6 +62,7 @@ var instanceData = [
     },
     "availability": [
       "ap-northeast-1",
+      "ap-northeast-2",
       "ap-south-1",
       "ap-southeast-2",
       "ap-southeast-3",

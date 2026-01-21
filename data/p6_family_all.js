@@ -1,5 +1,5 @@
 // Auto-generated P6 Family data from instances.vantage.sh
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 // Includes: p6-b200, p6-b300, p6e-gb200
 
 var instanceData = [
@@ -47,11 +47,11 @@ var instanceData = [
     "apiName": "p6-b300.48xlarge",
     "gpu": "NVIDIA B300 Blackwell",
     "gpuCount": 8,
-    "gpuMemory": "192 GB HBM3e",
+    "gpuMemory": "262 GB HBM3e",
     "vcpu": 192,
     "memory": "4096 GB",
     "network": "6400 Gigabit",
-    "storage": "EBS Only",
+    "storage": "3800 GB (8 × 475 GB SSD)",
     "pricing": {
       "us-west-2": {
         "onDemand": 142.416

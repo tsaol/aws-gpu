@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2025-12-21
+// Last updated: 2026-01-21
 
 var instanceData = [
   {
@@ -74,7 +74,8 @@ var instanceData = [
         "reserved": 1.00202
       },
       "us-gov-east-1": {
-        "onDemand": 1.9401
+        "onDemand": 1.9401,
+        "reserved": 1.26301
       },
       "us-gov-west-1": {
         "onDemand": 1.9401,
@@ -180,7 +181,8 @@ var instanceData = [
         "reserved": 1.59261
       },
       "us-gov-east-1": {
-        "onDemand": 3.08359
+        "onDemand": 3.08359,
+        "reserved": 2.00742
       },
       "us-gov-west-1": {
         "onDemand": 3.08359,
