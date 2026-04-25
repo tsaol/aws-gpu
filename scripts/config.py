@@ -151,6 +151,14 @@ GPU_MEMORY = {
     # Trainium
     'trn2': '96 GB HBM3',
     'trn1': '32 GB HBM',
+    # G2/G3s/GR 系列
+    'g3s': '8 GB GDDR5',
+    'g2': '4 GB GDDR5',
+    'gr6': '24 GB GDDR6',
+    'gr6f': '48 GB GDDR6',
+    # DL 系列
+    'dl1': '32 GB HBM2e',
+    'dl2q': '128 GB',
 }
 
 # ==================== 实例系列信息 ====================
@@ -282,6 +290,62 @@ FAMILY_INFO = {
         'use_case': 'Graphics & Remote Workstations',
         'year': '2020',
         'series': 'G',
+    },
+    'g3': {
+        'title': 'G3 Instance Family',
+        'description': 'NVIDIA M60',
+        'use_case': 'Graphics & Video Encoding',
+        'year': '2017',
+        'series': 'G',
+    },
+    'g3s': {
+        'title': 'G3s Instance Family',
+        'description': 'NVIDIA M60',
+        'use_case': 'Graphics Workstations',
+        'year': '2017',
+        'series': 'G',
+    },
+    'g2': {
+        'title': 'G2 Instance Family',
+        'description': 'NVIDIA GRID K520',
+        'use_case': 'Graphics (Previous Generation)',
+        'year': '2013',
+        'series': 'G',
+    },
+    'g6f': {
+        'title': 'G6f Instance Family',
+        'description': 'NVIDIA L40',
+        'use_case': 'AI Inference (Fractional GPU)',
+        'year': '2024',
+        'series': 'G',
+    },
+    'gr6': {
+        'title': 'GR6 Instance Family',
+        'description': 'NVIDIA L4',
+        'use_case': 'Ray Tracing & Graphics',
+        'year': '2024',
+        'series': 'G',
+    },
+    'gr6f': {
+        'title': 'GR6f Instance Family',
+        'description': 'NVIDIA L40',
+        'use_case': 'Ray Tracing (Fractional GPU)',
+        'year': '2024',
+        'series': 'G',
+    },
+    'dl1': {
+        'title': 'DL1 Instance Family',
+        'description': 'Habana Gaudi',
+        'use_case': 'Deep Learning Training',
+        'year': '2021',
+        'series': 'DL',
+    },
+    'dl2q': {
+        'title': 'DL2q Instance Family',
+        'description': 'Qualcomm AI 100',
+        'use_case': 'ML Inference (Qualcomm)',
+        'year': '2023',
+        'series': 'DL',
     },
     'inf2': {
         'title': 'Inf2 Instance Family',

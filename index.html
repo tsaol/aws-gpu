@@ -599,7 +599,7 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">GPU 实例总数</div>
-                <div class="stat-value highlight" id="total-instances">20+</div>
+                <div class="stat-value highlight" id="total-instances">30+</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">最新发布</div>
@@ -930,6 +930,84 @@
                             <td>~$0.38-2.18/小时</td>
                             <td>2020</td>
                         </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="4">
+                            <td class="instance-name"><a href="instances/g6f.html">G6f</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1</td>
+                            <td class="gpu-name">L40 (Fractional)</td>
+                            <td>48GB</td>
+                            <td>轻量AI推理、小模型部署</td>
+                            <td>2-16</td>
+                            <td>8-64 GB</td>
+                            <td>~$0.65-2.56/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="2">
+                            <td class="instance-name"><a href="instances/gr6.html">GR6</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/2</td>
+                            <td class="gpu-name">L4</td>
+                            <td>24GB</td>
+                            <td>光线追踪、图形渲染</td>
+                            <td>16-64</td>
+                            <td>128-256 GB</td>
+                            <td>~$1.56-3.12/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="1">
+                            <td class="instance-name"><a href="instances/gr6f.html">GR6f</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1</td>
+                            <td class="gpu-name">L40 (Fractional)</td>
+                            <td>48GB</td>
+                            <td>光线追踪、轻量图形</td>
+                            <td>16</td>
+                            <td>64 GB</td>
+                            <td>~$1.62/小时</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global,China" data-gpu="4">
+                            <td class="instance-name"><a href="instances/g3.html">G3</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
+                            <td>1/2/4</td>
+                            <td class="gpu-name">M60</td>
+                            <td>8GB</td>
+                            <td>图形工作站 (旧代)</td>
+                            <td>4-64</td>
+                            <td>30.5-488 GB</td>
+                            <td>~$0.75-4.56/小时</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global,China" data-gpu="1">
+                            <td class="instance-name"><a href="instances/g3s.html">G3s</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span><span class="tag tag-china">China</span></td>
+                            <td>1</td>
+                            <td class="gpu-name">M60</td>
+                            <td>8GB</td>
+                            <td>图形工作站 (旧代)</td>
+                            <td>4</td>
+                            <td>30.5 GB</td>
+                            <td>~$0.75/小时</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="4">
+                            <td class="instance-name"><a href="instances/g2.html">G2</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/4</td>
+                            <td class="gpu-name">GRID K520</td>
+                            <td>4GB</td>
+                            <td>图形 (旧代)</td>
+                            <td>8-32</td>
+                            <td>15-60 GB</td>
+                            <td>~$0.65-2.60/小时</td>
+                            <td>2013</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -1014,6 +1092,30 @@
                             <td>8-16 GB</td>
                             <td>~$0.37-0.58/小时</td>
                             <td>2019</td>
+                        </tr>
+                        <tr data-workload="训练" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/dl1.html">DL1</a></td>
+                            <td><span class="tag tag-training">训练</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">Habana Gaudi</td>
+                            <td>深度学习训练</td>
+                            <td>96</td>
+                            <td>768 GB</td>
+                            <td>~$13.11/小时</td>
+                            <td>2021</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/dl2q.html">DL2q</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>8</td>
+                            <td class="gpu-name">Qualcomm AI 100</td>
+                            <td>ML推理 (Qualcomm)</td>
+                            <td>96</td>
+                            <td>768 GB</td>
+                            <td>~$10.59/小时</td>
+                            <td>2023</td>
                         </tr>
                     </tbody>
                 </table>

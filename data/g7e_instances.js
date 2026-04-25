@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 
 var instanceData = [
   {
@@ -13,16 +13,32 @@ var instanceData = [
     "network": "400 Gigabit",
     "storage": "3800 GB SSD",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 12.01727
+      },
+      "ap-northeast-2": {
+        "onDemand": 10.1873
+      },
+      "eu-south-2": {
+        "onDemand": 8.73134
+      },
       "us-east-1": {
         "onDemand": 8.28608
       },
       "us-east-2": {
         "onDemand": 8.28608
+      },
+      "us-west-2": {
+        "onDemand": 8.28608
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -38,16 +54,32 @@ var instanceData = [
     "network": "800 Gigabit",
     "storage": "3800 GB (2 × 1900 GB SSD)",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 24.03454
+      },
+      "ap-northeast-2": {
+        "onDemand": 20.3746
+      },
+      "eu-south-2": {
+        "onDemand": 17.46268
+      },
       "us-east-1": {
         "onDemand": 16.57216
       },
       "us-east-2": {
         "onDemand": 16.57216
+      },
+      "us-west-2": {
+        "onDemand": 16.57216
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -63,16 +95,32 @@ var instanceData = [
     "network": "50 Gigabit",
     "storage": "1900 GB SSD",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 4.87752
+      },
+      "ap-northeast-2": {
+        "onDemand": 4.13478
+      },
+      "eu-south-2": {
+        "onDemand": 3.54384
+      },
       "us-east-1": {
         "onDemand": 3.36312
       },
       "us-east-2": {
         "onDemand": 3.36312
+      },
+      "us-west-2": {
+        "onDemand": 3.36312
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -88,16 +136,32 @@ var instanceData = [
     "network": "1600 Gigabit",
     "storage": "3800 GB (4 × 950 GB SSD)",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 48.06908
+      },
+      "ap-northeast-2": {
+        "onDemand": 40.74921
+      },
+      "eu-south-2": {
+        "onDemand": 34.92536
+      },
       "us-east-1": {
         "onDemand": 33.14432
       },
       "us-east-2": {
         "onDemand": 33.14432
+      },
+      "us-west-2": {
+        "onDemand": 33.14432
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -113,16 +177,32 @@ var instanceData = [
     "network": "50 Gigabit",
     "storage": "1900 GB SSD",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 5.79852
+      },
+      "ap-northeast-2": {
+        "onDemand": 4.91553
+      },
+      "eu-south-2": {
+        "onDemand": 4.213
+      },
       "us-east-1": {
         "onDemand": 3.99816
       },
       "us-east-2": {
         "onDemand": 3.99816
+      },
+      "us-west-2": {
+        "onDemand": 3.99816
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -138,16 +218,36 @@ var instanceData = [
     "network": "100 Gigabit",
     "storage": "1900 GB SSD",
     "pricing": {
+      "ap-northeast-1": {
+        "onDemand": 7.64051
+      },
+      "ap-northeast-2": {
+        "onDemand": 6.47703
+      },
+      "eu-south-2": {
+        "onDemand": 5.55133
+      },
       "us-east-1": {
         "onDemand": 5.26824
       },
       "us-east-2": {
         "onDemand": 5.26824
+      },
+      "us-west-2": {
+        "onDemand": 5.26824
+      },
+      "us-west-2-lax-1": {
+        "onDemand": 7.0601
       }
     },
     "availability": [
+      "ap-northeast-1",
+      "ap-northeast-2",
+      "eu-south-2",
       "us-east-1",
-      "us-east-2"
+      "us-east-2",
+      "us-west-2",
+      "us-west-2-lax-1"
     ],
     "generation": "current",
     "family": "GPU instance"

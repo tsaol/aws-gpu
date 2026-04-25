@@ -3,27 +3,27 @@
 
 var instanceData = [
   {
-    "name": "dl2q.24xlarge",
-    "apiName": "dl2q.24xlarge",
-    "gpu": "Qualcomm AI 100",
+    "name": "dl1.24xlarge",
+    "apiName": "dl1.24xlarge",
+    "gpu": "Habana Gaudi",
     "gpuCount": 8,
-    "gpuMemory": "128 GB",
+    "gpuMemory": "32 GB HBM2e",
     "vcpu": 96,
     "memory": "768 GB",
-    "network": "100 Gigabit",
-    "storage": "EBS Only",
+    "network": "4x 100 Gigabit",
+    "storage": "1000 GB (4 × 250 GB SSD)",
     "pricing": {
-      "eu-central-1": {
-        "onDemand": 11.5952,
-        "reserved": 7.305
+      "us-east-1": {
+        "onDemand": 13.10904,
+        "reserved": 8.2587
       },
       "us-west-2": {
-        "onDemand": 8.9194,
-        "reserved": 5.6192
+        "onDemand": 13.10904,
+        "reserved": 8.2587
       }
     },
     "availability": [
-      "eu-central-1",
+      "us-east-1",
       "us-west-2"
     ],
     "generation": "current",

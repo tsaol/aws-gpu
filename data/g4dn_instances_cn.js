@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 
 var instanceData = [
   {
@@ -128,6 +128,32 @@ var instanceData = [
       "cn-northwest-1": {
         "onDemand": 15.35,
         "reserved": 9.671
+      }
+    },
+    "availability": [
+      "cn-north-1",
+      "cn-northwest-1"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g4dn.metal",
+    "apiName": "g4dn.metal",
+    "gpu": "NVIDIA T4",
+    "gpuCount": 8,
+    "gpuMemory": "16 GB GDDR6",
+    "vcpu": 96,
+    "memory": "384 GB",
+    "network": "100 Gigabit",
+    "storage": "900 GB (2 × 450 GB SSD)",
+    "pricing": {
+      "cn-north-1": {
+        "onDemand": 77.697
+      },
+      "cn-northwest-1": {
+        "onDemand": 55.192,
+        "reserved": 34.771
       }
     },
     "availability": [
