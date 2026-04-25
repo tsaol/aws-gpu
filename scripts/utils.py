@@ -68,10 +68,16 @@ def convert_pricing(pricing: Dict) -> Dict:
     return result
 
 
+ACCELERATOR_COUNTS = {
+    'dl1.24xlarge': 8,
+    'dl2q.24xlarge': 8,
+}
+
+
 def get_gpu_info(inst: Dict, is_china: bool = False) -> Dict:
     """获取 GPU 详细信息"""
-    gpu_count = inst.get('GPU', 0)
     instance_type = inst.get('instance_type', '')
+    gpu_count = inst.get('GPU', 0) or ACCELERATOR_COUNTS.get(instance_type, 0)
 
     # 查找 GPU 型号
     gpu_model = 'Unknown GPU'

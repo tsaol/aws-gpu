@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "g3s.xlarge",
     "gpu": "NVIDIA M60",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "8 GB GDDR5",
     "vcpu": 4,
     "memory": "30.5 GB",
     "network": "10 Gigabit",

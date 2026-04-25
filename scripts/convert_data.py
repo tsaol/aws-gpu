@@ -40,8 +40,13 @@ def extract_gpu_instances(input_file: Path, output_file: Path, region_type: str 
 
     print(f"   总实例数: {len(all_instances)}")
 
-    # 提取 GPU 实例（GPU > 0）
-    gpu_instances = [inst for inst in all_instances if inst.get('GPU', 0) > 0]
+    # 提取 GPU/加速器实例（GPU > 0 或 DL/Inf/Trn 系列）
+    accel_prefixes = ('dl1.', 'dl2q.', 'inf1.', 'inf2.', 'trn1.', 'trn1n.', 'trn2.')
+    gpu_instances = [
+        inst for inst in all_instances
+        if inst.get('GPU', 0) > 0
+        or inst.get('instance_type', '').startswith(accel_prefixes)
+    ]
     gpu_instances.sort(key=lambda x: x['instance_type'])
 
     print(f"   GPU 实例数: {colorize(str(len(gpu_instances)), 'green')}")

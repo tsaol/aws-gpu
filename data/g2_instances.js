@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 
 var instanceData = [
   {
@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "g2.2xlarge",
     "gpu": "NVIDIA GRID K520",
     "gpuCount": 1,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB GDDR5",
     "vcpu": 8,
     "memory": "15 GB",
     "network": "Moderate",
@@ -60,7 +60,7 @@ var instanceData = [
     "apiName": "g2.8xlarge",
     "gpu": "NVIDIA GRID K520",
     "gpuCount": 4,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "4 GB GDDR5",
     "vcpu": 32,
     "memory": "60 GB",
     "network": "High",

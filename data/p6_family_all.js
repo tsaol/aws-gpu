@@ -1,5 +1,5 @@
 // Auto-generated P6 Family data from instances.vantage.sh
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 // Includes: p6-b200, p6-b300, p6e-gb200
 
 var instanceData = [
@@ -53,11 +53,15 @@ var instanceData = [
     "network": "6400 Gigabit",
     "storage": "3800 GB (8 × 475 GB SSD)",
     "pricing": {
+      "us-gov-east-1": {
+        "onDemand": 170.9
+      },
       "us-west-2": {
         "onDemand": 142.416
       }
     },
     "availability": [
+      "us-gov-east-1",
       "us-west-2"
     ],
     "generation": "current",

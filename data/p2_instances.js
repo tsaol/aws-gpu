@@ -1,12 +1,12 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-01-21
+// Last updated: 2026-04-25
 
 var instanceData = [
   {
     "name": "p2.16xlarge",
     "apiName": "p2.16xlarge",
     "gpu": "NVIDIA K80",
-    "gpuCount": 8,
+    "gpuCount": 16,
     "gpuMemory": "12 GB GDDR5",
     "vcpu": 64,
     "memory": "732 GB",
@@ -67,7 +67,7 @@ var instanceData = [
     "name": "p2.8xlarge",
     "apiName": "p2.8xlarge",
     "gpu": "NVIDIA K80",
-    "gpuCount": 4,
+    "gpuCount": 8,
     "gpuMemory": "12 GB GDDR5",
     "vcpu": 32,
     "memory": "488 GB",
