@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
@@ -10,8 +10,8 @@ var instanceData = [
     "gpuMemory": "32 GB HBM2e",
     "vcpu": 96,
     "memory": "768 GB",
-    "network": "4x 100 Gigabit",
-    "storage": "1000 GB (4 × 250 GB SSD)",
+    "network": "400 Gigabit",
+    "storage": "EBS Only",
     "pricing": {
       "us-east-1": {
         "onDemand": 13.10904,

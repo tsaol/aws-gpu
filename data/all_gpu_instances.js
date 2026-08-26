@@ -1,6 +1,6 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
-// Total GPU instances: 93
+// Last updated: 2026-08-26
+// Total GPU instances: 99
 
 const allGPUInstances = [
   {
@@ -11,8 +11,8 @@ const allGPUInstances = [
     "gpuMemory": "32 GB HBM2e",
     "vcpu": 96,
     "memory": "768 GB",
-    "network": "4x 100 Gigabit",
-    "storage": "1000 GB (4 × 250 GB SSD)",
+    "network": "400 Gigabit",
+    "storage": "EBS Only",
     "pricing": {
       "us-east-1": {
         "onDemand": 13.10904,
@@ -2009,6 +2009,9 @@ const allGPUInstances = [
         "onDemand": 6.01593,
         "reserved": 3.79003
       },
+      "eu-south-2": {
+        "onDemand": 5.97646
+      },
       "eu-west-1": {
         "onDemand": 6.33167,
         "reserved": 3.98895
@@ -2016,6 +2019,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 7.19994,
         "reserved": 4.53596
+      },
+      "eu-west-3": {
+        "onDemand": 7.19994
       },
       "il-central-1": {
         "onDemand": 6.64825,
@@ -2052,8 +2058,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2111,6 +2119,9 @@ const allGPUInstances = [
         "onDemand": 4.34437,
         "reserved": 2.73695
       },
+      "eu-south-2": {
+        "onDemand": 4.31586
+      },
       "eu-west-1": {
         "onDemand": 4.57237,
         "reserved": 2.8806
@@ -2118,6 +2129,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 5.1994,
         "reserved": 3.27562
+      },
+      "eu-west-3": {
+        "onDemand": 5.1994
       },
       "il-central-1": {
         "onDemand": 4.80099,
@@ -2154,8 +2168,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2213,6 +2229,9 @@ const allGPUInstances = [
         "onDemand": 8.63782,
         "reserved": 5.44183
       },
+      "eu-south-2": {
+        "onDemand": 8.58115
+      },
       "eu-west-1": {
         "onDemand": 9.09117,
         "reserved": 5.72743
@@ -2220,6 +2239,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 10.33786,
         "reserved": 6.51285
+      },
+      "eu-west-3": {
+        "onDemand": 10.33786
       },
       "il-central-1": {
         "onDemand": 9.54572,
@@ -2256,8 +2278,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2315,6 +2339,9 @@ const allGPUInstances = [
         "onDemand": 1.28549,
         "reserved": 0.80986
       },
+      "eu-south-2": {
+        "onDemand": 1.27706
+      },
       "eu-west-1": {
         "onDemand": 1.35296,
         "reserved": 0.85236
@@ -2322,6 +2349,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 1.53849,
         "reserved": 0.96925
+      },
+      "eu-west-3": {
+        "onDemand": 1.53849
       },
       "il-central-1": {
         "onDemand": 1.42061,
@@ -2358,8 +2388,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2417,6 +2449,9 @@ const allGPUInstances = [
         "onDemand": 17.27564,
         "reserved": 10.88365
       },
+      "eu-south-2": {
+        "onDemand": 17.16231
+      },
       "eu-west-1": {
         "onDemand": 18.18233,
         "reserved": 11.45487
@@ -2424,6 +2459,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 20.67572,
         "reserved": 13.0257
+      },
+      "eu-west-3": {
+        "onDemand": 20.67572
       },
       "il-central-1": {
         "onDemand": 19.09145,
@@ -2460,8 +2498,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2519,6 +2559,9 @@ const allGPUInstances = [
         "onDemand": 1.72247,
         "reserved": 1.08516
       },
+      "eu-south-2": {
+        "onDemand": 1.71117
+      },
       "eu-west-1": {
         "onDemand": 1.81287,
         "reserved": 1.14211
@@ -2526,6 +2569,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 2.06148,
         "reserved": 1.29873
+      },
+      "eu-west-3": {
+        "onDemand": 2.06148
       },
       "il-central-1": {
         "onDemand": 1.90352,
@@ -2565,8 +2611,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2625,6 +2673,9 @@ const allGPUInstances = [
         "onDemand": 2.59644,
         "reserved": 1.63576
       },
+      "eu-south-2": {
+        "onDemand": 2.5794
+      },
       "eu-west-1": {
         "onDemand": 2.73271,
         "reserved": 1.72161
@@ -2632,6 +2683,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 3.10745,
         "reserved": 1.95769
+      },
+      "eu-west-3": {
+        "onDemand": 3.10745
       },
       "il-central-1": {
         "onDemand": 2.86934,
@@ -2671,8 +2725,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -2731,6 +2787,9 @@ const allGPUInstances = [
         "onDemand": 1.067,
         "reserved": 0.67221
       },
+      "eu-south-2": {
+        "onDemand": 1.06
+      },
       "eu-west-1": {
         "onDemand": 1.123,
         "reserved": 0.70749
@@ -2738,6 +2797,9 @@ const allGPUInstances = [
       "eu-west-2": {
         "onDemand": 1.277,
         "reserved": 0.80451
+      },
+      "eu-west-3": {
+        "onDemand": 1.277
       },
       "il-central-1": {
         "onDemand": 1.17915,
@@ -2774,8 +2836,10 @@ const allGPUInstances = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -4053,6 +4117,14 @@ const allGPUInstances = [
         "onDemand": 15.21742,
         "reserved": 9.58698
       },
+      "ap-south-1": {
+        "onDemand": 12.60131,
+        "reserved": 7.93883
+      },
+      "ap-south-2": {
+        "onDemand": 12.60131,
+        "reserved": 7.93883
+      },
       "eu-central-1": {
         "onDemand": 13.12002,
         "reserved": 8.26562
@@ -4086,6 +4158,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4120,6 +4194,14 @@ const allGPUInstances = [
         "onDemand": 10.98917,
         "reserved": 6.92318
       },
+      "ap-south-1": {
+        "onDemand": 9.09996,
+        "reserved": 5.73297
+      },
+      "ap-south-2": {
+        "onDemand": 9.09996,
+        "reserved": 5.73297
+      },
       "eu-central-1": {
         "onDemand": 9.47454,
         "reserved": 5.96896
@@ -4153,6 +4235,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4187,6 +4271,14 @@ const allGPUInstances = [
         "onDemand": 21.84956,
         "reserved": 13.76522
       },
+      "ap-south-1": {
+        "onDemand": 18.09328,
+        "reserved": 11.39877
+      },
+      "ap-south-2": {
+        "onDemand": 18.09328,
+        "reserved": 11.39877
+      },
       "eu-central-1": {
         "onDemand": 18.83806,
         "reserved": 11.86798
@@ -4220,6 +4312,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4254,6 +4348,14 @@ const allGPUInstances = [
         "onDemand": 3.25168,
         "reserved": 2.04856
       },
+      "ap-south-1": {
+        "onDemand": 2.69266,
+        "reserved": 1.69638
+      },
+      "ap-south-2": {
+        "onDemand": 2.69266,
+        "reserved": 1.69638
+      },
       "eu-central-1": {
         "onDemand": 2.8035,
         "reserved": 1.76621
@@ -4287,6 +4389,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4321,6 +4425,14 @@ const allGPUInstances = [
         "onDemand": 43.69912,
         "reserved": 27.53044
       },
+      "ap-south-1": {
+        "onDemand": 36.18656,
+        "reserved": 22.79753
+      },
+      "ap-south-2": {
+        "onDemand": 36.18656,
+        "reserved": 22.79753
+      },
       "eu-central-1": {
         "onDemand": 37.67612,
         "reserved": 23.73596
@@ -4354,6 +4466,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4388,6 +4502,14 @@ const allGPUInstances = [
         "onDemand": 4.35703,
         "reserved": 2.74493
       },
+      "ap-south-1": {
+        "onDemand": 3.60799,
+        "reserved": 2.27303
+      },
+      "ap-south-2": {
+        "onDemand": 3.60799,
+        "reserved": 2.27303
+      },
       "eu-central-1": {
         "onDemand": 3.75651,
         "reserved": 2.3666
@@ -4421,6 +4543,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4455,6 +4579,14 @@ const allGPUInstances = [
         "onDemand": 6.56775,
         "reserved": 4.13768
       },
+      "ap-south-1": {
+        "onDemand": 5.43865,
+        "reserved": 3.42635
+      },
+      "ap-south-2": {
+        "onDemand": 5.43865,
+        "reserved": 3.42635
+      },
       "eu-central-1": {
         "onDemand": 5.66252,
         "reserved": 3.56739
@@ -4488,6 +4620,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4522,6 +4656,14 @@ const allGPUInstances = [
         "onDemand": 2.699,
         "reserved": 1.70037
       },
+      "ap-south-1": {
+        "onDemand": 2.235,
+        "reserved": 1.40805
+      },
+      "ap-south-2": {
+        "onDemand": 2.235,
+        "reserved": 1.40805
+      },
       "eu-central-1": {
         "onDemand": 2.327,
         "reserved": 1.46601
@@ -4555,6 +4697,8 @@ const allGPUInstances = [
       "ap-northeast-1",
       "ap-northeast-2",
       "ap-northeast-3",
+      "ap-south-1",
+      "ap-south-2",
       "eu-central-1",
       "eu-north-1",
       "eu-south-2",
@@ -4843,6 +4987,204 @@ const allGPUInstances = [
     "family": "GPU instance"
   },
   {
+    "name": "g7.12xlarge",
+    "apiName": "g7.12xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 2,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 48,
+    "memory": "192 GB",
+    "network": "175 Gigabit",
+    "storage": "1900 GB SSD",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 7.48474
+      },
+      "us-east-1": {
+        "onDemand": 7.12832
+      },
+      "us-east-2": {
+        "onDemand": 7.12832
+      },
+      "us-west-2": {
+        "onDemand": 7.12832
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7.24xlarge",
+    "apiName": "g7.24xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 4,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 96,
+    "memory": "384 GB",
+    "network": "350 Gigabit",
+    "storage": "3800 GB SSD",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 14.96947
+      },
+      "us-east-1": {
+        "onDemand": 14.25664
+      },
+      "us-east-2": {
+        "onDemand": 14.25664
+      },
+      "us-west-2": {
+        "onDemand": 14.25664
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7.2xlarge",
+    "apiName": "g7.2xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 8,
+    "memory": "32 GB",
+    "network": "Up to 60 Gigabit",
+    "storage": "440 GB SSD",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 2.646
+      },
+      "us-east-1": {
+        "onDemand": 2.52
+      },
+      "us-east-2": {
+        "onDemand": 2.52
+      },
+      "us-west-2": {
+        "onDemand": 2.52
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7.48xlarge",
+    "apiName": "g7.48xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 8,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 192,
+    "memory": "768 GB",
+    "network": "700 Gigabit",
+    "storage": "3800 GB (2 × 1900 GB SSD)",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 29.93894
+      },
+      "us-east-1": {
+        "onDemand": 28.51328
+      },
+      "us-east-2": {
+        "onDemand": 28.51328
+      },
+      "us-west-2": {
+        "onDemand": 28.51328
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7.4xlarge",
+    "apiName": "g7.4xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 16,
+    "memory": "64 GB",
+    "network": "Up to 100 Gigabit",
+    "storage": "875 GB SSD",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 3.19418
+      },
+      "us-east-1": {
+        "onDemand": 3.04208
+      },
+      "us-east-2": {
+        "onDemand": 3.04208
+      },
+      "us-west-2": {
+        "onDemand": 3.04208
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
+    "name": "g7.8xlarge",
+    "apiName": "g7.8xlarge",
+    "gpu": "NVIDIA RTX PRO 4500 Blackwell",
+    "gpuCount": 1,
+    "gpuMemory": "32 GB GDDR7",
+    "vcpu": 32,
+    "memory": "128 GB",
+    "network": "100 Gigabit",
+    "storage": "930 GB SSD",
+    "pricing": {
+      "eu-south-2": {
+        "onDemand": 4.29055
+      },
+      "us-east-1": {
+        "onDemand": 4.08624
+      },
+      "us-east-2": {
+        "onDemand": 4.08624
+      },
+      "us-west-2": {
+        "onDemand": 4.08624
+      }
+    },
+    "availability": [
+      "eu-south-2",
+      "us-east-1",
+      "us-east-2",
+      "us-west-2"
+    ],
+    "generation": "current",
+    "family": "GPU instance"
+  },
+  {
     "name": "g7e.12xlarge",
     "apiName": "g7e.12xlarge",
     "gpu": "NVIDIA RTX PRO 6000 Blackwell",
@@ -4859,8 +5201,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 10.1873
       },
+      "ap-south-1": {
+        "onDemand": 13.53377
+      },
+      "eu-central-1": {
+        "onDemand": 14.09088
+      },
+      "eu-north-1": {
+        "onDemand": 11.95333
+      },
       "eu-south-2": {
         "onDemand": 8.73134
+      },
+      "eu-west-2": {
+        "onDemand": 14.40172
       },
       "us-east-1": {
         "onDemand": 8.28608
@@ -4875,7 +5229,11 @@ const allGPUInstances = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -4900,8 +5258,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 20.3746
       },
+      "ap-south-1": {
+        "onDemand": 27.06754
+      },
+      "eu-central-1": {
+        "onDemand": 28.18177
+      },
+      "eu-north-1": {
+        "onDemand": 23.90667
+      },
       "eu-south-2": {
         "onDemand": 17.46268
+      },
+      "eu-west-2": {
+        "onDemand": 28.80344
       },
       "us-east-1": {
         "onDemand": 16.57216
@@ -4916,7 +5286,11 @@ const allGPUInstances = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -4941,8 +5315,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 4.13478
       },
+      "ap-south-1": {
+        "onDemand": 5.49303
+      },
+      "eu-central-1": {
+        "onDemand": 5.71915
+      },
+      "eu-north-1": {
+        "onDemand": 4.85157
+      },
       "eu-south-2": {
         "onDemand": 3.54384
+      },
+      "eu-west-2": {
+        "onDemand": 5.84531
       },
       "us-east-1": {
         "onDemand": 3.36312
@@ -4957,7 +5343,11 @@ const allGPUInstances = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -4982,8 +5372,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 40.74921
       },
+      "ap-south-1": {
+        "onDemand": 54.13507
+      },
+      "eu-central-1": {
+        "onDemand": 56.36354
+      },
+      "eu-north-1": {
+        "onDemand": 47.81334
+      },
       "eu-south-2": {
         "onDemand": 34.92536
+      },
+      "eu-west-2": {
+        "onDemand": 57.60687
       },
       "us-east-1": {
         "onDemand": 33.14432
@@ -4998,7 +5400,11 @@ const allGPUInstances = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -5023,8 +5429,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 4.91553
       },
+      "ap-south-1": {
+        "onDemand": 6.53025
+      },
+      "eu-central-1": {
+        "onDemand": 6.79907
+      },
+      "eu-north-1": {
+        "onDemand": 5.76767
+      },
       "eu-south-2": {
         "onDemand": 4.213
+      },
+      "eu-west-2": {
+        "onDemand": 6.94905
       },
       "us-east-1": {
         "onDemand": 3.99816
@@ -5034,15 +5452,23 @@ const allGPUInstances = [
       },
       "us-west-2": {
         "onDemand": 3.99816
+      },
+      "us-west-2-lax-1": {
+        "onDemand": 5.35803
       }
     },
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "us-west-2-lax-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -5064,8 +5490,20 @@ const allGPUInstances = [
       "ap-northeast-2": {
         "onDemand": 6.47703
       },
+      "ap-south-1": {
+        "onDemand": 8.60469
+      },
+      "eu-central-1": {
+        "onDemand": 8.9589
+      },
+      "eu-north-1": {
+        "onDemand": 7.59986
+      },
       "eu-south-2": {
         "onDemand": 5.55133
+      },
+      "eu-west-2": {
+        "onDemand": 9.15653
       },
       "us-east-1": {
         "onDemand": 5.26824
@@ -5083,7 +5521,11 @@ const allGPUInstances = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2",
@@ -5379,7 +5821,7 @@ const allGPUInstances = [
     "name": "inf1.24xlarge",
     "apiName": "inf1.24xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 16,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 96,
     "memory": "192 GB",
@@ -5506,7 +5948,7 @@ const allGPUInstances = [
     "name": "inf1.2xlarge",
     "apiName": "inf1.2xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 8,
     "memory": "16 GB",
@@ -5628,7 +6070,7 @@ const allGPUInstances = [
     "name": "inf1.6xlarge",
     "apiName": "inf1.6xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 4,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 24,
     "memory": "48 GB",
@@ -5750,7 +6192,7 @@ const allGPUInstances = [
     "name": "inf1.xlarge",
     "apiName": "inf1.xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 4,
     "memory": "8 GB",
@@ -5877,7 +6319,7 @@ const allGPUInstances = [
     "name": "inf2.24xlarge",
     "apiName": "inf2.24xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 6,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 96,
     "memory": "384 GB",
@@ -5959,7 +6401,7 @@ const allGPUInstances = [
     "name": "inf2.48xlarge",
     "apiName": "inf2.48xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 12,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 192,
     "memory": "768 GB",
@@ -6041,7 +6483,7 @@ const allGPUInstances = [
     "name": "inf2.8xlarge",
     "apiName": "inf2.8xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 32,
     "memory": "128 GB",
@@ -6123,7 +6565,7 @@ const allGPUInstances = [
     "name": "inf2.xlarge",
     "apiName": "inf2.xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 4,
     "memory": "16 GB",
@@ -7016,6 +7458,9 @@ const allGPUInstances = [
     "network": "3200 Gbps EFAv4",
     "storage": "8 x 3.84 TB NVMe SSD",
     "pricing": {
+      "ap-south-1": {
+        "onDemand": 160.64525
+      },
       "us-east-1": {
         "onDemand": 113.9328
       },
@@ -7025,14 +7470,23 @@ const allGPUInstances = [
       "us-east-2": {
         "onDemand": 113.9328
       },
+      "us-gov-east-1": {
+        "onDemand": 136.71936
+      },
+      "us-gov-west-1": {
+        "onDemand": 136.71936
+      },
       "us-west-2": {
         "onDemand": 113.9328
       }
     },
     "availability": [
+      "ap-south-1",
       "us-east-1",
       "us-east-1-atl-1",
       "us-east-2",
+      "us-gov-east-1",
+      "us-gov-west-1",
       "us-west-2"
     ],
     "generation": "current",
@@ -7053,6 +7507,15 @@ const allGPUInstances = [
     "network": "6400 Gigabit",
     "storage": "3800 GB (8 × 475 GB SSD)",
     "pricing": {
+      "ap-northeast-2": {
+        "onDemand": 209.1735
+      },
+      "us-east-1": {
+        "onDemand": 142.416
+      },
+      "us-east-1-atl-1": {
+        "onDemand": 142.416
+      },
       "us-gov-east-1": {
         "onDemand": 170.9
       },
@@ -7061,6 +7524,9 @@ const allGPUInstances = [
       }
     },
     "availability": [
+      "ap-northeast-2",
+      "us-east-1",
+      "us-east-1-atl-1",
       "us-gov-east-1",
       "us-west-2"
     ],
@@ -7090,7 +7556,7 @@ const allGPUInstances = [
     "name": "trn1.2xlarge",
     "apiName": "trn1.2xlarge",
     "gpu": "AWS Trainium",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 8,
     "memory": "32 GB",
@@ -7122,7 +7588,7 @@ const allGPUInstances = [
     "name": "trn1.32xlarge",
     "apiName": "trn1.32xlarge",
     "gpu": "AWS Trainium",
-    "gpuCount": 16,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 128,
     "memory": "512 GB",
@@ -7154,8 +7620,8 @@ const allGPUInstances = [
     "name": "trn1n.32xlarge",
     "apiName": "trn1n.32xlarge",
     "gpu": "AWS Trainium",
-    "gpuCount": 16,
-    "gpuMemory": "Unknown",
+    "gpuCount": 0,
+    "gpuMemory": "32 GB HBM",
     "vcpu": 128,
     "memory": "512 GB",
     "network": "16x 100 Gigabit",
@@ -7186,7 +7652,7 @@ const allGPUInstances = [
     "name": "trn2.48xlarge",
     "apiName": "trn2.48xlarge",
     "gpu": "AWS Trainium2",
-    "gpuCount": 16,
+    "gpuCount": 0,
     "gpuMemory": "96 GB HBM3",
     "vcpu": 192,
     "memory": "2048 GB",

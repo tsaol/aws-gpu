@@ -1,12 +1,12 @@
 // Auto-generated from instances.vantage.sh China region data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
     "name": "inf1.24xlarge",
     "apiName": "inf1.24xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 16,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 96,
     "memory": "192 GB",
@@ -33,7 +33,7 @@ var instanceData = [
     "name": "inf1.2xlarge",
     "apiName": "inf1.2xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 8,
     "memory": "16 GB",
@@ -60,7 +60,7 @@ var instanceData = [
     "name": "inf1.6xlarge",
     "apiName": "inf1.6xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 4,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 24,
     "memory": "48 GB",
@@ -87,7 +87,7 @@ var instanceData = [
     "name": "inf1.xlarge",
     "apiName": "inf1.xlarge",
     "gpu": "AWS Inferentia",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "8 GB",
     "vcpu": 4,
     "memory": "8 GB",

@@ -1,0 +1,207 @@
+{
+  "name": "aws-gpu",
+  "base_url": "https://gpu.liucao.me",
+  "pages": [
+    {
+      "path": "/",
+      "name": "home",
+      "expect_text": [
+        "Amazon Web Services",
+        "GPU 实例总数",
+        "2026-08-26",
+        "NVIDIA GPU",
+        "AWS 自研芯片",
+        "RTX PRO 4500 Blackwell",
+        "RTX PRO 6000 Blackwell",
+        "GB200 Grace Blackwell",
+        "H200",
+        "AWS Trainium"
+      ],
+      "expect_elements": [
+        "#last-updated",
+        "#total-instances",
+        "#search-input",
+        "#filter-workload",
+        "#filter-region",
+        "#filter-gpu-count",
+        "#result-count",
+        "#nvidia-table",
+        "#aws-table",
+        "#case-section",
+        "a[href='instances/g7.html']",
+        "a[href='instances/g7e.html']",
+        "a[href='instances/p6e-gb200.html']"
+      ],
+      "min_content_length": 40000,
+      "interactions": [
+        {
+          "type": "click",
+          "selector": "a[href='instances/g7.html']",
+          "verify": "navigates",
+          "expected_url": "instances/g7.html",
+          "description": "G7 链接跳转到详情页（先跑，避免被筛选影响）"
+        },
+        {
+          "type": "click",
+          "selector": "#nvidia-table th.sortable[data-sort='price']",
+          "verify": "order_changes",
+          "items_selector": "#nvidia-table tbody tr td:first-child",
+          "description": "点击价格表头应改变排序"
+        },
+        {
+          "type": "click",
+          "selector": "#nvidia-table th.sortable[data-sort='year']",
+          "verify": "order_changes",
+          "items_selector": "#nvidia-table tbody tr td:first-child",
+          "description": "点击发布时间表头应改变排序"
+        },
+        {
+          "type": "click",
+          "selector": "#aws-table th.sortable[data-sort='chip']",
+          "verify": "order_changes",
+          "items_selector": "#aws-table tbody tr td:first-child",
+          "description": "AWS 自研芯片表也可排序"
+        },
+        {
+          "type": "click",
+          "selector": ".theme-toggle",
+          "description": "深色模式切换按钮可点击"
+        },
+        {
+          "type": "select",
+          "selector": "#filter-workload",
+          "value": "推理",
+          "description": "Workload 筛选器可选择"
+        },
+        {
+          "type": "fill",
+          "selector": "#search-input",
+          "value": "H200",
+          "description": "搜索框可输入 GPU 型号"
+        },
+        {
+          "type": "click",
+          "selector": "button:has-text('清空筛选')",
+          "description": "清空筛选按钮恢复完整列表"
+        }
+      ],
+      "expect_no_text": [
+        "Unknown GPU",
+        "最后更新: 2026-01-21",
+        "30+",
+        "NaN"
+      ]
+    },
+    {
+      "path": "/instances/g7.html",
+      "name": "g7-detail",
+      "expect_text": [
+        "G7",
+        "RTX PRO 4500 Blackwell",
+        "g7.2xlarge",
+        "g7.48xlarge"
+      ],
+      "expect_elements": [
+        "table",
+        "a[href='../index.html']"
+      ],
+      "min_content_length": 5000,
+      "expect_no_text": [
+        "Unknown GPU",
+        "Unknown"
+      ]
+    },
+    {
+      "path": "/instances/g7e.html",
+      "name": "g7e-detail",
+      "expect_text": [
+        "G7e",
+        "RTX PRO 6000 Blackwell"
+      ],
+      "expect_elements": [
+        "table"
+      ],
+      "min_content_length": 5000,
+      "expect_no_text": [
+        "RTX PRO 4500",
+        "Unknown GPU"
+      ]
+    },
+    {
+      "path": "/instances/p6e-gb200.html",
+      "name": "p6e-detail",
+      "expect_text": [
+        "GB200"
+      ],
+      "expect_elements": [
+        "table"
+      ],
+      "min_content_length": 3000,
+      "expect_no_text": [
+        "Unknown GPU"
+      ]
+    },
+    {
+      "path": "/instances/trn1n.html",
+      "name": "trn1n-detail",
+      "expect_text": [
+        "Trainium"
+      ],
+      "expect_elements": [
+        "table"
+      ],
+      "min_content_length": 2000,
+      "expect_no_text": [
+        "Unknown"
+      ]
+    },
+    {
+      "path": "/data/meta.js",
+      "name": "meta-js",
+      "expect_text": [
+        "gpuDataMeta",
+        "2026-08-26",
+        "totalInstances",
+        "instances.vantage.sh"
+      ],
+      "min_content_length": 100
+    }
+  ],
+  "responsive": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "responsive_page": "/",
+  "screenshot_dir": "~/tmp/gpu-ui-screenshots",
+  "region": "us-west-2",
+  "api_tests": [
+    {
+      "path": "/data/meta.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/data/all_gpu_instances.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/instances/g7.html",
+      "method": "GET",
+      "status": 200
+    }
+  ]
+}
