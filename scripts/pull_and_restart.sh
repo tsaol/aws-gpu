@@ -5,8 +5,13 @@
 # 这台机器只负责同步，不在本地跑下载与转换 —— 这样线上内容永远等于仓库内容，
 # 不会出现「机器上的数据和 git 里不一致」的分叉。
 #
+# 安装（重要）：拷到仓库外再执行，不要直接跑仓库里的这份。
+#   sudo install -m 755 scripts/pull_and_restart.sh /usr/local/bin/aws-gpu-update.sh
+# 因为脚本会 git reset --hard，如果它自己就在被重置的目录里，
+# 遇到「目标提交尚未包含此脚本」的情况会把自己删掉，然后报 exit 127。
+#
 # 用法（root，通常由 cron 调用）:
-#   /home/ubuntu/codes/aws-gpu/scripts/pull_and_restart.sh
+#   /usr/local/bin/aws-gpu-update.sh [branch]
 #
 # 踩过的两个坑，所以下面两行不能省：
 #   1. cron/SSM 以 root 运行时 HOME 可能为空，git config --global 会写不到任何地方
