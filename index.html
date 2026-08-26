@@ -395,6 +395,17 @@
             font-size: 0.8em;
         }
 
+        /* 当前排序列显示实际方向，而不是永远的 ↕ */
+        th.sortable[data-order="asc"]::after {
+            content: ' ↑';
+            opacity: 1;
+        }
+
+        th.sortable[data-order="desc"]::after {
+            content: ' ↓';
+            opacity: 1;
+        }
+
         th.sort-asc::after {
             content: ' ↑';
             opacity: 1;
@@ -584,7 +595,7 @@
             <div class="header-content">
                 <div>
                     <h1>Amazon Web Services <span>GPU</span></h1>
-                    <p class="subtitle">AWS GPU 与 AI 加速实例完整列表 · 最后更新: 2026-01-21</p>
+                    <p class="subtitle">AWS GPU 与 AI 加速实例完整列表 · 最后更新: <span id="last-updated">2026-08-26</span></p>
                 </div>
                 <div class="header-actions">
                     <button class="theme-toggle" onclick="toggleTheme()">
@@ -599,7 +610,7 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">GPU 实例总数</div>
-                <div class="stat-value highlight" id="total-instances">30+</div>
+                <div class="stat-value highlight" id="total-instances">99</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">最新发布</div>
@@ -850,6 +861,19 @@
                             <td>8-192</td>
                             <td>64-2048 GB</td>
                             <td>~$3.36-33.14/小时</td>
+                            <td>2026</td>
+                        </tr>
+                        <tr data-workload="推理" data-region="Global" data-gpu="8">
+                            <td class="instance-name"><a href="instances/g7.html">G7</a></td>
+                            <td><span class="tag tag-inference">推理</span></td>
+                            <td><span class="tag tag-global">Global</span></td>
+                            <td>1/2/4/8</td>
+                            <td class="gpu-name">RTX PRO 4500 Blackwell</td>
+                            <td>32GB</td>
+                            <td>AI推理、图形渲染、GPU加速分析、AR/VR与CAD</td>
+                            <td>8-192</td>
+                            <td>32-768 GB</td>
+                            <td>~$2.52-28.51/小时</td>
                             <td>2026</td>
                         </tr>
                         <tr data-workload="训练,推理" data-region="Global" data-gpu="8">
@@ -1164,7 +1188,18 @@
         </footer>
     </div>
 
+    <script src="data/meta.js"></script>
     <script>
+        // 从 data/meta.js 填充更新日期与实例总数。
+        // HTML 里的值只是兜底，真实值以 data/ 为准（由 convert_data.py 生成）。
+        (function() {
+            if (typeof gpuDataMeta === 'undefined') return;
+            const d = document.getElementById('last-updated');
+            const n = document.getElementById('total-instances');
+            if (d && gpuDataMeta.lastUpdated) d.textContent = gpuDataMeta.lastUpdated;
+            if (n && gpuDataMeta.totalInstances) n.textContent = gpuDataMeta.totalInstances;
+        })();
+
         // Theme Toggle
         function toggleTheme() {
             const body = document.body;
@@ -1250,6 +1285,85 @@
             
             document.getElementById('result-count').textContent = `显示 ${visibleCount} 个实例`;
         }
+
+        // Table Sorting
+        // 四个表头带 class="sortable" + data-sort，CSS 也画了 ↕ 箭头，
+        // 但此前没有任何 JS 绑定它们，点击毫无反应。以下补上真实排序。
+        //
+        // 取值都要从展示文本里解析，格式不规整，已知这些情况：
+        //   GPU 数量  "8" / "1/2/4/8" / "4/36/72"      -> 取最大值
+        //   价格      "~$2.52-28.51/小时" / "已发布 (GA)" -> 取第一个数字；无数字排最后
+        //   发布时间  "2025" / "2023-2024"             -> 取第一个数字
+        const SORT_COLUMN = {
+            'nvidia-table': { name: 0, gpu: 3, price: 9, year: 10 },
+            'aws-table':    { name: 0, chip: 3, price: 8, year: 9 },
+        };
+
+        function cellText(row, idx) {
+            const td = row.children[idx];
+            return td ? td.textContent.trim() : '';
+        }
+
+        // 无数字时返回 null，排序时统一沉到末尾，避免把「已发布 (GA)」当成 0 排到最前
+        function firstNumber(text) {
+            const m = text.replace(/,/g, '').match(/\d+(\.\d+)?/);
+            return m ? parseFloat(m[0]) : null;
+        }
+
+        function maxNumber(text) {
+            const nums = (text.replace(/,/g, '').match(/\d+(\.\d+)?/g) || []).map(parseFloat);
+            return nums.length ? Math.max(...nums) : null;
+        }
+
+        function sortValue(row, key, idx) {
+            const text = cellText(row, idx);
+            if (key === 'name') return text.toLowerCase();
+            if (key === 'gpu' || key === 'chip') return maxNumber(text);
+            return firstNumber(text);   // price / year
+        }
+
+        function sortTable(tableId, key, asc) {
+            const idx = (SORT_COLUMN[tableId] || {})[key];
+            if (idx === undefined) return;
+
+            const tbody = document.querySelector(`#${tableId} tbody`);
+            if (!tbody) return;
+
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            rows.sort((a, b) => {
+                const va = sortValue(a, key, idx);
+                const vb = sortValue(b, key, idx);
+                // 缺值恒排末尾，无论升降序
+                if (va === null && vb === null) return 0;
+                if (va === null) return 1;
+                if (vb === null) return -1;
+                if (va < vb) return asc ? -1 : 1;
+                if (va > vb) return asc ? 1 : -1;
+                return 0;
+            });
+            rows.forEach(r => tbody.appendChild(r));
+        }
+
+        (function initSorting() {
+            document.querySelectorAll('th.sortable').forEach(th => {
+                th.style.cursor = 'pointer';
+                th.addEventListener('click', () => {
+                    const table = th.closest('table');
+                    if (!table || !table.id) return;
+                    const key = th.dataset.sort;
+                    const asc = th.dataset.order !== 'asc';
+
+                    sortTable(table.id, key, asc);
+
+                    // 只在本表内重置箭头，另一个表的排序状态保持不变
+                    table.querySelectorAll('th.sortable').forEach(o => {
+                        if (o !== th) { delete o.dataset.order; o.removeAttribute('aria-sort'); }
+                    });
+                    th.dataset.order = asc ? 'asc' : 'desc';
+                    th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+                });
+            });
+        })();
 
         // Clear Filters
         function clearFilters() {

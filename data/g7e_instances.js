@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
@@ -19,8 +19,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 10.1873
       },
+      "ap-south-1": {
+        "onDemand": 13.53377
+      },
+      "eu-central-1": {
+        "onDemand": 14.09088
+      },
+      "eu-north-1": {
+        "onDemand": 11.95333
+      },
       "eu-south-2": {
         "onDemand": 8.73134
+      },
+      "eu-west-2": {
+        "onDemand": 14.40172
       },
       "us-east-1": {
         "onDemand": 8.28608
@@ -35,7 +47,11 @@ var instanceData = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -60,8 +76,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 20.3746
       },
+      "ap-south-1": {
+        "onDemand": 27.06754
+      },
+      "eu-central-1": {
+        "onDemand": 28.18177
+      },
+      "eu-north-1": {
+        "onDemand": 23.90667
+      },
       "eu-south-2": {
         "onDemand": 17.46268
+      },
+      "eu-west-2": {
+        "onDemand": 28.80344
       },
       "us-east-1": {
         "onDemand": 16.57216
@@ -76,7 +104,11 @@ var instanceData = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -101,8 +133,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 4.13478
       },
+      "ap-south-1": {
+        "onDemand": 5.49303
+      },
+      "eu-central-1": {
+        "onDemand": 5.71915
+      },
+      "eu-north-1": {
+        "onDemand": 4.85157
+      },
       "eu-south-2": {
         "onDemand": 3.54384
+      },
+      "eu-west-2": {
+        "onDemand": 5.84531
       },
       "us-east-1": {
         "onDemand": 3.36312
@@ -117,7 +161,11 @@ var instanceData = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -142,8 +190,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 40.74921
       },
+      "ap-south-1": {
+        "onDemand": 54.13507
+      },
+      "eu-central-1": {
+        "onDemand": 56.36354
+      },
+      "eu-north-1": {
+        "onDemand": 47.81334
+      },
       "eu-south-2": {
         "onDemand": 34.92536
+      },
+      "eu-west-2": {
+        "onDemand": 57.60687
       },
       "us-east-1": {
         "onDemand": 33.14432
@@ -158,7 +218,11 @@ var instanceData = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2"
@@ -183,8 +247,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 4.91553
       },
+      "ap-south-1": {
+        "onDemand": 6.53025
+      },
+      "eu-central-1": {
+        "onDemand": 6.79907
+      },
+      "eu-north-1": {
+        "onDemand": 5.76767
+      },
       "eu-south-2": {
         "onDemand": 4.213
+      },
+      "eu-west-2": {
+        "onDemand": 6.94905
       },
       "us-east-1": {
         "onDemand": 3.99816
@@ -194,15 +270,23 @@ var instanceData = [
       },
       "us-west-2": {
         "onDemand": 3.99816
+      },
+      "us-west-2-lax-1": {
+        "onDemand": 5.35803
       }
     },
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
-      "us-west-2"
+      "us-west-2",
+      "us-west-2-lax-1"
     ],
     "generation": "current",
     "family": "GPU instance"
@@ -224,8 +308,20 @@ var instanceData = [
       "ap-northeast-2": {
         "onDemand": 6.47703
       },
+      "ap-south-1": {
+        "onDemand": 8.60469
+      },
+      "eu-central-1": {
+        "onDemand": 8.9589
+      },
+      "eu-north-1": {
+        "onDemand": 7.59986
+      },
       "eu-south-2": {
         "onDemand": 5.55133
+      },
+      "eu-west-2": {
+        "onDemand": 9.15653
       },
       "us-east-1": {
         "onDemand": 5.26824
@@ -243,7 +339,11 @@ var instanceData = [
     "availability": [
       "ap-northeast-1",
       "ap-northeast-2",
+      "ap-south-1",
+      "eu-central-1",
+      "eu-north-1",
       "eu-south-2",
+      "eu-west-2",
       "us-east-1",
       "us-east-2",
       "us-west-2",

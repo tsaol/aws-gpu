@@ -81,7 +81,10 @@ GPU_MODELS = {
     # P2 系列 (K80)
     'p2': 'NVIDIA K80',
     # G7 系列
+    # 顺序要紧：查找是前缀匹配，g7e 必须排在 g7 前面，
+    # 否则 g7e.* 会先命中 'g7' 拿到错误型号。
     'g7e': 'NVIDIA RTX PRO 6000 Blackwell',
+    'g7': 'NVIDIA RTX PRO 4500 Blackwell',
     # G6 系列
     'g6e': 'NVIDIA L40S',
     'g6f': 'NVIDIA L40',
@@ -133,6 +136,7 @@ GPU_MEMORY = {
     'p2': '12 GB GDDR5',
     # G7 系列
     'g7e': '96 GB GDDR7',
+    'g7': '32 GB GDDR7',
     # G6 系列
     'g6e': '48 GB GDDR6',
     'g6': '24 GB GDDR6',
@@ -149,7 +153,9 @@ GPU_MEMORY = {
     'inf2': '32 GB HBM',
     'inf1': '8 GB',
     # Trainium
+    # trn1n 是 trn1 的高带宽网络版本，Trainium 芯片与显存规格相同
     'trn2': '96 GB HBM3',
+    'trn1n': '32 GB HBM',
     'trn1': '32 GB HBM',
     # G2/G3s/GR 系列
     'g3s': '8 GB GDDR5',
@@ -246,6 +252,13 @@ FAMILY_INFO = {
         'title': 'G7e Instance Family',
         'description': 'NVIDIA RTX PRO 6000 Blackwell Server Edition',
         'use_case': 'AI Inference & Spatial Computing',
+        'year': '2026',
+        'series': 'G',
+    },
+    'g7': {
+        'title': 'G7 Instance Family',
+        'description': 'NVIDIA RTX PRO 4500 Blackwell Server Edition',
+        'use_case': 'AI Inference, Graphics & Data Analytics',
         'year': '2026',
         'series': 'G',
     },

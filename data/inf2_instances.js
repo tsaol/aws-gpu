@@ -1,12 +1,12 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
     "name": "inf2.24xlarge",
     "apiName": "inf2.24xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 6,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 96,
     "memory": "384 GB",
@@ -88,7 +88,7 @@ var instanceData = [
     "name": "inf2.48xlarge",
     "apiName": "inf2.48xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 12,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 192,
     "memory": "768 GB",
@@ -170,7 +170,7 @@ var instanceData = [
     "name": "inf2.8xlarge",
     "apiName": "inf2.8xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 32,
     "memory": "128 GB",
@@ -252,7 +252,7 @@ var instanceData = [
     "name": "inf2.xlarge",
     "apiName": "inf2.xlarge",
     "gpu": "AWS Inferentia2",
-    "gpuCount": 1,
+    "gpuCount": 0,
     "gpuMemory": "32 GB HBM",
     "vcpu": 4,
     "memory": "16 GB",
