@@ -7,7 +7,7 @@ var instanceData = [
     "apiName": "trn1n.32xlarge",
     "gpu": "AWS Trainium",
     "gpuCount": 0,
-    "gpuMemory": "Unknown",
+    "gpuMemory": "32 GB HBM",
     "vcpu": 128,
     "memory": "512 GB",
     "network": "16x 100 Gigabit",

@@ -114,6 +114,53 @@ stray = [d for d in set(re.findall(r'最后更新[:：]\s*(\d{4}-\d{2}-\d{2})', 
 check('正文没有过期的硬编码「最后更新」日期', not stray,
       f'发现 {stray}')
 
+# --- 新家族的落地检查 ---
+# 2026-08 数据源新增 g7，但三处配置都漏了它：GPU_MODELS 没有 'g7'（前缀匹配落到
+# 'Unknown GPU'）、GPU_MEMORY 没有、FAMILY_INFO 没有（导致 generate_pages 跳过）。
+# 数据里出现一个新家族时，这几项必须同时补齐，否则页面会显示 Unknown 或缺页。
+sys.path.insert(0, str(ROOT / 'scripts'))
+from config import GPU_MODELS, GPU_MEMORY, FAMILY_INFO  # noqa: E402
+
+families = sorted({i['name'].split('.')[0] for i in instances if i.get('name')})
+
+# u-p6e-gb200x36 / x72 是 GB200 UltraServer（整机柜规格，无 apiName、无独立
+# 实例类型），首页由 P6e 那一行代表，不该要求它们有自己的详情页与配置。
+ULTRASERVER_PREFIX = 'u-'
+page_families = [f for f in families if not f.startswith(ULTRASERVER_PREFIX)]
+
+unknown_gpu = sorted({i['name'].split('.')[0] for i in instances
+                      if i.get('gpu') in (None, '', 'Unknown GPU')})
+check('没有家族的 GPU 型号是 Unknown', not unknown_gpu,
+      f'缺 GPU_MODELS 条目: {unknown_gpu}')
+
+unknown_mem = sorted({i['name'].split('.')[0] for i in instances
+                      if i.get('gpuMemory') in (None, '', 'Unknown')})
+check('没有家族的 GPU 显存是 Unknown', not unknown_mem,
+      f'缺 GPU_MEMORY 条目: {unknown_mem}')
+
+no_info = [f for f in page_families if f not in FAMILY_INFO]
+check('每个家族都有 FAMILY_INFO', not no_info,
+      f'generate_pages 会跳过这些家族: {no_info}')
+
+no_page = [f for f in page_families
+           if not (ROOT / 'instances' / f'{f}.html').exists()]
+check('每个家族都有详情页', not no_page,
+      f'缺 instances/*.html: {no_page}')
+
+# 前缀匹配的顺序陷阱：更长的键必须排在它的前缀之前，
+# 否则 g7e.* 会先命中 'g7'、gr6f.* 会先命中 'gr6'。
+keys = list(GPU_MODELS)
+shadowed = [(long, short) for i, short in enumerate(keys)
+            for long in keys[i + 1:] if long.startswith(short)]
+check('GPU_MODELS 没有被前缀遮蔽的键', not shadowed,
+      f'这些键永远匹配不到（需调整顺序）: {shadowed}')
+
+# 首页表格是手写的，新家族要手动加行，否则数据有了但页面看不到
+missing_row = [f for f in page_families
+               if f'instances/{f}.html' not in html]
+check('首页表格覆盖所有家族', not missing_row,
+      f'数据里有但首页没链接: {missing_row}')
+
 print(f'\n{checks - len(failures)}/{checks} 通过')
 if failures:
     print('失败项: ' + ', '.join(failures))
