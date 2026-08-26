@@ -1,0 +1,527 @@
+{
+  "name": "aws-gpu",
+  "base_url": "https://gpu.liucao.me",
+  "built_at": "2026-08-26 03:53:23",
+  "auth": null,
+  "region": "us-west-2",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot_dir": "~/tmp/gpu-ui-screenshots",
+  "test_cases": [
+    {
+      "id": "home-loads",
+      "category": "home",
+      "type": "page_load",
+      "description": "Page / returns HTTP 200",
+      "path": "/",
+      "expect_status": 200
+    },
+    {
+      "id": "home-content",
+      "category": "home",
+      "type": "text_present",
+      "description": "Page contains expected text: Amazon Web Services, GPU \u5b9e\u4f8b\u603b\u6570, 2026-08-26, NVIDIA GPU, AWS \u81ea\u7814\u82af\u7247, RTX PRO 4500 Blackwell, RTX PRO 6000 Blackwell, GB200 Grace Blackwell, H200, AWS Trainium",
+      "path": "/",
+      "texts": [
+        "Amazon Web Services",
+        "GPU \u5b9e\u4f8b\u603b\u6570",
+        "2026-08-26",
+        "NVIDIA GPU",
+        "AWS \u81ea\u7814\u82af\u7247",
+        "RTX PRO 4500 Blackwell",
+        "RTX PRO 6000 Blackwell",
+        "GB200 Grace Blackwell",
+        "H200",
+        "AWS Trainium"
+      ]
+    },
+    {
+      "id": "home-no-text",
+      "category": "home",
+      "type": "text_absent",
+      "description": "Page does NOT contain: Unknown GPU, \u6700\u540e\u66f4\u65b0: 2026-01-21, 30+, NaN",
+      "path": "/",
+      "texts": [
+        "Unknown GPU",
+        "\u6700\u540e\u66f4\u65b0: 2026-01-21",
+        "30+",
+        "NaN"
+      ]
+    },
+    {
+      "id": "home-elements",
+      "category": "home",
+      "type": "elements_exist",
+      "description": "Page has required elements",
+      "path": "/",
+      "elements": {
+        "#last-updated": 1,
+        "#total-instances": 1,
+        "#search-input": 1,
+        "#filter-workload": 1,
+        "#filter-region": 1,
+        "#filter-gpu-count": 1,
+        "#result-count": 1,
+        "#nvidia-table": 1,
+        "#aws-table": 1,
+        "#case-section": 1,
+        "a[href='instances/g7.html']": 1,
+        "a[href='instances/g7e.html']": 1,
+        "a[href='instances/p6e-gb200.html']": 1
+      }
+    },
+    {
+      "id": "home-interaction-0",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click 'G7' \u2014 verify: navigates",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": "a[href='instances/g7.html']",
+        "verify": "navigates",
+        "expected_url": "instances/g7.html",
+        "description": "G7 \u94fe\u63a5\u8df3\u8f6c\u5230\u8be6\u60c5\u9875\uff08\u5148\u8dd1\uff0c\u907f\u514d\u88ab\u7b5b\u9009\u5f71\u54cd\uff09"
+      }
+    },
+    {
+      "id": "home-interaction-1",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click '\u4ef7\u683c(\u6309\u9700)' \u2014 verify: order_changes",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": "#nvidia-table th.sortable[data-sort='price']",
+        "verify": "order_changes",
+        "items_selector": "#nvidia-table tbody tr td:first-child",
+        "description": "\u70b9\u51fb\u4ef7\u683c\u8868\u5934\u5e94\u6539\u53d8\u6392\u5e8f"
+      }
+    },
+    {
+      "id": "home-interaction-2",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click '\u53d1\u5e03\u65f6\u95f4' \u2014 verify: order_changes",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": "#nvidia-table th.sortable[data-sort='year']",
+        "verify": "order_changes",
+        "items_selector": "#nvidia-table tbody tr td:first-child",
+        "description": "\u70b9\u51fb\u53d1\u5e03\u65f6\u95f4\u8868\u5934\u5e94\u6539\u53d8\u6392\u5e8f"
+      }
+    },
+    {
+      "id": "home-interaction-3",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click '\u82af\u7247\u6570\u91cf' \u2014 verify: order_changes",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": "#aws-table th.sortable[data-sort='chip']",
+        "verify": "order_changes",
+        "items_selector": "#aws-table tbody tr td:first-child",
+        "description": "AWS \u81ea\u7814\u82af\u7247\u8868\u4e5f\u53ef\u6392\u5e8f"
+      }
+    },
+    {
+      "id": "home-interaction-4",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click '\ud83c\udf19\n\u6df1\u8272\u6a21\u5f0f' \u2014 verify: click succeeds",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": ".theme-toggle",
+        "description": "\u6df1\u8272\u6a21\u5f0f\u5207\u6362\u6309\u94ae\u53ef\u70b9\u51fb"
+      }
+    },
+    {
+      "id": "home-interaction-5",
+      "category": "home",
+      "type": "interaction",
+      "description": "Select '\u5168\u90e8\u7c7b\u578b\n\u8bad\u7ec3\n\u63a8\u7406' \u2014 verify: click succeeds",
+      "path": "/",
+      "interaction": {
+        "type": "select",
+        "selector": "#filter-workload",
+        "value": "\u63a8\u7406",
+        "description": "Workload \u7b5b\u9009\u5668\u53ef\u9009\u62e9"
+      }
+    },
+    {
+      "id": "home-interaction-6",
+      "category": "home",
+      "type": "interaction",
+      "description": "Fill '' \u2014 verify: click succeeds",
+      "path": "/",
+      "interaction": {
+        "type": "fill",
+        "selector": "#search-input",
+        "value": "H200",
+        "description": "\u641c\u7d22\u6846\u53ef\u8f93\u5165 GPU \u578b\u53f7"
+      }
+    },
+    {
+      "id": "home-interaction-7",
+      "category": "home",
+      "type": "interaction",
+      "description": "Click '\u6e05\u7a7a\u7b5b\u9009' \u2014 verify: click succeeds",
+      "path": "/",
+      "interaction": {
+        "type": "click",
+        "selector": "button:has-text('\u6e05\u7a7a\u7b5b\u9009')",
+        "description": "\u6e05\u7a7a\u7b5b\u9009\u6309\u94ae\u6062\u590d\u5b8c\u6574\u5217\u8868"
+      }
+    },
+    {
+      "id": "home-content-size",
+      "category": "home",
+      "type": "content_size",
+      "description": "Page content is at least 40000 chars",
+      "path": "/",
+      "min_length": 40000,
+      "discovered_length": 57557
+    },
+    {
+      "id": "home-screenshot",
+      "category": "home",
+      "type": "screenshot",
+      "description": "Capture screenshot of /",
+      "path": "/",
+      "filename": "home.png"
+    },
+    {
+      "id": "g7-detail-loads",
+      "category": "g7-detail",
+      "type": "page_load",
+      "description": "Page /instances/g7.html returns HTTP 200",
+      "path": "/instances/g7.html",
+      "expect_status": 200
+    },
+    {
+      "id": "g7-detail-content",
+      "category": "g7-detail",
+      "type": "text_present",
+      "description": "Page contains expected text: G7, RTX PRO 4500 Blackwell, g7.2xlarge, g7.48xlarge",
+      "path": "/instances/g7.html",
+      "texts": [
+        "G7",
+        "RTX PRO 4500 Blackwell",
+        "g7.2xlarge",
+        "g7.48xlarge"
+      ]
+    },
+    {
+      "id": "g7-detail-no-text",
+      "category": "g7-detail",
+      "type": "text_absent",
+      "description": "Page does NOT contain: Unknown GPU, Unknown",
+      "path": "/instances/g7.html",
+      "texts": [
+        "Unknown GPU",
+        "Unknown"
+      ]
+    },
+    {
+      "id": "g7-detail-elements",
+      "category": "g7-detail",
+      "type": "elements_exist",
+      "description": "Page has required elements",
+      "path": "/instances/g7.html",
+      "elements": {
+        "table": 1,
+        "a[href='../index.html']": 2
+      }
+    },
+    {
+      "id": "g7-detail-content-size",
+      "category": "g7-detail",
+      "type": "content_size",
+      "description": "Page content is at least 5000 chars",
+      "path": "/instances/g7.html",
+      "min_length": 5000,
+      "discovered_length": 17878
+    },
+    {
+      "id": "g7-detail-screenshot",
+      "category": "g7-detail",
+      "type": "screenshot",
+      "description": "Capture screenshot of /instances/g7.html",
+      "path": "/instances/g7.html",
+      "filename": "g7-detail.png"
+    },
+    {
+      "id": "g7e-detail-loads",
+      "category": "g7e-detail",
+      "type": "page_load",
+      "description": "Page /instances/g7e.html returns HTTP 200",
+      "path": "/instances/g7e.html",
+      "expect_status": 200
+    },
+    {
+      "id": "g7e-detail-content",
+      "category": "g7e-detail",
+      "type": "text_present",
+      "description": "Page contains expected text: G7e, RTX PRO 6000 Blackwell",
+      "path": "/instances/g7e.html",
+      "texts": [
+        "G7e",
+        "RTX PRO 6000 Blackwell"
+      ]
+    },
+    {
+      "id": "g7e-detail-no-text",
+      "category": "g7e-detail",
+      "type": "text_absent",
+      "description": "Page does NOT contain: RTX PRO 4500, Unknown GPU",
+      "path": "/instances/g7e.html",
+      "texts": [
+        "RTX PRO 4500",
+        "Unknown GPU"
+      ]
+    },
+    {
+      "id": "g7e-detail-elements",
+      "category": "g7e-detail",
+      "type": "elements_exist",
+      "description": "Page has required elements",
+      "path": "/instances/g7e.html",
+      "elements": {
+        "table": 1
+      }
+    },
+    {
+      "id": "g7e-detail-content-size",
+      "category": "g7e-detail",
+      "type": "content_size",
+      "description": "Page content is at least 5000 chars",
+      "path": "/instances/g7e.html",
+      "min_length": 5000,
+      "discovered_length": 17894
+    },
+    {
+      "id": "g7e-detail-screenshot",
+      "category": "g7e-detail",
+      "type": "screenshot",
+      "description": "Capture screenshot of /instances/g7e.html",
+      "path": "/instances/g7e.html",
+      "filename": "g7e-detail.png"
+    },
+    {
+      "id": "p6e-detail-loads",
+      "category": "p6e-detail",
+      "type": "page_load",
+      "description": "Page /instances/p6e-gb200.html returns HTTP 200",
+      "path": "/instances/p6e-gb200.html",
+      "expect_status": 200
+    },
+    {
+      "id": "p6e-detail-content",
+      "category": "p6e-detail",
+      "type": "text_present",
+      "description": "Page contains expected text: GB200",
+      "path": "/instances/p6e-gb200.html",
+      "texts": [
+        "GB200"
+      ]
+    },
+    {
+      "id": "p6e-detail-no-text",
+      "category": "p6e-detail",
+      "type": "text_absent",
+      "description": "Page does NOT contain: Unknown GPU",
+      "path": "/instances/p6e-gb200.html",
+      "texts": [
+        "Unknown GPU"
+      ]
+    },
+    {
+      "id": "p6e-detail-elements",
+      "category": "p6e-detail",
+      "type": "elements_exist",
+      "description": "Page has required elements",
+      "path": "/instances/p6e-gb200.html",
+      "elements": {
+        "table": 1
+      }
+    },
+    {
+      "id": "p6e-detail-content-size",
+      "category": "p6e-detail",
+      "type": "content_size",
+      "description": "Page content is at least 3000 chars",
+      "path": "/instances/p6e-gb200.html",
+      "min_length": 3000,
+      "discovered_length": 14248
+    },
+    {
+      "id": "p6e-detail-screenshot",
+      "category": "p6e-detail",
+      "type": "screenshot",
+      "description": "Capture screenshot of /instances/p6e-gb200.html",
+      "path": "/instances/p6e-gb200.html",
+      "filename": "p6e-detail.png"
+    },
+    {
+      "id": "trn1n-detail-loads",
+      "category": "trn1n-detail",
+      "type": "page_load",
+      "description": "Page /instances/trn1n.html returns HTTP 200",
+      "path": "/instances/trn1n.html",
+      "expect_status": 200
+    },
+    {
+      "id": "trn1n-detail-content",
+      "category": "trn1n-detail",
+      "type": "text_present",
+      "description": "Page contains expected text: Trainium",
+      "path": "/instances/trn1n.html",
+      "texts": [
+        "Trainium"
+      ]
+    },
+    {
+      "id": "trn1n-detail-no-text",
+      "category": "trn1n-detail",
+      "type": "text_absent",
+      "description": "Page does NOT contain: Unknown",
+      "path": "/instances/trn1n.html",
+      "texts": [
+        "Unknown"
+      ]
+    },
+    {
+      "id": "trn1n-detail-elements",
+      "category": "trn1n-detail",
+      "type": "elements_exist",
+      "description": "Page has required elements",
+      "path": "/instances/trn1n.html",
+      "elements": {
+        "table": 1
+      }
+    },
+    {
+      "id": "trn1n-detail-content-size",
+      "category": "trn1n-detail",
+      "type": "content_size",
+      "description": "Page content is at least 2000 chars",
+      "path": "/instances/trn1n.html",
+      "min_length": 2000,
+      "discovered_length": 14290
+    },
+    {
+      "id": "trn1n-detail-screenshot",
+      "category": "trn1n-detail",
+      "type": "screenshot",
+      "description": "Capture screenshot of /instances/trn1n.html",
+      "path": "/instances/trn1n.html",
+      "filename": "trn1n-detail.png"
+    },
+    {
+      "id": "meta-js-loads",
+      "category": "meta-js",
+      "type": "page_load",
+      "description": "Page /data/meta.js returns HTTP 200",
+      "path": "/data/meta.js",
+      "expect_status": 200
+    },
+    {
+      "id": "meta-js-content",
+      "category": "meta-js",
+      "type": "text_present",
+      "description": "Page contains expected text: gpuDataMeta, 2026-08-26, totalInstances, instances.vantage.sh",
+      "path": "/data/meta.js",
+      "texts": [
+        "gpuDataMeta",
+        "2026-08-26",
+        "totalInstances",
+        "instances.vantage.sh"
+      ]
+    },
+    {
+      "id": "meta-js-content-size",
+      "category": "meta-js",
+      "type": "content_size",
+      "description": "Page content is at least 100 chars",
+      "path": "/data/meta.js",
+      "min_length": 100,
+      "discovered_length": 356
+    },
+    {
+      "id": "meta-js-screenshot",
+      "category": "meta-js",
+      "type": "screenshot",
+      "description": "Capture screenshot of /data/meta.js",
+      "path": "/data/meta.js",
+      "filename": "meta-js.png"
+    },
+    {
+      "id": "api-get-data-meta.js",
+      "category": "api",
+      "type": "api_call",
+      "description": "GET /data/meta.js returns 200",
+      "method": "GET",
+      "path": "/data/meta.js",
+      "expect_status": 200
+    },
+    {
+      "id": "api-get-data-all_gpu_instances.js",
+      "category": "api",
+      "type": "api_call",
+      "description": "GET /data/all_gpu_instances.js returns 200",
+      "method": "GET",
+      "path": "/data/all_gpu_instances.js",
+      "expect_status": 200
+    },
+    {
+      "id": "api-get-instances-g7.html",
+      "category": "api",
+      "type": "api_call",
+      "description": "GET /instances/g7.html returns 200",
+      "method": "GET",
+      "path": "/instances/g7.html",
+      "expect_status": 200
+    },
+    {
+      "id": "responsive-desktop",
+      "category": "responsive",
+      "type": "responsive",
+      "description": "No horizontal overflow at 1440x900 (desktop)",
+      "path": "/",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "id": "responsive-tablet",
+      "category": "responsive",
+      "type": "responsive",
+      "description": "No horizontal overflow at 768x1024 (tablet)",
+      "path": "/",
+      "viewport": {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "id": "responsive-mobile",
+      "category": "responsive",
+      "type": "responsive",
+      "description": "No horizontal overflow at 390x844 (mobile)",
+      "path": "/",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      }
+    }
+  ]
+}
