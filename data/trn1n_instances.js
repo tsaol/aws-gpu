@@ -1,12 +1,12 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
     "name": "trn1n.32xlarge",
     "apiName": "trn1n.32xlarge",
     "gpu": "AWS Trainium",
-    "gpuCount": 16,
+    "gpuCount": 0,
     "gpuMemory": "Unknown",
     "vcpu": 128,
     "memory": "512 GB",

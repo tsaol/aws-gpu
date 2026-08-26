@@ -1,5 +1,5 @@
 // Auto-generated from instances.vantage.sh data
-// Last updated: 2026-04-25
+// Last updated: 2026-08-26
 
 var instanceData = [
   {
@@ -49,6 +49,9 @@ var instanceData = [
         "onDemand": 6.01593,
         "reserved": 3.79003
       },
+      "eu-south-2": {
+        "onDemand": 5.97646
+      },
       "eu-west-1": {
         "onDemand": 6.33167,
         "reserved": 3.98895
@@ -56,6 +59,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 7.19994,
         "reserved": 4.53596
+      },
+      "eu-west-3": {
+        "onDemand": 7.19994
       },
       "il-central-1": {
         "onDemand": 6.64825,
@@ -92,8 +98,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -151,6 +159,9 @@ var instanceData = [
         "onDemand": 4.34437,
         "reserved": 2.73695
       },
+      "eu-south-2": {
+        "onDemand": 4.31586
+      },
       "eu-west-1": {
         "onDemand": 4.57237,
         "reserved": 2.8806
@@ -158,6 +169,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 5.1994,
         "reserved": 3.27562
+      },
+      "eu-west-3": {
+        "onDemand": 5.1994
       },
       "il-central-1": {
         "onDemand": 4.80099,
@@ -194,8 +208,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -253,6 +269,9 @@ var instanceData = [
         "onDemand": 8.63782,
         "reserved": 5.44183
       },
+      "eu-south-2": {
+        "onDemand": 8.58115
+      },
       "eu-west-1": {
         "onDemand": 9.09117,
         "reserved": 5.72743
@@ -260,6 +279,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 10.33786,
         "reserved": 6.51285
+      },
+      "eu-west-3": {
+        "onDemand": 10.33786
       },
       "il-central-1": {
         "onDemand": 9.54572,
@@ -296,8 +318,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -355,6 +379,9 @@ var instanceData = [
         "onDemand": 1.28549,
         "reserved": 0.80986
       },
+      "eu-south-2": {
+        "onDemand": 1.27706
+      },
       "eu-west-1": {
         "onDemand": 1.35296,
         "reserved": 0.85236
@@ -362,6 +389,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 1.53849,
         "reserved": 0.96925
+      },
+      "eu-west-3": {
+        "onDemand": 1.53849
       },
       "il-central-1": {
         "onDemand": 1.42061,
@@ -398,8 +428,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -457,6 +489,9 @@ var instanceData = [
         "onDemand": 17.27564,
         "reserved": 10.88365
       },
+      "eu-south-2": {
+        "onDemand": 17.16231
+      },
       "eu-west-1": {
         "onDemand": 18.18233,
         "reserved": 11.45487
@@ -464,6 +499,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 20.67572,
         "reserved": 13.0257
+      },
+      "eu-west-3": {
+        "onDemand": 20.67572
       },
       "il-central-1": {
         "onDemand": 19.09145,
@@ -500,8 +538,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -559,6 +599,9 @@ var instanceData = [
         "onDemand": 1.72247,
         "reserved": 1.08516
       },
+      "eu-south-2": {
+        "onDemand": 1.71117
+      },
       "eu-west-1": {
         "onDemand": 1.81287,
         "reserved": 1.14211
@@ -566,6 +609,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 2.06148,
         "reserved": 1.29873
+      },
+      "eu-west-3": {
+        "onDemand": 2.06148
       },
       "il-central-1": {
         "onDemand": 1.90352,
@@ -605,8 +651,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -665,6 +713,9 @@ var instanceData = [
         "onDemand": 2.59644,
         "reserved": 1.63576
       },
+      "eu-south-2": {
+        "onDemand": 2.5794
+      },
       "eu-west-1": {
         "onDemand": 2.73271,
         "reserved": 1.72161
@@ -672,6 +723,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 3.10745,
         "reserved": 1.95769
+      },
+      "eu-west-3": {
+        "onDemand": 3.10745
       },
       "il-central-1": {
         "onDemand": 2.86934,
@@ -711,8 +765,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",
@@ -771,6 +827,9 @@ var instanceData = [
         "onDemand": 1.067,
         "reserved": 0.67221
       },
+      "eu-south-2": {
+        "onDemand": 1.06
+      },
       "eu-west-1": {
         "onDemand": 1.123,
         "reserved": 0.70749
@@ -778,6 +837,9 @@ var instanceData = [
       "eu-west-2": {
         "onDemand": 1.277,
         "reserved": 0.80451
+      },
+      "eu-west-3": {
+        "onDemand": 1.277
       },
       "il-central-1": {
         "onDemand": 1.17915,
@@ -814,8 +876,10 @@ var instanceData = [
       "ca-central-1",
       "eu-central-1",
       "eu-north-1",
+      "eu-south-2",
       "eu-west-1",
       "eu-west-2",
+      "eu-west-3",
       "il-central-1",
       "me-central-1",
       "sa-east-1",

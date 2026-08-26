@@ -584,7 +584,7 @@
             <div class="header-content">
                 <div>
                     <h1>Amazon Web Services <span>GPU</span></h1>
-                    <p class="subtitle">AWS GPU 与 AI 加速实例完整列表 · 最后更新: 2026-01-21</p>
+                    <p class="subtitle">AWS GPU 与 AI 加速实例完整列表 · 最后更新: <span id="last-updated">2026-08-26</span></p>
                 </div>
                 <div class="header-actions">
                     <button class="theme-toggle" onclick="toggleTheme()">
@@ -599,7 +599,7 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">GPU 实例总数</div>
-                <div class="stat-value highlight" id="total-instances">30+</div>
+                <div class="stat-value highlight" id="total-instances">99</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">最新发布</div>
@@ -1164,7 +1164,18 @@
         </footer>
     </div>
 
+    <script src="data/meta.js"></script>
     <script>
+        // 从 data/meta.js 填充更新日期与实例总数。
+        // HTML 里的值只是兜底，真实值以 data/ 为准（由 convert_data.py 生成）。
+        (function() {
+            if (typeof gpuDataMeta === 'undefined') return;
+            const d = document.getElementById('last-updated');
+            const n = document.getElementById('total-instances');
+            if (d && gpuDataMeta.lastUpdated) d.textContent = gpuDataMeta.lastUpdated;
+            if (n && gpuDataMeta.totalInstances) n.textContent = gpuDataMeta.totalInstances;
+        })();
+
         // Theme Toggle
         function toggleTheme() {
             const body = document.body;
