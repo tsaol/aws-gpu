@@ -62,10 +62,22 @@ jobs:
 
       - name: Commit
         if: steps.diff.outputs.changed == 'true'
+        env:
+          RULES_B64: ${{ secrets.GITLEAKS_PRIVATE_RULES }}
         run: |
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/ instances/ index.html
+          # scan what is about to be committed; stop (no commit) if anything sensitive is in it
+          curl -sSLo /tmp/gl.tgz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  /tmp/gl.tgz" | sha256sum -c -
+          tar -xzf /tmp/gl.tgz -C /tmp gitleaks
+          /tmp/gitleaks git . --pre-commit --staged --redact --no-banner -v
+          /tmp/gitleaks git . --pre-commit --staged --config .gitleaks-rules.toml --redact --no-banner -v
+          if [ -z "$RULES_B64" ]; then echo "::error::GITLEAKS_PRIVATE_RULES secret is missing"; exit 1; fi
+          (umask 077; echo "$RULES_B64" | base64 -d > "$RUNNER_TEMP/private.toml")
+          /tmp/gitleaks git . --pre-commit --staged --config "$RUNNER_TEMP/private.toml" --redact --no-banner -v
+          rm -f "$RUNNER_TEMP/private.toml"
           COUNT=$(python3 -c "import json;d=open('data/meta.js').read();print(json.loads(d[d.find('{'):d.rfind(';')])['totalInstances'])")
           git commit -m "refresh gpu data from vantage.sh ($COUNT instances)"
           git push
