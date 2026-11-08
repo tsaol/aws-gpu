@@ -16,7 +16,7 @@ from typing import List, Dict
 sys.path.insert(0, str(Path(__file__).parent))
 
 from config import (
-    DATA_DIR, RAW_DATA_FILES, GPU_RAW_FILES,
+    DATA_DIR, INDEX_FILE, RAW_DATA_FILES, GPU_RAW_FILES,
     GPU_MEMORY, get_current_date
 )
 from utils import (
@@ -121,6 +121,35 @@ def save_all_instances(instances: List[Dict], suffix: str = '') -> None:
     print(f"   合并文件: {filename} ({len(instances)} 个实例)")
 
 
+def keep_previous_storage(instances: List[Dict], suffix: str = '') -> List[Dict]:
+    """数据源偶尔丢掉本地盘信息，这时保留上次发布的值。
+
+    2026-11 instances.vantage.sh 的 g4ad 全系 storage 变成了 null，转换后成了
+    "EBS Only"，但 g4ad 实际带 NVMe 本地盘。规则：新值是 "EBS Only"、而上次发布
+    的值有本地盘时，沿用上次的值并打印警告；其他情况一律用新值。
+    """
+    previous = {}
+    for f in DATA_DIR.glob(f'*_instances{suffix}.js'):
+        if suffix == '' and f.name.endswith('_cn.js'):
+            continue
+        try:
+            for inst in read_js_data(f):
+                if inst.get('name'):
+                    previous[inst['name']] = inst.get('storage')
+        except Exception:
+            continue
+
+    kept = []
+    for inst in instances:
+        old = previous.get(inst.get('name'))
+        if inst.get('storage') == 'EBS Only' and old and old != 'EBS Only':
+            inst['storage'] = old
+            kept.append(inst['name'])
+    if kept:
+        print(f"   {colorize('⚠️', 'yellow')} 数据源缺少本地盘信息，沿用上次的值: {', '.join(sorted(kept))}")
+    return instances
+
+
 def save_meta(instances: List[Dict]) -> None:
     """写出 data/meta.js，供 index.html 读取更新日期与实例总数。
 
@@ -144,6 +173,27 @@ def save_meta(instances: List[Dict]) -> None:
         f.write(';\n')
 
     print(f"   元数据: meta.js ({meta['totalInstances']} 实例 / {meta['totalFamilies']} 家族)")
+    sync_index_fallbacks(meta)
+
+
+def sync_index_fallbacks(meta: Dict) -> None:
+    """把 index.html 里 #last-updated / #total-instances 的兜底值改成和 meta 一致。
+
+    这两个值平时由 JS 从 meta.js 覆盖，兜底值只在 JS 失效时显示。以前没人改它，
+    每次刷新后 meta 的日期变了，一致性检查就失败，每周自动更新因此从 2026-08-31
+    起一直失败。在写 meta 的同一步顺手改掉，两边就不会再不一致。
+    """
+    import re
+    if not INDEX_FILE.exists():
+        return
+    html = INDEX_FILE.read_text(encoding='utf-8')
+    new = html
+    for el_id, value in (('last-updated', meta['lastUpdated']),
+                         ('total-instances', str(meta['totalInstances']))):
+        new = re.sub(rf'(id="{el_id}"[^>]*>)[^<]*(<)', rf'\g<1>{value}\g<2>', new, count=1)
+    if new != html:
+        INDEX_FILE.write_text(new, encoding='utf-8')
+        print(f"   index.html 兜底值已同步 ({meta['lastUpdated']} / {meta['totalInstances']})")
 
 
 def merge_family_data(family_prefix: str, extra_info: Dict = None) -> None:
@@ -251,6 +301,9 @@ def process_global_data(use_official: bool = True) -> bool:
     # 3. 合并 AWS 官方规格数据
     converted = apply_aws_official_specs(converted, use_official)
 
+    # 3.1 数据源丢了本地盘信息时，沿用上次的值
+    converted = keep_previous_storage(converted)
+
     # 4. 按系列保存
     save_by_family(converted)
 
@@ -298,6 +351,7 @@ def process_china_data() -> bool:
 
     # 2. 转换格式（中国区不包含预览实例）
     converted = convert_instances(gpu_instances, 'china', include_preview=False)
+    converted = keep_previous_storage(converted, suffix='_cn')
 
     # 3. 按系列保存（带 _cn 后缀）
     save_by_family(
