@@ -43,10 +43,7 @@
 - Updated data sync flow diagram
 
 ### Server Deployment
-- Updated 2 EC2 instances via SSM:
-  - [已删除] ([已删除])
-  - [已删除] ([已删除])
-- ALB: [已删除]
+- Updated the EC2 servers via SSM
 
 ---
 
